@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Conga Digital Commerce February &#x27;23 on Conga Revenue Lifecycle Platform</title>
+        <title>Conga Digital Commerce June &#x27;23</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -15,7 +15,7 @@
     <body>
 
         <div class="navbar navbar-default navbar-fixed-top visible-xs">
-            <a href="../" class="navbar-brand">Conga Digital Commerce February &#x27;23 on Conga Revenue Lifecycle Platform</a>
+            <a href="../" class="navbar-brand">Conga Digital Commerce June &#x27;23</a>
             <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
         </div>
 
@@ -62,7 +62,7 @@
     <h3>File</h3>
 </p>
 <p class="comment">
-    <code>projects/congarevenuecloud/elements/src/lib/files/files.component.ts</code>
+    <code>projects/congacommerce/elements/src/lib/files/files.component.ts</code>
 </p>
 
 
@@ -70,20 +70,19 @@
         <h3>Description</h3>
     </p>
     <p class="comment">
-        <p><strong>This component is a work in progress.</strong></p>
-<p> The files component is used for showing a list of attachments associated with an order in a table view.</p>
+        <p> The files component is used for showing a list of attachments associated with an order in a table view.</p>
 <h3>Preview</h3>
 <img src="https://raw.githubusercontent.com/Apttus-Ecom/Summer19/master/res/files.png" style="max-width: 100%">
 <h3>Usage</h3>
 
-<div><pre class="line-numbers"><code class="language-typescript">import { FilesModule } from &#39;&#64;congarevenuecloud/elements&#39;;
+<div><pre class="line-numbers"><code class="language-typescript">import { FilesModule } from &#39;&#64;congacommerce/elements&#39;;
 
 &#64;NgModule({
 imports: [FilesModule, ...]
 })
 export class AppModule {}</code></pre></div><div><pre class="line-numbers"><code class="language-html">```typescript
 &lt;apt-files
-          [recordId]=&quot;recordId&quot;
+          [recordId]=&#39;recordId&#39;
 &gt;&lt;/apt-files&gt;</code></pre></div><div><pre class="line-numbers"><code class="language-none"></code></pre></div>
     </p>
 
@@ -336,7 +335,7 @@ export class AppModule {}</code></pre></div><div><pre class="line-numbers"><code
             </tr>
             <tr>
                 <td class="col-md-4">
-<code>download(file: <a href="../interfaces/IFile.html" target="_self">IFile</a>)</code>
+<code>download(file: <a href="../classes/File.html" target="_self">IFile</a>)</code>
                 </td>
             </tr>
 
@@ -345,6 +344,8 @@ export class AppModule {}</code></pre></div><div><pre class="line-numbers"><code
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>This function used to download attachments.</p>
+</div>
 
                     <div class="io-description">
                         <b>Parameters :</b>
@@ -355,13 +356,14 @@ export class AppModule {}</code></pre></div><div><pre class="line-numbers"><code
                                     <td>Name</td>
                                     <td>Type</td>
                                     <td>Optional</td>
+                                    <td>Description</td>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
                                     <td>file</td>
                                     <td>
-                                                <code><a href="../interfaces/IFile.html" target="_self" >IFile</a></code>
+                                                <code><a href="../classes/File.html" target="_self" >IFile</a></code>
                                     </td>
 
                                     <td>
@@ -369,6 +371,10 @@ export class AppModule {}</code></pre></div><div><pre class="line-numbers"><code
                                     </td>
 
 
+                                    <td>
+                                        <p>is an instance of IFile.</p>
+
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -456,7 +462,7 @@ export class AppModule {}</code></pre></div><div><pre class="line-numbers"><code
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
         var COMPONENT_TEMPLATE = '<div><h5 class="py-2 text-uppercase">    {{\'DETAILS.ATTACHMENTS\' | translate}}    <span *ngIf="fileList$ | async as fileList">({{fileList.length}})</span></h5><div class="row">    <div class="col">        <table class="table table-sm">            <thead>                <tr>                    <th scope="col">#</th>                    <th scope="col">Name</th>                    <th scope="col">Type</th>                    <th scope="col">File Size</th>                    <th scope="col">Created Date</th>                </tr>            </thead>            <tbody>                <tr *ngFor="let file of fileList$ | async">                    <th scope="row">{{file.index}}</th>                    <td><a class="text-underline" (click)="download(file)" target="_blank">{{file.title}}</a></td>                    <td class="text-truncate">{{file.type}}</td>                    <td>{{file.size}}</td>                    <td>{{file.created_date | date:\'short\'}}</td>                </tr>            </tbody>        </table>    </div></div></div>'
-    var COMPONENTS = [{'name': 'AdditionalInformationComponent', 'selector': 'apt-additional-information'},{'name': 'AddressComponent', 'selector': 'apt-address'},{'name': 'AddToCartComponent', 'selector': 'apt-add-to-cart'},{'name': 'AlertComponent', 'selector': 'apt-alert'},{'name': 'AssetDropdownButtonComponent', 'selector': 'apt-asset-dropdown-button'},{'name': 'AssetListComponent', 'selector': 'apt-asset-list'},{'name': 'BreadcrumbComponent', 'selector': 'apt-breadcrumb'},{'name': 'CategoryFilterComponent', 'selector': 'apt-category-filter'},{'name': 'ChartComponent', 'selector': 'apt-chart'},{'name': 'ConstraintRuleAlertComponent', 'selector': 'apt-constraint-rule-alert'},{'name': 'ConstraintRuleSidebarComponent', 'selector': 'apt-constraint-rule-sidebar'},{'name': 'CRIconComponent', 'selector': 'apt-cr-constraint-icon'},{'name': 'CRRecommendedProductsComponent', 'selector': 'apt-cr-recommended-products'},{'name': 'DataFilterComponent', 'selector': 'apt-data-filter'},{'name': 'DependentPicklistComponent', 'selector': 'apt-dependent-picklist'},{'name': 'DotsComponent', 'selector': 'apt-dots'},{'name': 'FacetFilterComponent', 'selector': 'apt-facet-filter'},{'name': 'FavoriteModalComponent', 'selector': 'apt-favorite-modal'},{'name': 'FilesComponent', 'selector': 'apt-files'},{'name': 'GenerateDocumentComponent', 'selector': 'apt-generate-document'},{'name': 'InputDateComponent', 'selector': 'apt-date-range-input'},{'name': 'InputFieldComponent', 'selector': 'apt-input-field'},{'name': 'InputSelectComponent', 'selector': 'apt-input-select'},{'name': 'JumbotronComponent', 'selector': 'apt-jumbotron'},{'name': 'LineitemCardComponent', 'selector': 'apt-lineitem-card'},{'name': 'LineItemMenuComponent', 'selector': 'apt-line-item-menu'},{'name': 'LineItemTableRowComponent', 'selector': 'apt-line-item-table-row'},{'name': 'MiniCartComponent', 'selector': 'apt-mini-cart'},{'name': 'MiniProfileComponent', 'selector': 'apt-mini-profile'},{'name': 'OutputFieldComponent', 'selector': 'apt-output-field'},{'name': 'PaymentComponent', 'selector': 'apt-payment'},{'name': 'PaymentIFrameComponent', 'selector': 'apt-payment-iframe'},{'name': 'PopoverComponent', 'selector': 'apt-popover'},{'name': 'PresentDocumentComponent', 'selector': 'apt-present-document'},{'name': 'PriceComponent', 'selector': 'apt-price'},{'name': 'PriceModalComponent', 'selector': 'apt-price-modal'},{'name': 'PriceSummaryComponent', 'selector': 'apt-price-summary'},{'name': 'ProductCardComponent', 'selector': 'apt-product-card'},{'name': 'ProductCarouselComponent', 'selector': 'apt-product-carousel'},{'name': 'ProductCompareComponent', 'selector': 'apt-product-compare'},{'name': 'ProductConfigurationComponent', 'selector': 'apt-product-configuration'},{'name': 'ProductConfigurationSummaryComponent', 'selector': 'apt-product-configuration-summary'},{'name': 'ProductDrawerComponent', 'selector': 'apt-product-drawer'},{'name': 'ProductImagesComponent', 'selector': 'apt-product-images'},{'name': 'ProductSearchComponent', 'selector': 'apt-product-search'},{'name': 'ProductTypeFilterComponent', 'selector': 'apt-product-type-filter'},{'name': 'PromotionComponent', 'selector': 'apt-promotion'},{'name': 'PromotionModalComponent', 'selector': 'apt-pr-modal'},{'name': 'SelectAllComponent', 'selector': 'apt-select-all'},{'name': 'SpinnerComponent', 'selector': 'apt-spinner'},{'name': 'TableComponent', 'selector': 'apt-table'}];
+    var COMPONENTS = [{'name': 'AdditionalInformationComponent', 'selector': 'apt-additional-information'},{'name': 'AddressComponent', 'selector': 'apt-address'},{'name': 'AddToCartComponent', 'selector': 'apt-add-to-cart'},{'name': 'AlertComponent', 'selector': 'apt-alert'},{'name': 'AssetDropdownButtonComponent', 'selector': 'apt-asset-dropdown-button'},{'name': 'AssetListComponent', 'selector': 'apt-asset-list'},{'name': 'BreadcrumbComponent', 'selector': 'apt-breadcrumb'},{'name': 'CategoryFilterComponent', 'selector': 'apt-category-filter'},{'name': 'ChartComponent', 'selector': 'apt-chart'},{'name': 'ConstraintRuleAlertComponent', 'selector': 'apt-constraint-rule-alert'},{'name': 'ConstraintRuleSidebarComponent', 'selector': 'apt-constraint-rule-sidebar'},{'name': 'CRIconComponent', 'selector': 'apt-cr-constraint-icon'},{'name': 'CRRecommendedProductsComponent', 'selector': 'apt-cr-recommended-products'},{'name': 'DataFilterComponent', 'selector': 'apt-data-filter'},{'name': 'DotsComponent', 'selector': 'apt-dots'},{'name': 'FavoriteModalComponent', 'selector': 'apt-favorite-modal'},{'name': 'FilesComponent', 'selector': 'apt-files'},{'name': 'GenerateDocumentComponent', 'selector': 'apt-generate-document'},{'name': 'InputDateComponent', 'selector': 'apt-date-range-input'},{'name': 'InputFieldComponent', 'selector': 'apt-input-field'},{'name': 'InputSelectComponent', 'selector': 'apt-input-select'},{'name': 'JumbotronComponent', 'selector': 'apt-jumbotron'},{'name': 'LineitemCardComponent', 'selector': 'apt-lineitem-card'},{'name': 'LineItemMenuComponent', 'selector': 'apt-line-item-menu'},{'name': 'LineItemTableRowComponent', 'selector': 'apt-line-item-table-row'},{'name': 'LoginFormComponent', 'selector': 'apt-login-form'},{'name': 'MiniCartComponent', 'selector': 'apt-mini-cart'},{'name': 'MiniProfileComponent', 'selector': 'apt-mini-profile'},{'name': 'OutputFieldComponent', 'selector': 'apt-output-field'},{'name': 'PaymentComponent', 'selector': 'apt-payment'},{'name': 'PaymentIFrameComponent', 'selector': 'apt-payment-iframe'},{'name': 'PresentDocumentComponent', 'selector': 'apt-present-document'},{'name': 'PriceComponent', 'selector': 'apt-price'},{'name': 'PriceSummaryComponent', 'selector': 'apt-price-summary'},{'name': 'ProductCardComponent', 'selector': 'apt-product-card'},{'name': 'ProductCarouselComponent', 'selector': 'apt-product-carousel'},{'name': 'ProductCompareComponent', 'selector': 'apt-product-compare'},{'name': 'ProductConfigurationComponent', 'selector': 'apt-product-configuration'},{'name': 'ProductConfigurationSummaryComponent', 'selector': 'apt-product-configuration-summary'},{'name': 'ProductDrawerComponent', 'selector': 'apt-product-drawer'},{'name': 'ProductImagesComponent', 'selector': 'apt-product-images'},{'name': 'ProductSearchComponent', 'selector': 'apt-product-search'},{'name': 'ProductTypeFilterComponent', 'selector': 'apt-product-type-filter'},{'name': 'PromotionComponent', 'selector': 'apt-promotion'},{'name': 'PromotionModalComponent', 'selector': 'apt-pr-modal'},{'name': 'RevalidateCartModalComponent', 'selector': 'apt-revalidate-cart-modal'},{'name': 'SelectAllComponent', 'selector': 'apt-select-all'},{'name': 'SpinnerComponent', 'selector': 'apt-spinner'},{'name': 'TableComponent', 'selector': 'apt-table'},{'name': 'TaxPopHoverComponent', 'selector': 'apt-tax-pophover'}];
     var DIRECTIVES = [{'name': 'AutoFocusDirective', 'selector': '[aptAutoFocus]'}];
     var ACTUAL_COMPONENT = {'name': 'FilesComponent'};
 </script>

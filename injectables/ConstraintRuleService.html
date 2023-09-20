@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Conga Digital Commerce February &#x27;23 on Conga Revenue Lifecycle Platform</title>
+        <title>Conga Digital Commerce June &#x27;23</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -15,7 +15,7 @@
     <body>
 
         <div class="navbar navbar-default navbar-fixed-top visible-xs">
-            <a href="../" class="navbar-brand">Conga Digital Commerce February &#x27;23 on Conga Revenue Lifecycle Platform</a>
+            <a href="../" class="navbar-brand">Conga Digital Commerce June &#x27;23</a>
             <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
         </div>
 
@@ -56,7 +56,7 @@
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>projects/congarevenuecloud/ecommerce/src/lib/modules/constraint-rules/services/constraint-rule.service.ts</code>
+            <code>projects/congacommerce/ecommerce/src/lib/modules/constraint-rules/services/constraint-rule.service.ts</code>
         </p>
 
 
@@ -64,9 +64,18 @@
                 <h3>Description</h3>
             </p>
             <p class="comment">
-                <p><strong> This service is work in progress</strong>
-Constraint rules are a powerful feature when configuring products. They allow you to include, excludes, recommend, validate and replace products based on business logic.</p>
+                <p>Constraint rules are a powerful feature when configuring products. They allow you to include, excludes, recommend, validate and replace products based on business logic.</p>
+<h3>Usage</h3>
 
+<div><pre class="line-numbers"><code class="language-typescript">import { ConstraintRuleService, AObjectService} from &#39;&#64;congacommerce/ecommerce&#39;;
+
+export class MyComponent implements OnInit{
+constructor( private constraintRuleService: ConstraintRuleService)
+}
+// or
+export class MyService extends AObjectService {
+private constraintRuleService: ConstraintRuleService = this.injector.get(ConstraintRuleService);
+}</code></pre></div>
             </p>
 
             <p class="comment">
@@ -123,6 +132,10 @@ Constraint rules are a powerful feature when configuring products. They allow yo
                             <li>
                                     <span class="modifier">Protected</span>
                                 <a href="#productService" >productService</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Protected</span>
+                                <a href="#soapService" >soapService</a>
                             </li>
                             <li>
                                 <a href="#type" >type</a>
@@ -210,7 +223,7 @@ Constraint rules are a powerful feature when configuring products. They allow yo
                     <div class="io-description"><p>This method can be used to fetch the list of constraint rules for the given list of productIds.
 It will return all the configurations of a constraint rules with constraint rule conditon and constraint rule action.</p>
 <h3 id="example">Example:</h3>
-<div><pre class="line-numbers"><code class="language-typescript">import { ConstraintRule, ConstraintRuleService } from &#39;&#64;congarevenuecloud/ecommerce&#39;;
+<div><pre class="line-numbers"><code class="language-typescript">import { ConstraintRule, ConstraintRuleService } from &#39;&#64;congacommerce/ecommerce&#39;;
 
 export class MyComponent implements OnInit{
 rule: Array&lt;ConstraintRule&gt;;
@@ -337,7 +350,7 @@ this.rule$ = this.crService.getConstraintRulesForProducts(productList: Array&lt;
                     <div class="io-description"><p>This method can be used to fetch the list of Applied rule action info records for active cart.
 It returns AppliedRuleActionInfo record having constraint rule action, actionType as Exclusion.</p>
 <h3 id="example">Example:</h3>
-<div><pre class="line-numbers"><code class="language-typescript">import { AppliedRuleActionInfo, ConstraintRuleService } from &#39;&#64;congarevenuecloud/ecommerce&#39;;
+<div><pre class="line-numbers"><code class="language-typescript">import { AppliedRuleActionInfo, ConstraintRuleService } from &#39;&#64;congacommerce/ecommerce&#39;;
 
 export class MyComponent implements OnInit{
 rule: Array&lt;AppliedRuleActionInfo&gt;;
@@ -391,7 +404,7 @@ this.rule$ = this.crService.getExclusionProductActionsForCart();
                     <div class="io-description"><p>This method can be used to fetch the list of Applied rule action info records for active cart.
 It returns  applied rule action info records have pending flag as true.</p>
 <h3 id="example">Example:</h3>
-<div><pre class="line-numbers"><code class="language-typescript">import { AppliedRuleActionInfo, ConstraintRuleService } from &#39;&#64;congarevenuecloud/ecommerce&#39;;
+<div><pre class="line-numbers"><code class="language-typescript">import { AppliedRuleActionInfo, ConstraintRuleService } from &#39;&#64;congacommerce/ecommerce&#39;;
 
 export class MyComponent implements OnInit{
 rule: Array&lt;AppliedRuleActionInfo&gt;;
@@ -444,7 +457,7 @@ this.rule$ = this.crService.getPendingActionsForCart();
                 <td class="col-md-4">
                     <div class="io-description"><p>This method can be used to fetch the list of product for the given cart which has recommended rules set.</p>
 <h3 id="example">Example:</h3>
-<div><pre class="line-numbers"><code class="language-typescript">import { ConstraintRule, ConstraintRuleService } from &#39;&#64;congarevenuecloud/ecommerce&#39;;
+<div><pre class="line-numbers"><code class="language-typescript">import { ConstraintRule, ConstraintRuleService } from &#39;&#64;congacommerce/ecommerce&#39;;
 
 export class MyComponent implements OnInit{
 products: Array&lt;Product&gt;;
@@ -529,7 +542,7 @@ this.products$ = this.crService.getRecommendationsForCart();
                 <td class="col-md-4">
                     <div class="io-description"><p>This method can be used to fetch the list of product which has recommended rules set for the list of product passed as argument.</p>
 <h3 id="example">Example:</h3>
-<div><pre class="line-numbers"><code class="language-typescript">import { ConstraintRule, ConstraintRuleService } from &#39;&#64;congarevenuecloud/ecommerce&#39;;
+<div><pre class="line-numbers"><code class="language-typescript">import { ConstraintRule, ConstraintRuleService } from &#39;&#64;congacommerce/ecommerce&#39;;
 
 export class MyComponent implements OnInit{
 products: Array&lt;Product&gt;;
@@ -615,7 +628,7 @@ this.products$ = this.crService.getRecommendationsForProducts(productList: Array
                     <div class="io-description"><p>This method can be used to fetch the list of ConstraintRule records for given product identifier.
 It do not fetch the constraint rule record if SkipRule flag is true.</p>
 <h3 id="example">Example:</h3>
-<div><pre class="line-numbers"><code class="language-typescript">import { ConstraintRule, ConstraintRuleService } from &#39;&#64;congarevenuecloud/ecommerce&#39;;
+<div><pre class="line-numbers"><code class="language-typescript">import { ConstraintRule, ConstraintRuleService } from &#39;&#64;congacommerce/ecommerce&#39;;
 
 export class MyComponent implements OnInit{
 rule: Array&lt;ConstraintRule&gt;;
@@ -700,7 +713,7 @@ this.rule$ = this.crService.getRuleByProductId(productId: string);
                 <td class="col-md-4">
                     <div class="io-description"><p>This method returns boolean value for  active cart&#39;s applied rule action record based on pending flag.</p>
 <h3 id="example">Example:</h3>
-<div><pre class="line-numbers"><code class="language-typescript">import { ConstraintRule, ConstraintRuleService } from &#39;&#64;congarevenuecloud/ecommerce&#39;;
+<div><pre class="line-numbers"><code class="language-typescript">import { ConstraintRule, ConstraintRuleService } from &#39;&#64;congacommerce/ecommerce&#39;;
 
 export class MyComponent implements OnInit{
 haserror: boolean;
@@ -985,6 +998,27 @@ this.haserror$ = this.crService.hasPendingErrors();
                 <tr>
                     <td class="col-md-4">
                         <i>Default value : </i><code>this.injector.get(ProductService)</code>
+                    </td>
+                </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="soapService"></a>
+                    <span class="name">
+                            <span class="modifier">Protected</span>
+                        <span ><b>soapService</b></span>
+                        <a href="#soapService"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>this.injector.get(SoapService)</code>
                     </td>
                 </tr>
 

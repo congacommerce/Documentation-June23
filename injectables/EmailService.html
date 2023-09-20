@@ -3,19 +3,19 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Conga Digital Commerce September &#x27;22 on Conga Revenue Lifecycle Platform</title>
+        <title>Conga Digital Commerce June &#x27;23</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
 	   <link rel="stylesheet" href="../styles/style.css">
-        <link rel="stylesheet" href="../styles/dark.css" media="(prefers-color-scheme: dark)">
+        <link rel="stylesheet" href="../styles/dark.css">
         <link rel="stylesheet" href="../styles/material.css">
     </head>
     <body>
 
         <div class="navbar navbar-default navbar-fixed-top visible-xs">
-            <a href="../" class="navbar-brand">Conga Digital Commerce September &#x27;22 on Conga Revenue Lifecycle Platform</a>
+            <a href="../" class="navbar-brand">Conga Digital Commerce June &#x27;23</a>
             <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
         </div>
 
@@ -31,6 +31,7 @@
                <!-- START CONTENT -->
                <div class="content injectable">
                    <div class="content-data">
+
 
 
 
@@ -64,7 +65,17 @@
             </p>
             <p class="comment">
                 <p>The email service provides methods for interacting with the emails of the current user has access to.</p>
+<h3>Usage</h3>
 
+<div><pre class="line-numbers"><code class="language-typescript">import { EmailService, AObjectService} from &#39;&#64;congacommerce/ecommerce&#39;;
+
+export class MyComponent implements OnInit{
+constructor( private emailService: EmailService)
+}
+// or
+export class MyService extends AObjectService {
+private emailService: EmailService = this.injector.get(EmailService);
+}</code></pre></div>
             </p>
 
             <p class="comment">
@@ -93,9 +104,6 @@
                                 <a href="#guestUserNewOrderNotification" >guestUserNewOrderNotification</a>
                             </li>
                             <li>
-                                <a href="#orderStatusChangeNotification" >orderStatusChangeNotification</a>
-                            </li>
-                            <li>
                                     <span class="modifier">Public</span>
                                 <a href="#sendEmail" >sendEmail</a>
                             </li>
@@ -106,6 +114,9 @@
                             <li>
                                     <span class="modifier">Public</span>
                                 <a href="#sendEmailToAddress" >sendEmailToAddress</a>
+                            </li>
+                            <li>
+                                <a href="#statusChangeNotification" >statusChangeNotification</a>
                             </li>
                         </ul>
                     </td>
@@ -150,7 +161,18 @@
             <tr>
                 <td class="col-md-4">
                     <div class="io-description"><p>Send email notification for new order to the guest user</p>
-</div>
+<h3 id="example">Example:</h3>
+<div><pre class="line-numbers"><code class="language-typescript">import { EmailService } from &#39;&#64;congacommerce/ecommerce&#39;;
+import { Observable } from &#39;rxjs/Observable&#39;;
+
+export class MyComponent implements OnInit{
+result;
+constructor(private emailService: EmailService){}
+
+guestUserNewOrderNotification(orderId: string, orderURL: string){
+this.emailService.guestUserNewOrderNotification(orderId, orderUrl).subscribe(res=&gt; this.result=res);
+}
+}</code></pre></div></div>
 
                     <div class="io-description">
                         <b>Parameters :</b>
@@ -218,157 +240,6 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="orderStatusChangeNotification"></a>
-                    <span class="name">
-                        <span ><b>orderStatusChangeNotification</b></span>
-                        <a href="#orderStatusChangeNotification"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-            <tr>
-                <td class="col-md-4">
-<code>orderStatusChangeNotification(templateName: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, orderId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, recipentId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, toAddresses?: string[], ccAddresses?: string[], attachmentIds?: string[])</code>
-                </td>
-            </tr>
-
-
-
-
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-description"><p>Send email notification on change status of the order</p>
-</div>
-
-                    <div class="io-description">
-                        <b>Parameters :</b>
-                        
-                        <table class="params">
-                            <thead>
-                                <tr>
-                                    <td>Name</td>
-                                    <td>Type</td>
-                                    <td>Optional</td>
-                                    <td>Description</td>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>templateName</td>
-                                    <td>
-                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
-                                    </td>
-
-                                    <td>
-                                        No
-                                    </td>
-
-
-                                    <td>
-                                        <p>name of the template to be used.</p>
-
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>orderId</td>
-                                    <td>
-                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
-                                    </td>
-
-                                    <td>
-                                        No
-                                    </td>
-
-
-                                    <td>
-                                        <p>generated order Id</p>
-
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>recipentId</td>
-                                    <td>
-                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
-                                    </td>
-
-                                    <td>
-                                        No
-                                    </td>
-
-
-                                    <td>
-                                        <p>which contact from the account to be used.</p>
-
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>toAddresses</td>
-                                    <td>
-                                            <code>string[]</code>
-                                    </td>
-
-                                    <td>
-                                        Yes
-                                    </td>
-
-
-                                    <td>
-                                        <p>which Addresses to be used to send email.</p>
-
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>ccAddresses</td>
-                                    <td>
-                                            <code>string[]</code>
-                                    </td>
-
-                                    <td>
-                                        Yes
-                                    </td>
-
-
-                                    <td>
-                                        <p>optional which Addresses to be used in cc to send email.</p>
-
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>attachmentIds</td>
-                                    <td>
-                                            <code>string[]</code>
-                                    </td>
-
-                                    <td>
-                                        Yes
-                                    </td>
-
-
-                                    <td>
-                                        <p>list of attachment Id</p>
-
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div>
-                    </div>
-                    <div class="io-description">
-                        <b>Returns : </b>    <code>Observable&lt;any&gt;</code>
-
-                    </div>
-                    <div class="io-description">
-                        <p>an observable</p>
-
-                    </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
                     <a name="sendEmail"></a>
                     <span class="name">
                         <span class="modifier">Public</span>
@@ -390,7 +261,21 @@
             <tr>
                 <td class="col-md-4">
                     <div class="io-description"><p> send email with the list of email content.</p>
-</div>
+<h3 id="example">Example:</h3>
+<div><pre class="line-numbers"><code class="language-typescript">import { EmailService } from &#39;&#64;congacommerce/ecommerce&#39;;
+import { Observable } from &#39;rxjs/Observable&#39;;
+
+export class MyComponent implements OnInit{
+emailUpdates;
+emailUpdates$ : Observable&lt;any&gt;;
+constructor(private emailService: EmailService){}
+
+sendEmail(emailContentList: MailContent[]){
+this.emailService.sendEmail(emailContentList).subscribe(a =&gt; this.emailUpdates = a);
+// or
+emailUpdates$ = this.emailService.sendEmail(emailContentList);
+}
+}</code></pre></div></div>
 
                     <div class="io-description">
                         <b>Parameters :</b>
@@ -463,7 +348,17 @@
             <tr>
                 <td class="col-md-4">
                     <div class="io-description"><p> send email template</p>
-</div>
+<h3 id="example">Example:</h3>
+<div><pre class="line-numbers"><code class="language-typescript">import { EmailService } from &#39;&#64;congacommerce/ecommerce&#39;;
+import { Observable } from &#39;rxjs/Observable&#39;;
+
+export class MyComponent implements OnInit{
+constructor(private emailService: EmailService){}
+
+sendEmailTemplate(templateName: string, to: User, what: AObject){
+this.emailService.sendEmailTemplate(templateName, to, what);
+}
+}</code></pre></div></div>
 
                     <div class="io-description">
                         <b>Parameters :</b>
@@ -568,7 +463,17 @@
             <tr>
                 <td class="col-md-4">
                     <div class="io-description"><p> send email to address</p>
-</div>
+<h3 id="example">Example:</h3>
+<div><pre class="line-numbers"><code class="language-typescript">import { EmailService } from &#39;&#64;congacommerce/ecommerce&#39;;
+import { Observable } from &#39;rxjs/Observable&#39;;
+
+export class MyComponent implements OnInit{
+constructor(private emailService: EmailService){}
+
+sendEmailToAddress(templateName: string, to: User, what: AObject){
+this.emailService.sendEmailToAddress(templateName, to, what);
+}
+}</code></pre></div></div>
 
                     <div class="io-description">
                         <b>Parameters :</b>
@@ -664,6 +569,168 @@
             </tr>
         </tbody>
     </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="statusChangeNotification"></a>
+                    <span class="name">
+                        <span ><b>statusChangeNotification</b></span>
+                        <a href="#statusChangeNotification"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>statusChangeNotification(templateName: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, recipentId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, toAddresses?: string[], ccAddresses?: string[], attachmentIds?: string[])</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Send email notification on change status of the order</p>
+<h3 id="example">Example:</h3>
+<div><pre class="line-numbers"><code class="language-typescript">import { EmailService } from &#39;&#64;congacommerce/ecommerce&#39;;
+import { Observable } from &#39;rxjs/Observable&#39;;
+
+export class MyComponent implements OnInit{
+result;
+constructor(private emailService: EmailService){}
+
+statusChangeNotification(templateName: string, id: string, recipentId: string){
+this.emailService.statusChangeNotification(templateName, id, recipentId).subscribe(res=&gt; this.result=res);
+}
+}</code></pre></div></div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>templateName</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>name of the template to be used.</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>id</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>generated order/quote Id</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>recipentId</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>which contact from the account to be used.</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>toAddresses</td>
+                                    <td>
+                                            <code>string[]</code>
+                                    </td>
+
+                                    <td>
+                                        Yes
+                                    </td>
+
+
+                                    <td>
+                                        <p>which Addresses to be used to send email.</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>ccAddresses</td>
+                                    <td>
+                                            <code>string[]</code>
+                                    </td>
+
+                                    <td>
+                                        Yes
+                                    </td>
+
+
+                                    <td>
+                                        <p>optional which Addresses to be used in cc to send email.</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>attachmentIds</td>
+                                    <td>
+                                            <code>string[]</code>
+                                    </td>
+
+                                    <td>
+                                        Yes
+                                    </td>
+
+
+                                    <td>
+                                        <p>list of attachment Id</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Observable&lt;any&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>an observable</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
 </section>
 
     </div>
@@ -671,6 +738,7 @@
 
 
 </div>
+
 
 
 
@@ -696,6 +764,15 @@
                <!-- END CONTENT -->
            </div>
        </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
 
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;

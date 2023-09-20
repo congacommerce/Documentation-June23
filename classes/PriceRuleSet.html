@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Conga Digital Commerce February &#x27;23 on Conga Revenue Lifecycle Platform</title>
+        <title>Conga Digital Commerce June &#x27;23</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -15,7 +15,7 @@
     <body>
 
         <div class="navbar navbar-default navbar-fixed-top visible-xs">
-            <a href="../" class="navbar-brand">Conga Digital Commerce February &#x27;23 on Conga Revenue Lifecycle Platform</a>
+            <a href="../" class="navbar-brand">Conga Digital Commerce June &#x27;23</a>
             <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
         </div>
 
@@ -60,7 +60,7 @@
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>projects/congarevenuecloud/ecommerce/src/lib/modules/pricing/classes/price-rule.model.ts</code>
+            <code>projects/congacommerce/ecommerce/src/lib/modules/pricing/classes/price-rule.model.ts</code>
         </p>
 
 
@@ -90,6 +90,9 @@
                                 <a href="#Active" >Active</a>
                             </li>
                             <li>
+                                <a href="#AdjustmentAppliesTo" >AdjustmentAppliesTo</a>
+                            </li>
+                            <li>
                                 <a href="#ApplicationMethod" >ApplicationMethod</a>
                             </li>
                             <li>
@@ -117,10 +120,10 @@
                                 <a href="#HasCriteria" >HasCriteria</a>
                             </li>
                             <li>
-                                <a href="#Incentive" >Incentive</a>
+                                <a href="#IncentiveId" >IncentiveId</a>
                             </li>
                             <li>
-                                <a href="#PriceList" >PriceList</a>
+                                <a href="#PriceListId" >PriceListId</a>
                             </li>
                             <li>
                                 <a href="#ProductCategory" >ProductCategory</a>
@@ -129,7 +132,7 @@
                                 <a href="#ProductFamily" >ProductFamily</a>
                             </li>
                             <li>
-                                <a href="#ProductGroup" >ProductGroup</a>
+                                <a href="#ProductGroupId" >ProductGroupId</a>
                             </li>
                             <li>
                                 <a href="#Sequence" >Sequence</a>
@@ -189,7 +192,42 @@
                         <b>Decorators : </b>
                         <br />
                         <code>
-                            @Expose({name: &#x27;IsActive&#x27;})<br />
+                            @AField({soql: &#x27;Apttus_Config2__Active__c&#x27;, aql: &#x27;Active&#x27;})<br />
+                        </code>
+                    </td>
+                </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="AdjustmentAppliesTo"></a>
+                    <span class="name">
+                        <span ><b>AdjustmentAppliesTo</b></span>
+                        <a href="#AdjustmentAppliesTo"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>null</code>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <b>Decorators : </b>
+                        <br />
+                        <code>
+                            @AField({soql: &#x27;Apttus_Config2__AdjustmentAppliesTo__c&#x27;, aql: &#x27;AdjustmentAppliesTo&#x27;})<br />
                         </code>
                     </td>
                 </tr>
@@ -224,7 +262,7 @@
                         <b>Decorators : </b>
                         <br />
                         <code>
-                            @Expose({name: &#x27;ApplicationMethod&#x27;})<br />
+                            @AField({soql: &#x27;Apttus_Config2__ApplicationMethod__c&#x27;, aql: &#x27;ApplicationMethod&#x27;})<br />
                         </code>
                     </td>
                 </tr>
@@ -259,7 +297,7 @@
                         <b>Decorators : </b>
                         <br />
                         <code>
-                            @Expose({name: &#x27;Category&#x27;})<br />
+                            @AField({soql: &#x27;Apttus_Config2__Category__c&#x27;, aql: &#x27;Category&#x27;})<br />
                         </code>
                     </td>
                 </tr>
@@ -294,7 +332,7 @@
                         <b>Decorators : </b>
                         <br />
                         <code>
-                            @Expose({name: &#x27;ChargeType&#x27;})<br />
+                            @AField({soql: &#x27;Apttus_Config2__ChargeType__c&#x27;, aql: &#x27;ChargeType&#x27;})<br />
                         </code>
                     </td>
                 </tr>
@@ -329,7 +367,7 @@
                         <b>Decorators : </b>
                         <br />
                         <code>
-                            @Expose({name: &#x27;Criteria&#x27;})<br />
+                            @AField({soql: &#x27;Apttus_Config2__Criteria__c&#x27;, aql: &#x27;Criteria&#x27;})<br />
                         </code>
                     </td>
                 </tr>
@@ -364,7 +402,7 @@
                         <b>Decorators : </b>
                         <br />
                         <code>
-                            @Expose({name: &#x27;Description&#x27;})<br />
+                            @AField({soql: &#x27;Apttus_Config2__Description__c&#x27;, aql: &#x27;Description&#x27;})<br />
                         </code>
                     </td>
                 </tr>
@@ -399,7 +437,7 @@
                         <b>Decorators : </b>
                         <br />
                         <code>
-                            @Expose({name: &#x27;EffectiveDate&#x27;})<br />
+                            @AField({soql: &#x27;Apttus_Config2__EffectiveDate__c&#x27;, aql: &#x27;EffectiveDate&#x27;})<br />
                         </code>
                     </td>
                 </tr>
@@ -434,7 +472,7 @@
                         <b>Decorators : </b>
                         <br />
                         <code>
-                            @Expose({name: &#x27;ExclusionCriteria&#x27;})<br />
+                            @AField({soql: &#x27;Apttus_Config2__ExclusionCriteria__c&#x27;, aql: &#x27;ExclusionCriteria&#x27;})<br />
                         </code>
                     </td>
                 </tr>
@@ -469,7 +507,7 @@
                         <b>Decorators : </b>
                         <br />
                         <code>
-                            @Expose({name: &#x27;ExpirationDate&#x27;})<br />
+                            @AField({soql: &#x27;Apttus_Config2__ExpirationDate__c&#x27;, aql: &#x27;ExpirationDate&#x27;})<br />
                         </code>
                     </td>
                 </tr>
@@ -504,7 +542,7 @@
                         <b>Decorators : </b>
                         <br />
                         <code>
-                            @Expose({name: &#x27;HasCriteria&#x27;})<br />
+                            @AField({soql: &#x27;Apttus_Config2__HasCriteria__c&#x27;, aql: &#x27;HasCriteria&#x27;})<br />
                         </code>
                     </td>
                 </tr>
@@ -516,16 +554,16 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="Incentive"></a>
+                    <a name="IncentiveId"></a>
                     <span class="name">
-                        <span ><b>Incentive</b></span>
-                        <a href="#Incentive"><span class="icon ion-ios-link"></span></a>
+                        <span ><b>IncentiveId</b></span>
+                        <a href="#IncentiveId"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
             </tr>
                 <tr>
                     <td class="col-md-4">
-                        <i>Type : </i>        <code><a href="../classes/Incentive.html" target="_self" >Incentive</a></code>
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
 
                     </td>
                 </tr>
@@ -539,7 +577,7 @@
                         <b>Decorators : </b>
                         <br />
                         <code>
-                            @Expose({name: &#x27;Incentive&#x27;})<br />@Type(undefined)<br />
+                            @AField({soql: &#x27;Apttus_Config2__IncentiveId__c&#x27;, aql: &#x27;IncentiveId&#x27;})<br />
                         </code>
                     </td>
                 </tr>
@@ -551,16 +589,16 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="PriceList"></a>
+                    <a name="PriceListId"></a>
                     <span class="name">
-                        <span ><b>PriceList</b></span>
-                        <a href="#PriceList"><span class="icon ion-ios-link"></span></a>
+                        <span ><b>PriceListId</b></span>
+                        <a href="#PriceListId"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
             </tr>
                 <tr>
                     <td class="col-md-4">
-                        <i>Type : </i>        <code><a href="../classes/PriceList.html" target="_self" >PriceList</a></code>
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
 
                     </td>
                 </tr>
@@ -574,7 +612,7 @@
                         <b>Decorators : </b>
                         <br />
                         <code>
-                            @Expose({name: &#x27;PriceList&#x27;})<br />@Type(undefined)<br />
+                            @AField({soql: &#x27;Apttus_Config2__PriceListId__c&#x27;, aql: &#x27;PriceListId&#x27;})<br />
                         </code>
                     </td>
                 </tr>
@@ -609,7 +647,7 @@
                         <b>Decorators : </b>
                         <br />
                         <code>
-                            @Expose({name: &#x27;ProductCategory&#x27;})<br />
+                            @AField({soql: &#x27;Apttus_Config2__ProductCategory__c&#x27;, aql: &#x27;ProductCategory&#x27;})<br />
                         </code>
                     </td>
                 </tr>
@@ -644,7 +682,7 @@
                         <b>Decorators : </b>
                         <br />
                         <code>
-                            @Expose({name: &#x27;ProductFamily&#x27;})<br />
+                            @AField({soql: &#x27;Apttus_Config2__ProductFamily__c&#x27;, aql: &#x27;ProductFamily&#x27;})<br />
                         </code>
                     </td>
                 </tr>
@@ -656,16 +694,16 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="ProductGroup"></a>
+                    <a name="ProductGroupId"></a>
                     <span class="name">
-                        <span ><b>ProductGroup</b></span>
-                        <a href="#ProductGroup"><span class="icon ion-ios-link"></span></a>
+                        <span ><b>ProductGroupId</b></span>
+                        <a href="#ProductGroupId"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
             </tr>
                 <tr>
                     <td class="col-md-4">
-                        <i>Type : </i>        <code><a href="../classes/ProductGroup.html" target="_self" >ProductGroup</a></code>
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
 
                     </td>
                 </tr>
@@ -679,7 +717,7 @@
                         <b>Decorators : </b>
                         <br />
                         <code>
-                            @Expose({name: &#x27;ProductGroup&#x27;})<br />@Type(undefined)<br />
+                            @AField({soql: &#x27;Apttus_Config2__ProductGroupId__c&#x27;, aql: &#x27;ProductGroupId&#x27;})<br />
                         </code>
                     </td>
                 </tr>
@@ -714,7 +752,7 @@
                         <b>Decorators : </b>
                         <br />
                         <code>
-                            @Expose({name: &#x27;Sequence&#x27;})<br />
+                            @AField({soql: &#x27;Apttus_Config2__Sequence__c&#x27;, aql: &#x27;Sequence&#x27;})<br />
                         </code>
                     </td>
                 </tr>
@@ -749,7 +787,7 @@
                         <b>Decorators : </b>
                         <br />
                         <code>
-                            @Expose({name: &#x27;StopProcessingMoreRules&#x27;})<br />
+                            @AField({soql: &#x27;Apttus_Config2__StopProcessingMoreRules__c&#x27;, aql: &#x27;StopProcessingMoreRules&#x27;})<br />
                         </code>
                     </td>
                 </tr>
@@ -784,7 +822,7 @@
                         <b>Decorators : </b>
                         <br />
                         <code>
-                            @Expose({name: &#x27;Type&#x27;})<br />
+                            @AField({soql: &#x27;Apttus_Config2__Type__c&#x27;, aql: &#x27;Type&#x27;})<br />
                         </code>
                     </td>
                 </tr>
@@ -819,7 +857,7 @@
                         <b>Decorators : </b>
                         <br />
                         <code>
-                            @Expose({name: &#x27;UseType&#x27;})<br />
+                            @AField({soql: &#x27;Apttus_Config2__UseType__c&#x27;, aql: &#x27;UseType&#x27;})<br />
                         </code>
                     </td>
                 </tr>

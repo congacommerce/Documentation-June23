@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Conga Digital Commerce February &#x27;23 on Conga Revenue Lifecycle Platform</title>
+        <title>Conga Digital Commerce June &#x27;23</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -15,7 +15,7 @@
     <body>
 
         <div class="navbar navbar-default navbar-fixed-top visible-xs">
-            <a href="../" class="navbar-brand">Conga Digital Commerce February &#x27;23 on Conga Revenue Lifecycle Platform</a>
+            <a href="../" class="navbar-brand">Conga Digital Commerce June &#x27;23</a>
             <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
         </div>
 
@@ -56,27 +56,10 @@
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>projects/congarevenuecloud/elements/src/lib/product-drawer/product-drawer.service.ts</code>
+            <code>projects/congacommerce/elements/src/lib/product-drawer/product-drawer.service.ts</code>
         </p>
 
 
-            <p class="comment">
-                <h3>Description</h3>
-            </p>
-            <p class="comment">
-                <p>Product Drawer service is used to check Drawer status(open/close).</p>
-<h3>Usage</h3>
-
-<div><pre class="line-numbers"><code class="language-typescript">import { ProductDrawerService, AObjectService} from &#39;&#64;congarevenuecloud/ecommerce&#39;;
-
-export class MyComponent implements OnInit{
-constructor( private productDrawerService: ProductDrawerService)
-}
-// or
-export class MyService extends AObjectService {
-private productDrawerService: ProductDrawerService = this.injector.get(ProductDrawerService);
-}</code></pre></div>
-            </p>
 
 
 
@@ -153,7 +136,7 @@ private productDrawerService: ProductDrawerService = this.injector.get(ProductDr
                 <td class="col-md-4">
                     <div class="io-description"><p>To close the drawer</p>
 <h3 id="example">Example:</h3>
-<div><pre class="line-numbers"><code class="language-typescript">import { ProductDrawerService } from &#39;&#64;congarevenuecloud/ecommerce&#39;;
+<div><pre class="line-numbers"><code class="language-typescript">import { ProductDrawerService } from &#39;&#64;congacommerce/ecommerce&#39;;
 import { Observable } from &#39;rxjs/Observable&#39;;
 
 export class MyComponent implements OnInit{
@@ -198,14 +181,7 @@ this.productDrawerService.closeDrawer();
                 <td class="col-md-4">
                     <div class="io-description"><p>check drawer is open or close</p>
 <h3 id="example">Example:</h3>
-<div><pre class="line-numbers"><code class="language-typescript">import { ProductDrawerService } from &#39;&#64;congarevenuecloud/ecommerce&#39;;
-import { Observable } from &#39;rxjs/Observable&#39;;
-
-export class MyComponent implements OnInit{
-isOpen$: Observable&lt;boolean&gt;;
-isOpen: boolean;
-
-constructor(private productDrawerService: ProductDrawerService){}
+<div><pre class="line-numbers"><code class="language-typescript">
 
 isDrawerOpen(){
 this.productDrawerService.isDrawerOpen().subscribe(a =&gt; this.isOpen = a);
@@ -254,7 +230,7 @@ this.isOpen$ = this.productDrawerService.isDrawerOpen();
                 <td class="col-md-4">
                     <div class="io-description"><p>TO open the drawer</p>
 <h3 id="example">Example:</h3>
-<div><pre class="line-numbers"><code class="language-typescript">import { ProductDrawerService } from &#39;&#64;congarevenuecloud/ecommerce&#39;;
+<div><pre class="line-numbers"><code class="language-typescript">import { ProductDrawerService } from &#39;&#64;congacommerce/ecommerce&#39;;
 import { Observable } from &#39;rxjs/Observable&#39;;
 
 export class MyComponent implements OnInit{
@@ -299,7 +275,7 @@ this.productDrawerService.openDrawer();
                 <td class="col-md-4">
                     <div class="io-description"><p>toggle the drawer action. close if it is open or vice versa</p>
 <h3 id="example">Example:</h3>
-<div><pre class="line-numbers"><code class="language-typescript">import { ProductDrawerService } from &#39;&#64;congarevenuecloud/ecommerce&#39;;
+<div><pre class="line-numbers"><code class="language-typescript">import { ProductDrawerService } from &#39;&#64;congacommerce/ecommerce&#39;;
 import { Observable } from &#39;rxjs/Observable&#39;;
 
 export class MyComponent implements OnInit{

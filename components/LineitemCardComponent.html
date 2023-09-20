@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Conga Digital Commerce February &#x27;23 on Conga Revenue Lifecycle Platform</title>
+        <title>Conga Digital Commerce June &#x27;23</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -15,7 +15,7 @@
     <body>
 
         <div class="navbar navbar-default navbar-fixed-top visible-xs">
-            <a href="../" class="navbar-brand">Conga Digital Commerce February &#x27;23 on Conga Revenue Lifecycle Platform</a>
+            <a href="../" class="navbar-brand">Conga Digital Commerce June &#x27;23</a>
             <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
         </div>
 
@@ -62,7 +62,7 @@
     <h3>File</h3>
 </p>
 <p class="comment">
-    <code>projects/congarevenuecloud/elements/src/lib/lineitem-card/lineitem-card.component.ts</code>
+    <code>projects/congacommerce/elements/src/lib/lineitem-card/lineitem-card.component.ts</code>
 </p>
 
 
@@ -75,7 +75,7 @@
 <img src="https://raw.githubusercontent.com/Apttus-Ecom/Summer19/master/res/line_item_card.png" style="max-width: 100%">
 <h3>Usage</h3>
 
-<div><pre class="line-numbers"><code class="language-typescript">import { LineItemCardModule } from &#39;&#64;congarevenuecloud/elements&#39;;
+<div><pre class="line-numbers"><code class="language-typescript">import { LineItemCardModule } from &#39;&#64;congacommerce/elements&#39;;
 
 &#64;NgModule({
 imports: [LineItemCardModule, ...]
@@ -202,7 +202,7 @@ export class AppModule {}</code></pre></div><div><pre class="line-numbers"><code
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor(config: ConfigurationService, BatchSelectionService: BatchSelectionService)</code>
+<code>constructor(config: ConfigurationService, BatchSelectionService: <a href="../injectables/BatchSelectionService.html" target="_self">BatchSelectionService</a>)</code>
                     </td>
                 </tr>
 
@@ -235,7 +235,7 @@ export class AppModule {}</code></pre></div><div><pre class="line-numbers"><code
                                                         <td>BatchSelectionService</td>
                                                   
                                                         <td>
-                                                                    <code>BatchSelectionService</code>
+                                                                        <code><a href="../injectables/BatchSelectionService.html" target="_self" >BatchSelectionService</a></code>
                                                         </td>
                                                   
                                                     <td>
@@ -382,7 +382,7 @@ export class AppModule {}</code></pre></div><div><pre class="line-numbers"><code
       &lt;a href&#x3D;&quot;javascript:void(0)&quot; [routerLink]&#x3D;&quot;[&#x27;/products&#x27;, _product[identifier], _lineItem[identifier]]&quot;
         [state]&#x3D;&quot;_product&quot;&gt;
         &lt;div class&#x3D;&quot;img-container&quot;&gt;
-          &lt;img class&#x3D;&quot;card-img-top w-auto m-auto d-flex align-self-center&quot; [src]&#x3D;&quot;_product.IconId | image&quot;
+          &lt;img class&#x3D;&quot;card-img-top w-100 m-auto d-flex align-self-center&quot; [src]&#x3D;&quot;_product.IconId | image&quot;
             [alt]&#x3D;&quot;_product.Name&quot; *ngIf&#x3D;&quot;thumbnail&quot;&gt;
         &lt;/div&gt;
 
@@ -517,8 +517,8 @@ export class AppModule {}</code></pre></div><div><pre class="line-numbers"><code
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><ng-container *ngIf="_lineItem && _lineItem[identifier]">  <div class="card">    <div class="card-body readonly p-3">      <div class="card-title d-flex justify-content-between align-items-start">        <p class="m-0 card-title font-weight-bold text-break" tooltip="{{_product?.Name}}" container="body"          placement="top">{{_product?.Name | truncate:30}}</p>        <button type="button" class="btn btn-link p-0 close" aria-label="Close" (click)="removeCartItem()"          *ngIf="selected$ | async">          <span aria-hidden="true">&times;</span>        </button>      </div>      <a href="javascript:void(0)" [routerLink]="[\'/products\', _product[identifier], _lineItem[identifier]]"        [state]="_product">        <div class="img-container">          <img class="card-img-top w-auto m-auto d-flex align-self-center" [src]="_product.IconId | image"            [alt]="_product.Name" *ngIf="thumbnail">        </div>        <span class="card-text font-weight-bold d-flex flex-column justify-content-between mt-2" *ngIf="showPrice">          <span>{{\'COMMON.NET_PRICE\' | translate}}</span>          <apt-price [record]="_lineItem" type="net"></apt-price>        </span>      </a>    </div>  </div></ng-container></div>'
-    var COMPONENTS = [{'name': 'AdditionalInformationComponent', 'selector': 'apt-additional-information'},{'name': 'AddressComponent', 'selector': 'apt-address'},{'name': 'AddToCartComponent', 'selector': 'apt-add-to-cart'},{'name': 'AlertComponent', 'selector': 'apt-alert'},{'name': 'AssetDropdownButtonComponent', 'selector': 'apt-asset-dropdown-button'},{'name': 'AssetListComponent', 'selector': 'apt-asset-list'},{'name': 'BreadcrumbComponent', 'selector': 'apt-breadcrumb'},{'name': 'CategoryFilterComponent', 'selector': 'apt-category-filter'},{'name': 'ChartComponent', 'selector': 'apt-chart'},{'name': 'ConstraintRuleAlertComponent', 'selector': 'apt-constraint-rule-alert'},{'name': 'ConstraintRuleSidebarComponent', 'selector': 'apt-constraint-rule-sidebar'},{'name': 'CRIconComponent', 'selector': 'apt-cr-constraint-icon'},{'name': 'CRRecommendedProductsComponent', 'selector': 'apt-cr-recommended-products'},{'name': 'DataFilterComponent', 'selector': 'apt-data-filter'},{'name': 'DependentPicklistComponent', 'selector': 'apt-dependent-picklist'},{'name': 'DotsComponent', 'selector': 'apt-dots'},{'name': 'FacetFilterComponent', 'selector': 'apt-facet-filter'},{'name': 'FavoriteModalComponent', 'selector': 'apt-favorite-modal'},{'name': 'FilesComponent', 'selector': 'apt-files'},{'name': 'GenerateDocumentComponent', 'selector': 'apt-generate-document'},{'name': 'InputDateComponent', 'selector': 'apt-date-range-input'},{'name': 'InputFieldComponent', 'selector': 'apt-input-field'},{'name': 'InputSelectComponent', 'selector': 'apt-input-select'},{'name': 'JumbotronComponent', 'selector': 'apt-jumbotron'},{'name': 'LineitemCardComponent', 'selector': 'apt-lineitem-card'},{'name': 'LineItemMenuComponent', 'selector': 'apt-line-item-menu'},{'name': 'LineItemTableRowComponent', 'selector': 'apt-line-item-table-row'},{'name': 'MiniCartComponent', 'selector': 'apt-mini-cart'},{'name': 'MiniProfileComponent', 'selector': 'apt-mini-profile'},{'name': 'OutputFieldComponent', 'selector': 'apt-output-field'},{'name': 'PaymentComponent', 'selector': 'apt-payment'},{'name': 'PaymentIFrameComponent', 'selector': 'apt-payment-iframe'},{'name': 'PopoverComponent', 'selector': 'apt-popover'},{'name': 'PresentDocumentComponent', 'selector': 'apt-present-document'},{'name': 'PriceComponent', 'selector': 'apt-price'},{'name': 'PriceModalComponent', 'selector': 'apt-price-modal'},{'name': 'PriceSummaryComponent', 'selector': 'apt-price-summary'},{'name': 'ProductCardComponent', 'selector': 'apt-product-card'},{'name': 'ProductCarouselComponent', 'selector': 'apt-product-carousel'},{'name': 'ProductCompareComponent', 'selector': 'apt-product-compare'},{'name': 'ProductConfigurationComponent', 'selector': 'apt-product-configuration'},{'name': 'ProductConfigurationSummaryComponent', 'selector': 'apt-product-configuration-summary'},{'name': 'ProductDrawerComponent', 'selector': 'apt-product-drawer'},{'name': 'ProductImagesComponent', 'selector': 'apt-product-images'},{'name': 'ProductSearchComponent', 'selector': 'apt-product-search'},{'name': 'ProductTypeFilterComponent', 'selector': 'apt-product-type-filter'},{'name': 'PromotionComponent', 'selector': 'apt-promotion'},{'name': 'PromotionModalComponent', 'selector': 'apt-pr-modal'},{'name': 'SelectAllComponent', 'selector': 'apt-select-all'},{'name': 'SpinnerComponent', 'selector': 'apt-spinner'},{'name': 'TableComponent', 'selector': 'apt-table'}];
+        var COMPONENT_TEMPLATE = '<div><ng-container *ngIf="_lineItem && _lineItem[identifier]">  <div class="card">    <div class="card-body readonly p-3">      <div class="card-title d-flex justify-content-between align-items-start">        <p class="m-0 card-title font-weight-bold text-break" tooltip="{{_product?.Name}}" container="body"          placement="top">{{_product?.Name | truncate:30}}</p>        <button type="button" class="btn btn-link p-0 close" aria-label="Close" (click)="removeCartItem()"          *ngIf="selected$ | async">          <span aria-hidden="true">&times;</span>        </button>      </div>      <a href="javascript:void(0)" [routerLink]="[\'/products\', _product[identifier], _lineItem[identifier]]"        [state]="_product">        <div class="img-container">          <img class="card-img-top w-100 m-auto d-flex align-self-center" [src]="_product.IconId | image"            [alt]="_product.Name" *ngIf="thumbnail">        </div>        <span class="card-text font-weight-bold d-flex flex-column justify-content-between mt-2" *ngIf="showPrice">          <span>{{\'COMMON.NET_PRICE\' | translate}}</span>          <apt-price [record]="_lineItem" type="net"></apt-price>        </span>      </a>    </div>  </div></ng-container></div>'
+    var COMPONENTS = [{'name': 'AdditionalInformationComponent', 'selector': 'apt-additional-information'},{'name': 'AddressComponent', 'selector': 'apt-address'},{'name': 'AddToCartComponent', 'selector': 'apt-add-to-cart'},{'name': 'AlertComponent', 'selector': 'apt-alert'},{'name': 'AssetDropdownButtonComponent', 'selector': 'apt-asset-dropdown-button'},{'name': 'AssetListComponent', 'selector': 'apt-asset-list'},{'name': 'BreadcrumbComponent', 'selector': 'apt-breadcrumb'},{'name': 'CategoryFilterComponent', 'selector': 'apt-category-filter'},{'name': 'ChartComponent', 'selector': 'apt-chart'},{'name': 'ConstraintRuleAlertComponent', 'selector': 'apt-constraint-rule-alert'},{'name': 'ConstraintRuleSidebarComponent', 'selector': 'apt-constraint-rule-sidebar'},{'name': 'CRIconComponent', 'selector': 'apt-cr-constraint-icon'},{'name': 'CRRecommendedProductsComponent', 'selector': 'apt-cr-recommended-products'},{'name': 'DataFilterComponent', 'selector': 'apt-data-filter'},{'name': 'DotsComponent', 'selector': 'apt-dots'},{'name': 'FavoriteModalComponent', 'selector': 'apt-favorite-modal'},{'name': 'FilesComponent', 'selector': 'apt-files'},{'name': 'GenerateDocumentComponent', 'selector': 'apt-generate-document'},{'name': 'InputDateComponent', 'selector': 'apt-date-range-input'},{'name': 'InputFieldComponent', 'selector': 'apt-input-field'},{'name': 'InputSelectComponent', 'selector': 'apt-input-select'},{'name': 'JumbotronComponent', 'selector': 'apt-jumbotron'},{'name': 'LineitemCardComponent', 'selector': 'apt-lineitem-card'},{'name': 'LineItemMenuComponent', 'selector': 'apt-line-item-menu'},{'name': 'LineItemTableRowComponent', 'selector': 'apt-line-item-table-row'},{'name': 'LoginFormComponent', 'selector': 'apt-login-form'},{'name': 'MiniCartComponent', 'selector': 'apt-mini-cart'},{'name': 'MiniProfileComponent', 'selector': 'apt-mini-profile'},{'name': 'OutputFieldComponent', 'selector': 'apt-output-field'},{'name': 'PaymentComponent', 'selector': 'apt-payment'},{'name': 'PaymentIFrameComponent', 'selector': 'apt-payment-iframe'},{'name': 'PresentDocumentComponent', 'selector': 'apt-present-document'},{'name': 'PriceComponent', 'selector': 'apt-price'},{'name': 'PriceSummaryComponent', 'selector': 'apt-price-summary'},{'name': 'ProductCardComponent', 'selector': 'apt-product-card'},{'name': 'ProductCarouselComponent', 'selector': 'apt-product-carousel'},{'name': 'ProductCompareComponent', 'selector': 'apt-product-compare'},{'name': 'ProductConfigurationComponent', 'selector': 'apt-product-configuration'},{'name': 'ProductConfigurationSummaryComponent', 'selector': 'apt-product-configuration-summary'},{'name': 'ProductDrawerComponent', 'selector': 'apt-product-drawer'},{'name': 'ProductImagesComponent', 'selector': 'apt-product-images'},{'name': 'ProductSearchComponent', 'selector': 'apt-product-search'},{'name': 'ProductTypeFilterComponent', 'selector': 'apt-product-type-filter'},{'name': 'PromotionComponent', 'selector': 'apt-promotion'},{'name': 'PromotionModalComponent', 'selector': 'apt-pr-modal'},{'name': 'RevalidateCartModalComponent', 'selector': 'apt-revalidate-cart-modal'},{'name': 'SelectAllComponent', 'selector': 'apt-select-all'},{'name': 'SpinnerComponent', 'selector': 'apt-spinner'},{'name': 'TableComponent', 'selector': 'apt-table'},{'name': 'TaxPopHoverComponent', 'selector': 'apt-tax-pophover'}];
     var DIRECTIVES = [{'name': 'AutoFocusDirective', 'selector': '[aptAutoFocus]'}];
     var ACTUAL_COMPONENT = {'name': 'LineitemCardComponent'};
 </script>

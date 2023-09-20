@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Conga Digital Commerce February &#x27;23 on Conga Revenue Lifecycle Platform</title>
+        <title>Conga Digital Commerce June &#x27;23</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -15,7 +15,7 @@
     <body>
 
         <div class="navbar navbar-default navbar-fixed-top visible-xs">
-            <a href="../" class="navbar-brand">Conga Digital Commerce February &#x27;23 on Conga Revenue Lifecycle Platform</a>
+            <a href="../" class="navbar-brand">Conga Digital Commerce June &#x27;23</a>
             <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
         </div>
 
@@ -56,7 +56,7 @@
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>projects/congarevenuecloud/ecommerce/src/lib/modules/catalog/services/product-information.service.ts</code>
+            <code>projects/congacommerce/ecommerce/src/lib/modules/catalog/services/product-information.service.ts</code>
         </p>
 
 
@@ -64,16 +64,18 @@
                 <h3>Description</h3>
             </p>
             <p class="comment">
-                <p><strong>This service is a work in progress.</strong></p>
-<p>The Product Information service is a way to find the attachments associated with a product
- <h3>Usage</h3></p>
-<div><pre class="line-numbers"><code class="language-typescript">import { ProductInformationService, AObjectService } from &#39;&#64;congarevenuecloud/ecommerce&#39;;
-constructor(private productInformationService: ProductInformationService) {
+                <p>The Product Information service is a way to find the attachments associated with a product</p>
+<h3>Usage</h3>
+
+<div><pre class="line-numbers"><code class="language-typescript">import { ProductInformationService } from &#39;&#64;congacommerce/ecommerce&#39;;
+
+constructor(private productInformationService: ProductInformationService) {}
+
 // or
+
 export class MyService extends AObjectService {
 private productInformationService: ProductInformationService = this.injector.get(ProductInformationService);
-}
-</code></pre></div>
+}</code></pre></div>
             </p>
 
             <p class="comment">
@@ -113,10 +115,6 @@ private productInformationService: ProductInformationService = this.injector.get
                         <ul class="index-list">
                             <li>
                                     <span class="modifier">Public</span>
-                                <a href="#donwloadProductAttachment" >donwloadProductAttachment</a>
-                            </li>
-                            <li>
-                                    <span class="modifier">Public</span>
                                 <a href="#getAttachmentUrl" >getAttachmentUrl</a>
                             </li>
                             <li>
@@ -145,88 +143,6 @@ private productInformationService: ProductInformationService = this.injector.get
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="donwloadProductAttachment"></a>
-                    <span class="name">
-                        <span class="modifier">Public</span>
-                        <span ><b>donwloadProductAttachment</b></span>
-                        <a href="#donwloadProductAttachment"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-            <tr>
-                <td class="col-md-4">
-                    <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>donwloadProductAttachment(attachment: <a href="../classes/ProductInformation.html" target="_self">ProductInformation</a>)</code>
-                </td>
-            </tr>
-
-
-
-
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-description"><p>Method is used to download the attachement of product.</p>
-<h3 id="example">Example:</h3>
-<div><pre class="line-numbers"><code class="language-typescript">import { ProductInformationService, ProductInformation } from &#39;&#64;congarevenuecloud/ecommerce&#39;;
-
-export class MyComponent implements OnInit{
-
-constructor(private productInformationService: ProductInformationService){}
-
-donwloadProductAttachment(attachment: ProductInformation){
-this.productInformationService.donwloadProductAttachment(attachment);
-}
-}</code></pre></div></div>
-
-                    <div class="io-description">
-                        <b>Parameters :</b>
-                        
-                        <table class="params">
-                            <thead>
-                                <tr>
-                                    <td>Name</td>
-                                    <td>Type</td>
-                                    <td>Optional</td>
-                                    <td>Description</td>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>attachment</td>
-                                    <td>
-                                                <code><a href="../classes/ProductInformation.html" target="_self" >ProductInformation</a></code>
-                                    </td>
-
-                                    <td>
-                                        No
-                                    </td>
-
-
-                                    <td>
-                                        <p>is an object of Product Information instance.</p>
-
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div>
-                    </div>
-                    <div class="io-description">
-                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
-
-                    </div>
-                    <div class="io-description">
-                        
-                    </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
                     <a name="getAttachmentUrl"></a>
                     <span class="name">
                         <span class="modifier">Public</span>
@@ -248,17 +164,16 @@ this.productInformationService.donwloadProductAttachment(attachment);
             <tr>
                 <td class="col-md-4">
                     <div class="io-description"><p>Method is used to retrieve the string URL for product attachments.</p>
-<h3 id="example">Example:</h3>
-<div><pre class="line-numbers"><code class="language-typescript">import { ProductInformationService } from &#39;&#64;congarevenuecloud/ecommerce&#39;;
-import { Observable } from &#39;rxjs/Observable&#39;;
+<h3 id="example">Example</h3>
+<div><pre class="line-numbers"><code class="language-typescript">import { ProductInformationService, ProductInformation } from &#39;&#64;congacommerce/ecommerce&#39;;
 
 export class MyComponent implements OnInit{
-getUrl: string;
+productAttachments;
 
-constructor(private productInformationService ProductInformationService){}
+constructor(private productInformationService: ProductInformationService){}
 
-getAttachmentUrl(attachmentId: string, productId: string){
-this.fetUrl = this.productInformationService.getAttachmentUrl(attachmentId, productId);
+ngOnInit(){
+this.productAttachments = this.productInformationService.getAttachmentUrl(attachmentId: string, productId: string);
 }
 }</code></pre></div></div>
 
@@ -349,20 +264,19 @@ this.fetUrl = this.productInformationService.getAttachmentUrl(attachmentId, prod
             <tr>
                 <td class="col-md-4">
                     <div class="io-description"><p>Method is used to retrieve the list of production information items with attachments for a given product.</p>
-<h3 id="example">Example:</h3>
-<div><pre class="line-numbers"><code class="language-typescript">import { ProductInformationService, ProductInformation } from &#39;&#64;congarevenuecloud/ecommerce&#39;;
-import { Observable } from &#39;rxjs/Observable&#39;;
+<h3 id="example">Example</h3>
+<div><pre class="line-numbers"><code class="language-typescript">import { ProductInformationService, ProductInformation } from &#39;&#64;congacommerce/ecommerce&#39;;
 
 export class MyComponent implements OnInit{
-productInformationValue$: Observable&lt;ProductInformation&gt;;
-productInformationValue: ProductInformation;
+productsInfo: ProductInformation;
+productsInfo$: Observable&lt;ProductInformation&gt;;
 
-constructor(private productInformationValueService ProductInformationValueService){}
+constructor(private productInformationService: ProductInformationService){}
 
-getProductInformation(productId: string){
-this.productInformationService.getProductInformation(productId).subscribe(a =&gt; this.productInformationValue = a);
+ngOnInit(){
+this.productInformationService.getProductInformation(productId: string).subscribe(products =&gt; {...});
 // or
-this.productInformationValue$ = this.productInformationService.getProductInformation(productId);
+this.productsInfo$ = this.productInformationService.getProductInformation(productId: string);
 }
 }</code></pre></div></div>
 

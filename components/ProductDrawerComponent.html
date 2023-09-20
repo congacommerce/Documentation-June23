@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Conga Digital Commerce February &#x27;23 on Conga Revenue Lifecycle Platform</title>
+        <title>Conga Digital Commerce June &#x27;23</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -15,7 +15,7 @@
     <body>
 
         <div class="navbar navbar-default navbar-fixed-top visible-xs">
-            <a href="../" class="navbar-brand">Conga Digital Commerce February &#x27;23 on Conga Revenue Lifecycle Platform</a>
+            <a href="../" class="navbar-brand">Conga Digital Commerce June &#x27;23</a>
             <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
         </div>
 
@@ -62,7 +62,7 @@
     <h3>File</h3>
 </p>
 <p class="comment">
-    <code>projects/congarevenuecloud/elements/src/lib/product-drawer/product-drawer.component.ts</code>
+    <code>projects/congacommerce/elements/src/lib/product-drawer/product-drawer.component.ts</code>
 </p>
 
 
@@ -70,13 +70,12 @@
         <h3>Description</h3>
     </p>
     <p class="comment">
-        <p>Product drawer component is used to create a toggleable drawer on the bottom of the screen that displays currently selected products and their associated batch actions.
-<strong>This component is a work in progress.</strong></p>
+        <p>Product drawer component is used to create a toggleable drawer on the bottom of the screen that displays currently selected products and their associated batch actions.</p>
 <h3>Preview</h3>
 <img src="https://raw.githubusercontent.com/Apttus-Ecom/Summer19/master/res/productDrawer.png" style="max-width: 100%">
 <h3>Usage</h3>
 
-<div><pre class="line-numbers"><code class="language-typescript">import { ProductDrawerModule } from &#39;&#64;congarevenuecloud/elements&#39;;
+<div><pre class="line-numbers"><code class="language-typescript">import { ProductDrawerModule } from &#39;&#64;congacommerce/elements&#39;;
 
 &#64;NgModule({
 imports: [ProductDrawerModule, ...]
@@ -191,7 +190,7 @@ export class AppModule {}</code></pre></div><div><pre class="line-numbers"><code
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor(batchSelectionService: BatchSelectionService, productDrawerService: <a href="../injectables/ProductDrawerService.html" target="_self">ProductDrawerService</a>, batchActionService: <a href="../classes/BatchAction.html" target="_self">BatchActionService</a>)</code>
+<code>constructor(batchSelectionService: <a href="../injectables/BatchSelectionService.html" target="_self">BatchSelectionService</a>, productDrawerService: <a href="../injectables/ProductDrawerService.html" target="_self">ProductDrawerService</a>, batchActionService: <a href="../classes/BatchAction.html" target="_self">BatchActionService</a>)</code>
                     </td>
                 </tr>
 
@@ -212,7 +211,7 @@ export class AppModule {}</code></pre></div><div><pre class="line-numbers"><code
                                                         <td>batchSelectionService</td>
                                                   
                                                         <td>
-                                                                    <code>BatchSelectionService</code>
+                                                                        <code><a href="../injectables/BatchSelectionService.html" target="_self" >BatchSelectionService</a></code>
                                                         </td>
                                                   
                                                     <td>
@@ -327,41 +326,38 @@ export class AppModule {}</code></pre></div><div><pre class="line-numbers"><code
 
     <div class="tab-pane fade " id="c-templateData">
         <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;bannerWrapper&quot; [class.hiddenBelow]&#x3D;&#x27;!(drawerIsOpen$ | async)&#x27;&gt;
-  &lt;div class&#x3D;&quot;body container-fluid bg-white&quot;
-    *ngIf&#x3D;&quot;{ products: products$ | async, cartItems: cartItems$ | async } as data&quot;&gt;
+  &lt;div class&#x3D;&quot;body container-fluid bg-white&quot; *ngIf&#x3D;&quot;{ products: products$ | async, cartItems: cartItems$ | async } as data&quot;&gt;
     &lt;div class&#x3D;&quot;tab px-3 bg-white&quot; (click)&#x3D;&quot;toggleDrawer()&quot;&gt;
       &lt;span class&#x3D;&quot;d-md-inline&quot;&gt; {{&#x27;COMMON.SELECTIONS&#x27; | translate}} &lt;/span&gt;
       &lt;apt-super-chevron direction&#x3D;&quot;{{!(drawerIsOpen$ | async) ? &#x27;up&#x27; : &#x27;down&#x27;}}&quot;&gt;&lt;/apt-super-chevron&gt;
     &lt;/div&gt;
     &lt;div class&#x3D;&quot;drawer-selection&quot;&gt;
-      &lt;button class&#x3D;&quot;btn btn-sm btn-pill btn-raised shadow-none m-2 p-0 pl-2&quot;
-        *ngIf&#x3D;&quot;data.products &amp;&amp; data.products.length &gt; 0&quot;
-        [ngClass]&#x3D;&quot;activePill&#x3D;&#x3D;&#x3D;&#x27;Product&#x27; ? &#x27;btn-primary&#x27; : &#x27;btn-outline-primary&#x27;&quot; (click)&#x3D;&quot;setActivePill(&#x27;Product&#x27;)&quot;&gt;
-        {{ &#x27;COMMON.PRODUCTS&#x27; | translate }} ({{ data.products.length }})
-        &lt;button class&#x3D;&quot;btn btn-link text-white p-0&quot; (click)&#x3D;&quot;removeAllProducts($event)&quot;&gt;
-          &lt;i class&#x3D;&quot;fas fa-times&quot;&gt;&lt;/i&gt;
+        &lt;button class&#x3D;&quot;btn btn-sm btn-pill btn-raised shadow-none m-2 p-0 pl-2&quot;
+                *ngIf&#x3D;&quot;data.products &amp;&amp; data.products.length &gt; 0&quot;
+                [ngClass]&#x3D;&quot;activePill&#x3D;&#x3D;&#x3D;&#x27;Product&#x27; ? &#x27;btn-primary&#x27; : &#x27;btn-outline-primary&#x27;&quot;
+                (click)&#x3D;&quot;setActivePill(&#x27;Product&#x27;)&quot;&gt;
+                {{ &#x27;COMMON.PRODUCTS&#x27; | translate }} ({{ data.products.length }}) 
+                &lt;button class&#x3D;&quot;btn btn-link text-white p-0&quot; (click)&#x3D;&quot;removeAllProducts($event)&quot;&gt;
+                  &lt;i class&#x3D;&quot;fas fa-times&quot;&gt;&lt;/i&gt;
+                &lt;/button&gt;
         &lt;/button&gt;
-      &lt;/button&gt;
-      &lt;button class&#x3D;&quot;btn btn-sm btn-pill btn-raised shadow-none m-2 p-0 pl-2&quot; id&#x3D;&quot;cartitem&quot;
-        *ngIf&#x3D;&quot;data.cartItems &amp;&amp; data.cartItems.length &gt; 0&quot;
-        [ngClass]&#x3D;&quot;activePill&#x3D;&#x3D;&#x3D;&#x27;CartItem&#x27; ? &#x27;btn-primary&#x27; : &#x27;btn-outline-primary&#x27;&quot; (click)&#x3D;&quot;setActivePill(&#x27;CartItem&#x27;)&quot;&gt;
-        {{ &#x27;COMMON.CARTITEMS&#x27; | translate }} ({{data.cartItems.length}})
-        &lt;button class&#x3D;&quot;btn btn-link text-white p-0&quot; (click)&#x3D;&quot;removeAllCartItems($event)&quot;&gt;
-          &lt;i class&#x3D;&quot;fas fa-times&quot;&gt;&lt;/i&gt;
+        &lt;button class&#x3D;&quot;btn btn-sm btn-pill btn-raised shadow-none m-2 p-0 pl-2&quot;
+                *ngIf&#x3D;&quot;data.cartItems &amp;&amp; data.cartItems.length &gt; 0&quot;
+                [ngClass]&#x3D;&quot;activePill&#x3D;&#x3D;&#x3D;&#x27;CartItem&#x27; ? &#x27;btn-primary&#x27; : &#x27;btn-outline-primary&#x27;&quot;
+                (click)&#x3D;&quot;setActivePill(&#x27;CartItem&#x27;)&quot; &gt;
+                {{ &#x27;COMMON.CARTITEMS&#x27; | translate }} ({{data.cartItems.length}}) 
+                &lt;button class&#x3D;&quot;btn btn-link text-white p-0&quot; (click)&#x3D;&quot;removeAllCartItems($event)&quot;&gt;
+                  &lt;i class&#x3D;&quot;fas fa-times&quot;&gt;&lt;/i&gt;
+                &lt;/button&gt;
         &lt;/button&gt;
-      &lt;/button&gt;
     &lt;/div&gt;
     &lt;div class&#x3D;&quot;row h-100&quot;&gt;
       &lt;div class&#x3D;&quot;col-lg-10 col-md-9 col-12&quot;&gt;
-        &lt;div class&#x3D;&quot;justify-content-center flex-column&quot; *ngIf&#x3D;&quot;data.products &amp;&amp; data.products?.length &gt; 0&quot;
-          [ngClass]&#x3D;&quot;activePill &#x3D;&#x3D;&#x3D; &#x27;Product&#x27; ? &#x27;d-flex&#x27;: &#x27;d-none&#x27;&quot;&gt;
-          &lt;apt-product-carousel [productList]&#x3D;&quot;data.products&quot; [readonly]&#x3D;&quot;true&quot; [showCategory]&#x3D;&quot;false&quot;
-            [showCode]&#x3D;&quot;false&quot;&gt;&lt;/apt-product-carousel&gt;
+        &lt;div class&#x3D;&quot;justify-content-center flex-column&quot; *ngIf&#x3D;&quot;data.products &amp;&amp; data.products?.length &gt; 0&quot; [ngClass]&#x3D;&quot;activePill &#x3D;&#x3D;&#x3D; &#x27;Product&#x27; ? &#x27;d-flex&#x27;: &#x27;d-none&#x27;&quot;&gt;
+            &lt;apt-product-carousel [productList]&#x3D;&quot;data.products&quot; [readonly]&#x3D;&quot;true&quot; [showCategory]&#x3D;&quot;false&quot; [showCode]&#x3D;&quot;false&quot;&gt;&lt;/apt-product-carousel&gt;
         &lt;/div&gt;
-        &lt;div class&#x3D;&quot;justify-content-center flex-column&quot; *ngIf&#x3D;&quot;data.cartItems &amp;&amp; data.cartItems?.length &gt; 0&quot;
-          [ngClass]&#x3D;&quot;activePill &#x3D;&#x3D;&#x3D; &#x27;CartItem&#x27; ? &#x27;d-flex&#x27;: &#x27;d-none&#x27;&quot;&gt;
-          &lt;apt-product-carousel [cartItemList]&#x3D;&quot;data.cartItems&quot; [readonly]&#x3D;&quot;true&quot; [showCategory]&#x3D;&quot;false&quot;
-            [showCode]&#x3D;&quot;false&quot;&gt;&lt;/apt-product-carousel&gt;
+        &lt;div class&#x3D;&quot;justify-content-center flex-column&quot; *ngIf&#x3D;&quot;data.cartItems &amp;&amp; data.cartItems?.length &gt; 0&quot; [ngClass]&#x3D;&quot;activePill &#x3D;&#x3D;&#x3D; &#x27;CartItem&#x27; ? &#x27;d-flex&#x27;: &#x27;d-none&#x27;&quot;&gt;
+            &lt;apt-product-carousel [cartItemList]&#x3D;&quot;data.cartItems&quot; [readonly]&#x3D;&quot;true&quot; [showCategory]&#x3D;&quot;false&quot; [showCode]&#x3D;&quot;false&quot;&gt;&lt;/apt-product-carousel&gt;
         &lt;/div&gt;
       &lt;/div&gt;
       &lt;div class&#x3D;&quot;col-lg-2 col-md-3 col-12 my-md-2 pb-md-3&quot;&gt;
@@ -369,7 +365,8 @@ export class AppModule {}</code></pre></div><div><pre class="line-numbers"><code
       &lt;/div&gt;
     &lt;/div&gt;
   &lt;/div&gt;
-&lt;/div&gt;</code></pre>
+&lt;/div&gt;
+</code></pre>
     </div>
 
     <div class="tab-pane fade " id="c-styleData">
@@ -382,7 +379,7 @@ export class AppModule {}</code></pre></div><div><pre class="line-numbers"><code
   height: 18.5rem;
   bottom: 0px;
   pointer-events: none;
-  transition: bottom 0.4s ease-in-out;
+  transition: bottom .4s ease-in-out;
   z-index: 1000;
 
   &amp;.hiddenBelow {
@@ -392,14 +389,14 @@ export class AppModule {}</code></pre></div><div><pre class="line-numbers"><code
   .batchActionWrapper {
     overflow-y: auto;
   }
-
+  
   .body {
     position: relative;
     pointer-events: fill;
     height: 100%;
     margin: 0 auto;
     border: 1px solid #aaa;
-
+    
     .tab {
       position: absolute;
       display: flex;
@@ -417,7 +414,7 @@ export class AppModule {}</code></pre></div><div><pre class="line-numbers"><code
     }
   }
 
-  .drawer-selection {
+  .drawer-selection{
     .btn {
       &amp;:focus {
         box-shadow: none;
@@ -433,7 +430,7 @@ export class AppModule {}</code></pre></div><div><pre class="line-numbers"><code
     }
     .btn-outline-primary {
       .btn-link {
-        color: #0079cc !important;
+        color: #0079CC !important;
       }
       &amp;:hover {
         .btn-link {
@@ -442,6 +439,7 @@ export class AppModule {}</code></pre></div><div><pre class="line-numbers"><code
       }
     }
   }
+  
 }
 
 @media (min-width: 768px) {
@@ -462,7 +460,7 @@ export class AppModule {}</code></pre></div><div><pre class="line-numbers"><code
       bottom: -23rem;
     }
   }
-
+  
   .carousel {
     height: 95%;
     overflow: hidden;
@@ -506,8 +504,8 @@ export class AppModule {}</code></pre></div><div><pre class="line-numbers"><code
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div class="bannerWrapper" [class.hiddenBelow]=\'!(drawerIsOpen$ | async)\'>  <div class="body container-fluid bg-white"    *ngIf="{ products: products$ | async, cartItems: cartItems$ | async } as data">    <div class="tab px-3 bg-white" (click)="toggleDrawer()">      <span class="d-md-inline"> {{\'COMMON.SELECTIONS\' | translate}} </span>      <apt-super-chevron direction="{{!(drawerIsOpen$ | async) ? \'up\' : \'down\'}}"></apt-super-chevron>    </div>    <div class="drawer-selection">      <button class="btn btn-sm btn-pill btn-raised shadow-none m-2 p-0 pl-2"        *ngIf="data.products && data.products.length > 0"        [ngClass]="activePill===\'Product\' ? \'btn-primary\' : \'btn-outline-primary\'" (click)="setActivePill(\'Product\')">        {{ \'COMMON.PRODUCTS\' | translate }} ({{ data.products.length }})        <button class="btn btn-link text-white p-0" (click)="removeAllProducts($event)">          <i class="fas fa-times"></i>        </button>      </button>      <button class="btn btn-sm btn-pill btn-raised shadow-none m-2 p-0 pl-2" id="cartitem"        *ngIf="data.cartItems && data.cartItems.length > 0"        [ngClass]="activePill===\'CartItem\' ? \'btn-primary\' : \'btn-outline-primary\'" (click)="setActivePill(\'CartItem\')">        {{ \'COMMON.CARTITEMS\' | translate }} ({{data.cartItems.length}})        <button class="btn btn-link text-white p-0" (click)="removeAllCartItems($event)">          <i class="fas fa-times"></i>        </button>      </button>    </div>    <div class="row h-100">      <div class="col-lg-10 col-md-9 col-12">        <div class="justify-content-center flex-column" *ngIf="data.products && data.products?.length > 0"          [ngClass]="activePill === \'Product\' ? \'d-flex\': \'d-none\'">          <apt-product-carousel [productList]="data.products" [readonly]="true" [showCategory]="false"            [showCode]="false"></apt-product-carousel>        </div>        <div class="justify-content-center flex-column" *ngIf="data.cartItems && data.cartItems?.length > 0"          [ngClass]="activePill === \'CartItem\' ? \'d-flex\': \'d-none\'">          <apt-product-carousel [cartItemList]="data.cartItems" [readonly]="true" [showCategory]="false"            [showCode]="false"></apt-product-carousel>        </div>      </div>      <div class="col-lg-2 col-md-3 col-12 my-md-2 pb-md-3">        <apt-batch-action (actionFired)="onAction($event)" [activePill]="activePill"></apt-batch-action>      </div>    </div>  </div></div></div>'
-    var COMPONENTS = [{'name': 'AdditionalInformationComponent', 'selector': 'apt-additional-information'},{'name': 'AddressComponent', 'selector': 'apt-address'},{'name': 'AddToCartComponent', 'selector': 'apt-add-to-cart'},{'name': 'AlertComponent', 'selector': 'apt-alert'},{'name': 'AssetDropdownButtonComponent', 'selector': 'apt-asset-dropdown-button'},{'name': 'AssetListComponent', 'selector': 'apt-asset-list'},{'name': 'BreadcrumbComponent', 'selector': 'apt-breadcrumb'},{'name': 'CategoryFilterComponent', 'selector': 'apt-category-filter'},{'name': 'ChartComponent', 'selector': 'apt-chart'},{'name': 'ConstraintRuleAlertComponent', 'selector': 'apt-constraint-rule-alert'},{'name': 'ConstraintRuleSidebarComponent', 'selector': 'apt-constraint-rule-sidebar'},{'name': 'CRIconComponent', 'selector': 'apt-cr-constraint-icon'},{'name': 'CRRecommendedProductsComponent', 'selector': 'apt-cr-recommended-products'},{'name': 'DataFilterComponent', 'selector': 'apt-data-filter'},{'name': 'DependentPicklistComponent', 'selector': 'apt-dependent-picklist'},{'name': 'DotsComponent', 'selector': 'apt-dots'},{'name': 'FacetFilterComponent', 'selector': 'apt-facet-filter'},{'name': 'FavoriteModalComponent', 'selector': 'apt-favorite-modal'},{'name': 'FilesComponent', 'selector': 'apt-files'},{'name': 'GenerateDocumentComponent', 'selector': 'apt-generate-document'},{'name': 'InputDateComponent', 'selector': 'apt-date-range-input'},{'name': 'InputFieldComponent', 'selector': 'apt-input-field'},{'name': 'InputSelectComponent', 'selector': 'apt-input-select'},{'name': 'JumbotronComponent', 'selector': 'apt-jumbotron'},{'name': 'LineitemCardComponent', 'selector': 'apt-lineitem-card'},{'name': 'LineItemMenuComponent', 'selector': 'apt-line-item-menu'},{'name': 'LineItemTableRowComponent', 'selector': 'apt-line-item-table-row'},{'name': 'MiniCartComponent', 'selector': 'apt-mini-cart'},{'name': 'MiniProfileComponent', 'selector': 'apt-mini-profile'},{'name': 'OutputFieldComponent', 'selector': 'apt-output-field'},{'name': 'PaymentComponent', 'selector': 'apt-payment'},{'name': 'PaymentIFrameComponent', 'selector': 'apt-payment-iframe'},{'name': 'PopoverComponent', 'selector': 'apt-popover'},{'name': 'PresentDocumentComponent', 'selector': 'apt-present-document'},{'name': 'PriceComponent', 'selector': 'apt-price'},{'name': 'PriceModalComponent', 'selector': 'apt-price-modal'},{'name': 'PriceSummaryComponent', 'selector': 'apt-price-summary'},{'name': 'ProductCardComponent', 'selector': 'apt-product-card'},{'name': 'ProductCarouselComponent', 'selector': 'apt-product-carousel'},{'name': 'ProductCompareComponent', 'selector': 'apt-product-compare'},{'name': 'ProductConfigurationComponent', 'selector': 'apt-product-configuration'},{'name': 'ProductConfigurationSummaryComponent', 'selector': 'apt-product-configuration-summary'},{'name': 'ProductDrawerComponent', 'selector': 'apt-product-drawer'},{'name': 'ProductImagesComponent', 'selector': 'apt-product-images'},{'name': 'ProductSearchComponent', 'selector': 'apt-product-search'},{'name': 'ProductTypeFilterComponent', 'selector': 'apt-product-type-filter'},{'name': 'PromotionComponent', 'selector': 'apt-promotion'},{'name': 'PromotionModalComponent', 'selector': 'apt-pr-modal'},{'name': 'SelectAllComponent', 'selector': 'apt-select-all'},{'name': 'SpinnerComponent', 'selector': 'apt-spinner'},{'name': 'TableComponent', 'selector': 'apt-table'}];
+        var COMPONENT_TEMPLATE = '<div><div class="bannerWrapper" [class.hiddenBelow]=\'!(drawerIsOpen$ | async)\'>  <div class="body container-fluid bg-white" *ngIf="{ products: products$ | async, cartItems: cartItems$ | async } as data">    <div class="tab px-3 bg-white" (click)="toggleDrawer()">      <span class="d-md-inline"> {{\'COMMON.SELECTIONS\' | translate}} </span>      <apt-super-chevron direction="{{!(drawerIsOpen$ | async) ? \'up\' : \'down\'}}"></apt-super-chevron>    </div>    <div class="drawer-selection">        <button class="btn btn-sm btn-pill btn-raised shadow-none m-2 p-0 pl-2"                *ngIf="data.products && data.products.length > 0"                [ngClass]="activePill===\'Product\' ? \'btn-primary\' : \'btn-outline-primary\'"                (click)="setActivePill(\'Product\')">                {{ \'COMMON.PRODUCTS\' | translate }} ({{ data.products.length }})                 <button class="btn btn-link text-white p-0" (click)="removeAllProducts($event)">                  <i class="fas fa-times"></i>                </button>        </button>        <button class="btn btn-sm btn-pill btn-raised shadow-none m-2 p-0 pl-2"                *ngIf="data.cartItems && data.cartItems.length > 0"                [ngClass]="activePill===\'CartItem\' ? \'btn-primary\' : \'btn-outline-primary\'"                (click)="setActivePill(\'CartItem\')" >                {{ \'COMMON.CARTITEMS\' | translate }} ({{data.cartItems.length}})                 <button class="btn btn-link text-white p-0" (click)="removeAllCartItems($event)">                  <i class="fas fa-times"></i>                </button>        </button>    </div>    <div class="row h-100">      <div class="col-lg-10 col-md-9 col-12">        <div class="justify-content-center flex-column" *ngIf="data.products && data.products?.length > 0" [ngClass]="activePill === \'Product\' ? \'d-flex\': \'d-none\'">            <apt-product-carousel [productList]="data.products" [readonly]="true" [showCategory]="false" [showCode]="false"></apt-product-carousel>        </div>        <div class="justify-content-center flex-column" *ngIf="data.cartItems && data.cartItems?.length > 0" [ngClass]="activePill === \'CartItem\' ? \'d-flex\': \'d-none\'">            <apt-product-carousel [cartItemList]="data.cartItems" [readonly]="true" [showCategory]="false" [showCode]="false"></apt-product-carousel>        </div>      </div>      <div class="col-lg-2 col-md-3 col-12 my-md-2 pb-md-3">        <apt-batch-action (actionFired)="onAction($event)" [activePill]="activePill"></apt-batch-action>      </div>    </div>  </div></div></div>'
+    var COMPONENTS = [{'name': 'AdditionalInformationComponent', 'selector': 'apt-additional-information'},{'name': 'AddressComponent', 'selector': 'apt-address'},{'name': 'AddToCartComponent', 'selector': 'apt-add-to-cart'},{'name': 'AlertComponent', 'selector': 'apt-alert'},{'name': 'AssetDropdownButtonComponent', 'selector': 'apt-asset-dropdown-button'},{'name': 'AssetListComponent', 'selector': 'apt-asset-list'},{'name': 'BreadcrumbComponent', 'selector': 'apt-breadcrumb'},{'name': 'CategoryFilterComponent', 'selector': 'apt-category-filter'},{'name': 'ChartComponent', 'selector': 'apt-chart'},{'name': 'ConstraintRuleAlertComponent', 'selector': 'apt-constraint-rule-alert'},{'name': 'ConstraintRuleSidebarComponent', 'selector': 'apt-constraint-rule-sidebar'},{'name': 'CRIconComponent', 'selector': 'apt-cr-constraint-icon'},{'name': 'CRRecommendedProductsComponent', 'selector': 'apt-cr-recommended-products'},{'name': 'DataFilterComponent', 'selector': 'apt-data-filter'},{'name': 'DotsComponent', 'selector': 'apt-dots'},{'name': 'FavoriteModalComponent', 'selector': 'apt-favorite-modal'},{'name': 'FilesComponent', 'selector': 'apt-files'},{'name': 'GenerateDocumentComponent', 'selector': 'apt-generate-document'},{'name': 'InputDateComponent', 'selector': 'apt-date-range-input'},{'name': 'InputFieldComponent', 'selector': 'apt-input-field'},{'name': 'InputSelectComponent', 'selector': 'apt-input-select'},{'name': 'JumbotronComponent', 'selector': 'apt-jumbotron'},{'name': 'LineitemCardComponent', 'selector': 'apt-lineitem-card'},{'name': 'LineItemMenuComponent', 'selector': 'apt-line-item-menu'},{'name': 'LineItemTableRowComponent', 'selector': 'apt-line-item-table-row'},{'name': 'LoginFormComponent', 'selector': 'apt-login-form'},{'name': 'MiniCartComponent', 'selector': 'apt-mini-cart'},{'name': 'MiniProfileComponent', 'selector': 'apt-mini-profile'},{'name': 'OutputFieldComponent', 'selector': 'apt-output-field'},{'name': 'PaymentComponent', 'selector': 'apt-payment'},{'name': 'PaymentIFrameComponent', 'selector': 'apt-payment-iframe'},{'name': 'PresentDocumentComponent', 'selector': 'apt-present-document'},{'name': 'PriceComponent', 'selector': 'apt-price'},{'name': 'PriceSummaryComponent', 'selector': 'apt-price-summary'},{'name': 'ProductCardComponent', 'selector': 'apt-product-card'},{'name': 'ProductCarouselComponent', 'selector': 'apt-product-carousel'},{'name': 'ProductCompareComponent', 'selector': 'apt-product-compare'},{'name': 'ProductConfigurationComponent', 'selector': 'apt-product-configuration'},{'name': 'ProductConfigurationSummaryComponent', 'selector': 'apt-product-configuration-summary'},{'name': 'ProductDrawerComponent', 'selector': 'apt-product-drawer'},{'name': 'ProductImagesComponent', 'selector': 'apt-product-images'},{'name': 'ProductSearchComponent', 'selector': 'apt-product-search'},{'name': 'ProductTypeFilterComponent', 'selector': 'apt-product-type-filter'},{'name': 'PromotionComponent', 'selector': 'apt-promotion'},{'name': 'PromotionModalComponent', 'selector': 'apt-pr-modal'},{'name': 'RevalidateCartModalComponent', 'selector': 'apt-revalidate-cart-modal'},{'name': 'SelectAllComponent', 'selector': 'apt-select-all'},{'name': 'SpinnerComponent', 'selector': 'apt-spinner'},{'name': 'TableComponent', 'selector': 'apt-table'},{'name': 'TaxPopHoverComponent', 'selector': 'apt-tax-pophover'}];
     var DIRECTIVES = [{'name': 'AutoFocusDirective', 'selector': '[aptAutoFocus]'}];
     var ACTUAL_COMPONENT = {'name': 'ProductDrawerComponent'};
 </script>

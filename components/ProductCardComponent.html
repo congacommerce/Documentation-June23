@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Conga Digital Commerce February &#x27;23 on Conga Revenue Lifecycle Platform</title>
+        <title>Conga Digital Commerce June &#x27;23</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -15,7 +15,7 @@
     <body>
 
         <div class="navbar navbar-default navbar-fixed-top visible-xs">
-            <a href="../" class="navbar-brand">Conga Digital Commerce February &#x27;23 on Conga Revenue Lifecycle Platform</a>
+            <a href="../" class="navbar-brand">Conga Digital Commerce June &#x27;23</a>
             <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
         </div>
 
@@ -62,7 +62,7 @@
     <h3>File</h3>
 </p>
 <p class="comment">
-    <code>projects/congarevenuecloud/elements/src/lib/product-card/product-card.component.ts</code>
+    <code>projects/congacommerce/elements/src/lib/product-card/product-card.component.ts</code>
 </p>
 
 
@@ -73,23 +73,23 @@
         <p>The Product Card component generates a card template which displays the product information.
 A product description is displayed if type input is set to &#39;media&#39;.</p>
 <h3>Preview</h3>
-<div >
-   <h4>1.) Card</h4>
+<div>
+   <h4>1. Card</h4>
    <img src="https://raw.githubusercontent.com/Apttus-Ecom/Summer19/master/res/productCard.png" style="max-width: 100%">
-   <h4>2.) Media</h4>
+   <h4>2. Media</h4>
    <img src="https://raw.githubusercontent.com/Apttus-Ecom/Summer19/master/res/productCardMedia.png" style="max-width: 100%">
 </div>
 <h3>Usage</h3>
 
-<div><pre class="line-numbers"><code class="language-typescript">import { ProductCardModule } from &#39;&#64;congarevenuecloud/elements&#39;;
+<div><pre class="line-numbers"><code class="language-typescript">import { ProductCardModule } from &#39;&#64;congacommerce/elements&#39;;
 
 &#64;NgModule({
 imports: [ProductCardModule, ...]
 })
 export class AppModule {}</code></pre></div><div><pre class="line-numbers"><code class="language-html">// Basic Usage
 ```typescript
-&lt;apt-product-card [product]=&quot;product&quot;&gt;&lt;/apt-product-card&gt;</code></pre></div><div><pre class="line-numbers"><code class="language-none">// All inputs and outputs
-```typescript
+&lt;apt-product-card [product]=&quot;product&quot;&gt;&lt;/apt-product-card&gt;</code></pre></div><div><pre class="line-numbers"><code class="language-none">```typescript
+// All inputs and outputs
 &lt;apt-product-card
              [product]=&quot;product&quot;
              [thumbnail]=&quot;showThumbnail&quot;
@@ -214,7 +214,7 @@ export class AppModule {}</code></pre></div><div><pre class="line-numbers"><code
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor(config: ConfigurationService, BatchSelectionService: BatchSelectionService, productService: <a href="../injectables/ProductService.html" target="_self">ProductService</a>, activatedRoute: <a href="https://angular.io/api/router/ActivatedRoute" target="_blank">ActivatedRoute</a>, router: <a href="https://angular.io/api/router/Router" target="_blank">Router</a>, storefrontService: <a href="../injectables/StorefrontService.html" target="_self">StorefrontService</a>, userService: <a href="../injectables/UserService.html" target="_self">UserService</a>, productConfigurationService: <a href="../injectables/ProductConfigurationService.html" target="_self">ProductConfigurationService</a>)</code>
+<code>constructor(config: ConfigurationService, BatchSelectionService: <a href="../injectables/BatchSelectionService.html" target="_self">BatchSelectionService</a>, productService: <a href="../injectables/ProductService.html" target="_self">ProductService</a>, activatedRoute: <a href="https://angular.io/api/router/ActivatedRoute" target="_blank">ActivatedRoute</a>, router: <a href="https://angular.io/api/router/Router" target="_blank">Router</a>, storefrontService: <a href="../injectables/StorefrontService.html" target="_self">StorefrontService</a>, userService: <a href="../injectables/UserService.html" target="_self">UserService</a>, productConfigurationService: <a href="../injectables/ProductConfigurationService.html" target="_self">ProductConfigurationService</a>)</code>
                     </td>
                 </tr>
 
@@ -247,7 +247,7 @@ export class AppModule {}</code></pre></div><div><pre class="line-numbers"><code
                                                         <td>BatchSelectionService</td>
                                                   
                                                         <td>
-                                                                    <code>BatchSelectionService</code>
+                                                                        <code><a href="../injectables/BatchSelectionService.html" target="_self" >BatchSelectionService</a></code>
                                                         </td>
                                                   
                                                     <td>
@@ -568,46 +568,39 @@ export class AppModule {}</code></pre></div><div><pre class="line-numbers"><code
           [checked]&#x3D;&quot;selected$ | async&quot; /&gt;
         &lt;label class&#x3D;&quot;custom-control-label d-flex justify-content-between&quot; [for]&#x3D;&quot;_product.Id&quot;&gt;&lt;/label&gt;
         &lt;div class&#x3D;&quot;d-flex justify-content-between&quot;&gt;
-          &lt;p class&#x3D;&quot;m-0 font-weight-bold d-flex text-break&quot; tooltip&#x3D;&quot;{{_product?.Name}}&quot; container&#x3D;&quot;body&quot;
-            placement&#x3D;&quot;top&quot;&gt;{{ _product?.Name | truncate:30 }}&lt;/p&gt;
+          &lt;p class&#x3D;&quot;m-0 font-weight-bold d-flex text-break&quot; tooltip&#x3D;&quot;{{_product?.Name}}&quot; container&#x3D;&quot;body&quot; placement&#x3D;&quot;top&quot;&gt;{{ _product?.Name | truncate:30 }}&lt;/p&gt;
           &lt;span class&#x3D;&quot;pt-1 text-muted icons d-flex&quot;&gt;
-            &lt;i class&#x3D;&quot;fa fa-shopping-bag&quot; tooltip&#x3D;&quot;{{&#x27;PRODUCT_CARD.INSTALLED_PRODUCT&#x27; | translate}}&quot; container&#x3D;&quot;body&quot;
+            &lt;i
+              class&#x3D;&quot;fa fa-shopping-bag&quot;
+              tooltip&#x3D;&quot;{{&#x27;PRODUCT_CARD.INSTALLED_PRODUCT&#x27; | translate}}&quot;
+              container&#x3D;&quot;body&quot;
               [adaptivePosition]&#x3D;&quot;false&quot;
-              *ngIf&#x3D;&quot;aboEnabled &amp;&amp; _product?.AssetLineItems?.length &gt; 0 &amp;&amp; isLoggedIn$ | async&quot;&gt;
+               *ngIf&#x3D;&quot;aboEnabled &amp;&amp; _product?.AssetLineItems?.length &gt; 0 &amp;&amp; isLoggedIn$ | async&quot;
+            &gt;
             &lt;/i&gt;
-            &lt;i class&#x3D;&quot;fa fa-wrench&quot; tooltip&#x3D;&quot;{{&#x27;PRODUCT_CARD.COMPLEX_PRODUCT&#x27; | translate}}&quot; container&#x3D;&quot;body&quot;
-              [adaptivePosition]&#x3D;&quot;false&quot; *ngIf&#x3D;&quot;_product.HasAttributes || _product.HasOptions&quot;&gt;&lt;/i&gt;
+            &lt;i class&#x3D;&quot;fa fa-wrench&quot; tooltip&#x3D;&quot;{{&#x27;PRODUCT_CARD.COMPLEX_PRODUCT&#x27; | translate}}&quot; container&#x3D;&quot;body&quot; [adaptivePosition]&#x3D;&quot;false&quot; *ngIf&#x3D;&quot;_product.HasAttributes || _product.HasOptions&quot;&gt;&lt;/i&gt;
           &lt;/span&gt;
         &lt;/div&gt;
       &lt;/div&gt;
-      &lt;!-- &lt;a href&#x3D;&quot;javascript:void(0)&quot; [routerLink]&#x3D;&quot;[&#x27;/products&#x27;, _product[identifier]]&quot; [state]&#x3D;&quot;_product&quot;&gt;  // Commented due to stopgap changes--&gt;
-      &lt;a href&#x3D;&quot;javascript:void(0)&quot; [state]&#x3D;&quot;_product&quot; (click)&#x3D;&quot;showProductConfiguration()&quot;&gt;
+      &lt;a href&#x3D;&quot;javascript:void(0)&quot; [routerLink]&#x3D;&quot;[&#x27;/products&#x27;, _product[identifier]]&quot; [state]&#x3D;&quot;_product&quot;&gt;
         &lt;div class&#x3D;&quot;img-container&quot;&gt;
-          &lt;img class&#x3D;&quot;card-img-top w-auto m-auto d-flex align-self-center&quot; [src]&#x3D;&quot;_product.IconId | image&quot;
+          &lt;img class&#x3D;&quot;card-img-top w-100 m-auto d-flex align-self-center&quot; [src]&#x3D;&quot;_product.IconId | image&quot;
             [alt]&#x3D;&quot;_product.Name&quot; *ngIf&#x3D;&quot;thumbnail&quot;&gt;
         &lt;/div&gt;
-
+    
         &lt;div class&#x3D;&quot;d-flex my-1 align-items-center split-items&quot;&gt;
           &lt;span class&#x3D;&quot;text-muted product-code pr-1 text-truncate&quot; *ngIf&#x3D;&quot;showCode&quot;&gt;{{_product.ProductCode}}&lt;/span&gt;
           &lt;span class&#x3D;&quot;text-muted product-category pl-1 pr-1 border-left text-truncate&quot;
             *ngIf&#x3D;&quot;showCategory &amp;&amp; _product.Categories?.length &gt; 0&quot;&gt;{{_product.Categories[0]?.Classification?.Name}}&lt;/span&gt;
         &lt;/div&gt;
+        &lt;span class&#x3D;&quot;card-text font-weight-bold d-flex flex-column justify-content-between&quot; *ngIf&#x3D;&quot;showPrice&quot;&gt;
+          &lt;span class&#x3D;&quot;text-truncate&quot;&gt;{{&#x27;PRODUCT_CARD.STANDARD_PRICE&#x27; | translate}}&lt;/span&gt;
+          &lt;apt-price [record]&#x3D;&quot;_product&quot;&gt;&lt;/apt-price&gt;
+        &lt;/span&gt;
       &lt;/a&gt;
-      &lt;div class&#x3D;&quot;d-flex flex-row&quot;&gt;
-        &lt;apt-popover [placement]&#x3D;&quot;&#x27;right&#x27;&quot; [popoverContent]&#x3D;&quot;popoverTemplate&quot;&gt;
-          &lt;span class&#x3D;&quot;card-text font-weight-bold d-flex flex-column justify-content-between&quot; *ngIf&#x3D;&quot;showPrice&quot;&gt;
-            &lt;span class&#x3D;&quot;text-truncate&quot;&gt;{{&#x27;PRODUCT_CARD.STANDARD_PRICE&#x27; | translate}}
-              &lt;!-- TODO: Add info icon when DC-8455 implementation is taken up.
-              &lt;i class&#x3D;&quot;fas fa-info-circle&quot;&gt;&lt;/i&gt; --&gt;
-            &lt;/span&gt;
-            &lt;apt-price [record]&#x3D;&quot;_product&quot;&gt;&lt;/apt-price&gt;
-          &lt;/span&gt;
-        &lt;/apt-popover&gt;
-      &lt;/div&gt;
-
     &lt;/div&gt;
     &lt;div class&#x3D;&quot;card-footer px-2&quot; *ngIf&#x3D;&quot;canAddToCart&quot;&gt;
-      &lt;apt-add-to-cart size&#x3D;&quot;sm&quot; [product]&#x3D;&quot;_product&quot; (updateProductQuantity)&#x3D;&quot;fetchQuantity($event)&quot;&gt;&lt;/apt-add-to-cart&gt;
+      &lt;apt-add-to-cart [skipRules]&#x3D;&quot;skipRules&quot; size&#x3D;&quot;sm&quot; [product]&#x3D;&quot;_product&quot;&gt;&lt;/apt-add-to-cart&gt;
     &lt;/div&gt;
   &lt;/div&gt;
 
@@ -617,23 +610,25 @@ export class AppModule {}</code></pre></div><div><pre class="line-numbers"><code
         [checked]&#x3D;&quot;selected$ | async&quot; /&gt;
       &lt;label class&#x3D;&quot;custom-control-label mt-2 ml-2&quot; [for]&#x3D;&quot;_product.Id&quot;&gt;&amp;nbsp;&lt;/label&gt;
     &lt;/div&gt;
-    &lt;!-- &lt;a href&#x3D;&quot;javascript:void(0)&quot; [routerLink]&#x3D;&quot;[&#x27;/products&#x27;, _product[identifier]]&quot;  // Commented due to stopgap changes--&gt;
-    &lt;a href&#x3D;&quot;javascript:void(0)&quot; class&#x3D;&quot;d-flex justify-content-center w-25&quot; [state]&#x3D;&quot;_product&quot;
-      (click)&#x3D;&quot;showProductConfiguration()&quot;&gt;
+    &lt;a href&#x3D;&quot;javascript:void(0)&quot; [routerLink]&#x3D;&quot;[&#x27;/products&#x27;, _product[identifier]]&quot;
+      class&#x3D;&quot;d-flex justify-content-center w-25&quot; [state]&#x3D;&quot;_product&quot;&gt;
       &lt;img class&#x3D;&quot;mr-3&quot; [src]&#x3D;&quot;_product.IconId | image&quot; [alt]&#x3D;&quot;_product.Name&quot;&gt;
     &lt;/a&gt;
     &lt;div class&#x3D;&quot;media-body px-3&quot;&gt;
       &lt;h5 class&#x3D;&quot;m-0&quot;&gt;
-        &lt;!-- &lt;a href&#x3D;&quot;javascript:void(0)&quot; [routerLink]&#x3D;&quot;[&#x27;/products&#x27;, _product[identifier]]&quot; [state]&#x3D;&quot;_product&quot;&gt;  // Commented due to stopgap changes--&gt;
-        &lt;a href&#x3D;&quot;javascript:void(0)&quot; [state]&#x3D;&quot;_product&quot; (click)&#x3D;&quot;showProductConfiguration()&quot;&gt;
+        &lt;a href&#x3D;&quot;javascript:void(0)&quot; [routerLink]&#x3D;&quot;[&#x27;/products&#x27;, _product[identifier]]&quot; [state]&#x3D;&quot;_product&quot;&gt;
           {{_product.Name}}
         &lt;/a&gt;
         &lt;span class&#x3D;&quot;ml-auto mr-3 purchased list-purchasedbucket&quot;&gt;
-          &lt;i *ngIf&#x3D;&quot;aboEnabled &amp;&amp; _product?.AssetLineItems?.length&gt;0 &amp;&amp; isLoggedIn$ | async&quot; class&#x3D;&quot;fa fa-shopping-bag&quot;
-            tooltip&#x3D;&quot;{{&#x27;PRODUCT_CARD.INSTALLED_PRODUCT&#x27; | translate}}&quot; container&#x3D;&quot;body&quot; [adaptivePosition]&#x3D;&quot;false&quot;
-            aria-hidden&#x3D;&quot;true&quot;&gt;&lt;/i&gt;
-          &lt;i class&#x3D;&quot;fa fa-wrench&quot; tooltip&#x3D;&quot;{{&#x27;PRODUCT_CARD.COMPLEX_PRODUCT&#x27; | translate}}&quot; container&#x3D;&quot;body&quot;
-            [adaptivePosition]&#x3D;&quot;false&quot; *ngIf&#x3D;&quot;_product.HasAttributes || _product.HasOptions&quot;&gt;&lt;/i&gt;
+          &lt;i
+            *ngIf&#x3D;&quot;aboEnabled &amp;&amp; _product?.AssetLineItems?.length&gt;0 &amp;&amp; isLoggedIn$ | async&quot;
+            class&#x3D;&quot;fa fa-shopping-bag&quot;
+            tooltip&#x3D;&quot;{{&#x27;PRODUCT_CARD.INSTALLED_PRODUCT&#x27; | translate}}&quot;
+            container&#x3D;&quot;body&quot;
+            [adaptivePosition]&#x3D;&quot;false&quot;
+            aria-hidden&#x3D;&quot;true&quot;
+          &gt;&lt;/i&gt;
+          &lt;i class&#x3D;&quot;fa fa-wrench&quot; tooltip&#x3D;&quot;{{&#x27;PRODUCT_CARD.COMPLEX_PRODUCT&#x27; | translate}}&quot; container&#x3D;&quot;body&quot; [adaptivePosition]&#x3D;&quot;false&quot; *ngIf&#x3D;&quot;_product.HasAttributes || _product.HasOptions&quot;&gt;&lt;/i&gt;
         &lt;/span&gt;
       &lt;/h5&gt;
       &lt;div class&#x3D;&quot;d-flex mb-3 align-items-center split-items&quot;&gt;
@@ -650,8 +645,7 @@ export class AppModule {}</code></pre></div><div><pre class="line-numbers"><code
         &lt;apt-price [record]&#x3D;&quot;_product&quot;&gt;&lt;/apt-price&gt;
       &lt;/strong&gt;
       &lt;div *ngIf&#x3D;&quot;canAddToCart&quot;&gt;
-        &lt;apt-add-to-cart size&#x3D;&quot;sm&quot; [product]&#x3D;&quot;_product&quot; (updateProductQuantity)&#x3D;&quot;fetchQuantity($event)&quot;&gt;
-        &lt;/apt-add-to-cart&gt;
+        &lt;apt-add-to-cart [skipRules]&#x3D;&quot;skipRules&quot; size&#x3D;&quot;sm&quot; [product]&#x3D;&quot;_product&quot;&gt;&lt;/apt-add-to-cart&gt;
       &lt;/div&gt;
     &lt;/div&gt;
   &lt;/div&gt;
@@ -659,19 +653,17 @@ export class AppModule {}</code></pre></div><div><pre class="line-numbers"><code
   &lt;div class&#x3D;&quot;card&quot; *ngIf&#x3D;&quot;type &#x3D;&#x3D;&#x3D; &#x27;readonly&#x27;&quot;&gt;
     &lt;div class&#x3D;&quot;card-body readonly p-3&quot;&gt;
       &lt;div class&#x3D;&quot;card-title d-flex justify-content-between align-items-start&quot;&gt;
-        &lt;p class&#x3D;&quot;m-0 card-title font-weight-bold text-break&quot; tooltip&#x3D;&quot;{{_product?.Name}}&quot; container&#x3D;&quot;body&quot;
-          placement&#x3D;&quot;top&quot;&gt;{{_product?.Name | truncate:30}}&lt;/p&gt;
-        &lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;btn btn-link p-0 close&quot; aria-label&#x3D;&quot;Close&quot; (click)&#x3D;&quot;removeProduct()&quot;
-          *ngIf&#x3D;&quot;selected$ | async&quot;&gt;
-          &lt;span aria-hidden&#x3D;&quot;true&quot;&gt;&amp;times;&lt;/span&gt;
-        &lt;/button&gt;
+          &lt;p class&#x3D;&quot;m-0 card-title font-weight-bold text-break&quot; tooltip&#x3D;&quot;{{_product?.Name}}&quot; container&#x3D;&quot;body&quot; placement&#x3D;&quot;top&quot;&gt;{{_product?.Name | truncate:30}}&lt;/p&gt;
+          &lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;btn btn-link p-0 close&quot; aria-label&#x3D;&quot;Close&quot; (click)&#x3D;&quot;removeProduct()&quot; *ngIf&#x3D;&quot;selected$ | async&quot;&gt;
+            &lt;span aria-hidden&#x3D;&quot;true&quot;&gt;&amp;times;&lt;/span&gt;
+          &lt;/button&gt;
       &lt;/div&gt;
       &lt;a href&#x3D;&quot;javascript:void(0)&quot; [routerLink]&#x3D;&quot;[&#x27;/products&#x27;, _product[identifier]]&quot; [state]&#x3D;&quot;_product&quot;&gt;
         &lt;div class&#x3D;&quot;img-container&quot;&gt;
-          &lt;img class&#x3D;&quot;card-img-top w-auto m-auto d-flex align-self-center&quot; [src]&#x3D;&quot;_product.IconId | image&quot;
+          &lt;img class&#x3D;&quot;card-img-top w-100 m-auto d-flex align-self-center&quot; [src]&#x3D;&quot;_product.IconId | image&quot;
             [alt]&#x3D;&quot;_product.Name&quot; *ngIf&#x3D;&quot;thumbnail&quot;&gt;
         &lt;/div&gt;
-
+    
         &lt;div class&#x3D;&quot;d-flex mt-3 align-items-center split-items&quot; *ngIf&#x3D;&quot;showCategory || showCode&quot;&gt;
           &lt;span class&#x3D;&quot;text-muted product-code&quot; *ngIf&#x3D;&quot;showCode&quot;&gt;{{_product.ProductCode}}&lt;/span&gt;
           &lt;span class&#x3D;&quot;text-muted product-category&quot;
@@ -684,14 +676,7 @@ export class AppModule {}</code></pre></div><div><pre class="line-numbers"><code
       &lt;/a&gt;
     &lt;/div&gt;
   &lt;/div&gt;
-&lt;/ng-container&gt;
-
-&lt;!-- TODO: Add template when DC-8455 implementation is taken up
-&lt;ng-template #popoverTemplate&gt;
-&lt;/ng-template&gt; --&gt;
-
-&lt;!-- Stopgap approach --&gt;
-&lt;apt-product-configuration-summary [product]&#x3D;&quot;_product&quot; #productConfiguration&gt;&lt;/apt-product-configuration-summary&gt;</code></pre>
+&lt;/ng-container&gt;</code></pre>
     </div>
 
     <div class="tab-pane fade " id="c-styleData">
@@ -767,7 +752,7 @@ export class AppModule {}</code></pre></div><div><pre class="line-numbers"><code
         height: 31px;
         padding-top: 3px;
       }
-    .icons{
+      .icons{
         white-space: nowrap;
         i{
             font-size: smaller;
@@ -801,6 +786,16 @@ export class AppModule {}</code></pre></div><div><pre class="line-numbers"><code
             form.d-flex {
                 div:first-child {
                     justify-content: flex-end !important;
+                }
+                div:last-child {
+                    justify-content: flex-end;
+                    &amp; &gt; apt-cr-popover {
+                        flex-grow: unset !important;
+                        margin-right: 0px !important;
+                        &amp; &gt; div {
+                            margin-right: 0px !important;
+                        }
+                    }
                 }
             }
         }
@@ -841,8 +836,8 @@ export class AppModule {}</code></pre></div><div><pre class="line-numbers"><code
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><ng-container *ngIf="_product && _product[identifier]">  <div class="card" *ngIf="type == \'card\'">    <div class="card-body">      <div class="custom-control custom-checkbox custom-checkbox-lg card-title">        <input [id]="_product.Id" type="checkbox" class="custom-control-input" (change)="handleCheckbox($event)"          [checked]="selected$ | async" />        <label class="custom-control-label d-flex justify-content-between" [for]="_product.Id"></label>        <div class="d-flex justify-content-between">          <p class="m-0 font-weight-bold d-flex text-break" tooltip="{{_product?.Name}}" container="body"            placement="top">{{ _product?.Name | truncate:30 }}</p>          <span class="pt-1 text-muted icons d-flex">            <i class="fa fa-shopping-bag" tooltip="{{\'PRODUCT_CARD.INSTALLED_PRODUCT\' | translate}}" container="body"              [adaptivePosition]="false"              *ngIf="aboEnabled && _product?.AssetLineItems?.length > 0 && isLoggedIn$ | async">            </i>            <i class="fa fa-wrench" tooltip="{{\'PRODUCT_CARD.COMPLEX_PRODUCT\' | translate}}" container="body"              [adaptivePosition]="false" *ngIf="_product.HasAttributes || _product.HasOptions"></i>          </span>        </div>      </div>      <!-- <a href="javascript:void(0)" [routerLink]="[\'/products\', _product[identifier]]" [state]="_product">  // Commented due to stopgap changes-->      <a href="javascript:void(0)" [state]="_product" (click)="showProductConfiguration()">        <div class="img-container">          <img class="card-img-top w-auto m-auto d-flex align-self-center" [src]="_product.IconId | image"            [alt]="_product.Name" *ngIf="thumbnail">        </div>        <div class="d-flex my-1 align-items-center split-items">          <span class="text-muted product-code pr-1 text-truncate" *ngIf="showCode">{{_product.ProductCode}}</span>          <span class="text-muted product-category pl-1 pr-1 border-left text-truncate"            *ngIf="showCategory && _product.Categories?.length > 0">{{_product.Categories[0]?.Classification?.Name}}</span>        </div>      </a>      <div class="d-flex flex-row">        <apt-popover [placement]="\'right\'" [popoverContent]="popoverTemplate">          <span class="card-text font-weight-bold d-flex flex-column justify-content-between" *ngIf="showPrice">            <span class="text-truncate">{{\'PRODUCT_CARD.STANDARD_PRICE\' | translate}}              <!-- TODO: Add info icon when DC-8455 implementation is taken up.              <i class="fas fa-info-circle"></i> -->            </span>            <apt-price [record]="_product"></apt-price>          </span>        </apt-popover>      </div>    </div>    <div class="card-footer px-2" *ngIf="canAddToCart">      <apt-add-to-cart size="sm" [product]="_product" (updateProductQuantity)="fetchQuantity($event)"></apt-add-to-cart>    </div>  </div>  <div *ngIf="type == \'media\'" class="media">    <div class="custom-control custom-checkbox custom-checkbox-lg">      <input [id]="_product.Id" type="checkbox" class="custom-control-input" (change)="handleCheckbox($event)"        [checked]="selected$ | async" />      <label class="custom-control-label mt-2 ml-2" [for]="_product.Id">&nbsp;</label>    </div>    <!-- <a href="javascript:void(0)" [routerLink]="[\'/products\', _product[identifier]]"  // Commented due to stopgap changes-->    <a href="javascript:void(0)" class="d-flex justify-content-center w-25" [state]="_product"      (click)="showProductConfiguration()">      <img class="mr-3" [src]="_product.IconId | image" [alt]="_product.Name">    </a>    <div class="media-body px-3">      <h5 class="m-0">        <!-- <a href="javascript:void(0)" [routerLink]="[\'/products\', _product[identifier]]" [state]="_product">  // Commented due to stopgap changes-->        <a href="javascript:void(0)" [state]="_product" (click)="showProductConfiguration()">          {{_product.Name}}        </a>        <span class="ml-auto mr-3 purchased list-purchasedbucket">          <i *ngIf="aboEnabled && _product?.AssetLineItems?.length>0 && isLoggedIn$ | async" class="fa fa-shopping-bag"            tooltip="{{\'PRODUCT_CARD.INSTALLED_PRODUCT\' | translate}}" container="body" [adaptivePosition]="false"            aria-hidden="true"></i>          <i class="fa fa-wrench" tooltip="{{\'PRODUCT_CARD.COMPLEX_PRODUCT\' | translate}}" container="body"            [adaptivePosition]="false" *ngIf="_product.HasAttributes || _product.HasOptions"></i>        </span>      </h5>      <div class="d-flex mb-3 align-items-center split-items">        <div class="text-muted" *ngIf="showCode">{{_product.ProductCode}}</div>        <div class="text-muted" *ngIf="showCategory && _product.Categories?.length > 0">          {{_product.Categories[0]?.Classification?.Name}}</div>      </div>      <div class="productDescription">        {{_product.Description}}      </div>    </div>    <div class="pl-4 align-self-stretch d-flex align-items-start flex-column">      <strong class="mb-auto align-self-end" *ngIf="showPrice">        <apt-price [record]="_product"></apt-price>      </strong>      <div *ngIf="canAddToCart">        <apt-add-to-cart size="sm" [product]="_product" (updateProductQuantity)="fetchQuantity($event)">        </apt-add-to-cart>      </div>    </div>  </div>  <div class="card" *ngIf="type === \'readonly\'">    <div class="card-body readonly p-3">      <div class="card-title d-flex justify-content-between align-items-start">        <p class="m-0 card-title font-weight-bold text-break" tooltip="{{_product?.Name}}" container="body"          placement="top">{{_product?.Name | truncate:30}}</p>        <button type="button" class="btn btn-link p-0 close" aria-label="Close" (click)="removeProduct()"          *ngIf="selected$ | async">          <span aria-hidden="true">&times;</span>        </button>      </div>      <a href="javascript:void(0)" [routerLink]="[\'/products\', _product[identifier]]" [state]="_product">        <div class="img-container">          <img class="card-img-top w-auto m-auto d-flex align-self-center" [src]="_product.IconId | image"            [alt]="_product.Name" *ngIf="thumbnail">        </div>        <div class="d-flex mt-3 align-items-center split-items" *ngIf="showCategory || showCode">          <span class="text-muted product-code" *ngIf="showCode">{{_product.ProductCode}}</span>          <span class="text-muted product-category"            *ngIf="showCategory && _product.Categories?.length > 0">{{_product.Categories[0].Classification.Name}}</span>&nbsp;        </div>        <span class="card-text font-weight-bold d-flex flex-column justify-content-between mt-2" *ngIf="showPrice">          <span>{{\'PRODUCT_CARD.STANDARD_PRICE\' | translate}}</span>          <apt-price [record]="_product"></apt-price>        </span>      </a>    </div>  </div></ng-container><!-- TODO: Add template when DC-8455 implementation is taken up<ng-template #popoverTemplate></ng-template> --><!-- Stopgap approach --><apt-product-configuration-summary [product]="_product" #productConfiguration></apt-product-configuration-summary></div>'
-    var COMPONENTS = [{'name': 'AdditionalInformationComponent', 'selector': 'apt-additional-information'},{'name': 'AddressComponent', 'selector': 'apt-address'},{'name': 'AddToCartComponent', 'selector': 'apt-add-to-cart'},{'name': 'AlertComponent', 'selector': 'apt-alert'},{'name': 'AssetDropdownButtonComponent', 'selector': 'apt-asset-dropdown-button'},{'name': 'AssetListComponent', 'selector': 'apt-asset-list'},{'name': 'BreadcrumbComponent', 'selector': 'apt-breadcrumb'},{'name': 'CategoryFilterComponent', 'selector': 'apt-category-filter'},{'name': 'ChartComponent', 'selector': 'apt-chart'},{'name': 'ConstraintRuleAlertComponent', 'selector': 'apt-constraint-rule-alert'},{'name': 'ConstraintRuleSidebarComponent', 'selector': 'apt-constraint-rule-sidebar'},{'name': 'CRIconComponent', 'selector': 'apt-cr-constraint-icon'},{'name': 'CRRecommendedProductsComponent', 'selector': 'apt-cr-recommended-products'},{'name': 'DataFilterComponent', 'selector': 'apt-data-filter'},{'name': 'DependentPicklistComponent', 'selector': 'apt-dependent-picklist'},{'name': 'DotsComponent', 'selector': 'apt-dots'},{'name': 'FacetFilterComponent', 'selector': 'apt-facet-filter'},{'name': 'FavoriteModalComponent', 'selector': 'apt-favorite-modal'},{'name': 'FilesComponent', 'selector': 'apt-files'},{'name': 'GenerateDocumentComponent', 'selector': 'apt-generate-document'},{'name': 'InputDateComponent', 'selector': 'apt-date-range-input'},{'name': 'InputFieldComponent', 'selector': 'apt-input-field'},{'name': 'InputSelectComponent', 'selector': 'apt-input-select'},{'name': 'JumbotronComponent', 'selector': 'apt-jumbotron'},{'name': 'LineitemCardComponent', 'selector': 'apt-lineitem-card'},{'name': 'LineItemMenuComponent', 'selector': 'apt-line-item-menu'},{'name': 'LineItemTableRowComponent', 'selector': 'apt-line-item-table-row'},{'name': 'MiniCartComponent', 'selector': 'apt-mini-cart'},{'name': 'MiniProfileComponent', 'selector': 'apt-mini-profile'},{'name': 'OutputFieldComponent', 'selector': 'apt-output-field'},{'name': 'PaymentComponent', 'selector': 'apt-payment'},{'name': 'PaymentIFrameComponent', 'selector': 'apt-payment-iframe'},{'name': 'PopoverComponent', 'selector': 'apt-popover'},{'name': 'PresentDocumentComponent', 'selector': 'apt-present-document'},{'name': 'PriceComponent', 'selector': 'apt-price'},{'name': 'PriceModalComponent', 'selector': 'apt-price-modal'},{'name': 'PriceSummaryComponent', 'selector': 'apt-price-summary'},{'name': 'ProductCardComponent', 'selector': 'apt-product-card'},{'name': 'ProductCarouselComponent', 'selector': 'apt-product-carousel'},{'name': 'ProductCompareComponent', 'selector': 'apt-product-compare'},{'name': 'ProductConfigurationComponent', 'selector': 'apt-product-configuration'},{'name': 'ProductConfigurationSummaryComponent', 'selector': 'apt-product-configuration-summary'},{'name': 'ProductDrawerComponent', 'selector': 'apt-product-drawer'},{'name': 'ProductImagesComponent', 'selector': 'apt-product-images'},{'name': 'ProductSearchComponent', 'selector': 'apt-product-search'},{'name': 'ProductTypeFilterComponent', 'selector': 'apt-product-type-filter'},{'name': 'PromotionComponent', 'selector': 'apt-promotion'},{'name': 'PromotionModalComponent', 'selector': 'apt-pr-modal'},{'name': 'SelectAllComponent', 'selector': 'apt-select-all'},{'name': 'SpinnerComponent', 'selector': 'apt-spinner'},{'name': 'TableComponent', 'selector': 'apt-table'}];
+        var COMPONENT_TEMPLATE = '<div><ng-container *ngIf="_product && _product[identifier]">  <div class="card" *ngIf="type == \'card\'">    <div class="card-body">      <div class="custom-control custom-checkbox custom-checkbox-lg card-title">        <input [id]="_product.Id" type="checkbox" class="custom-control-input" (change)="handleCheckbox($event)"          [checked]="selected$ | async" />        <label class="custom-control-label d-flex justify-content-between" [for]="_product.Id"></label>        <div class="d-flex justify-content-between">          <p class="m-0 font-weight-bold d-flex text-break" tooltip="{{_product?.Name}}" container="body" placement="top">{{ _product?.Name | truncate:30 }}</p>          <span class="pt-1 text-muted icons d-flex">            <i              class="fa fa-shopping-bag"              tooltip="{{\'PRODUCT_CARD.INSTALLED_PRODUCT\' | translate}}"              container="body"              [adaptivePosition]="false"               *ngIf="aboEnabled && _product?.AssetLineItems?.length > 0 && isLoggedIn$ | async"            >            </i>            <i class="fa fa-wrench" tooltip="{{\'PRODUCT_CARD.COMPLEX_PRODUCT\' | translate}}" container="body" [adaptivePosition]="false" *ngIf="_product.HasAttributes || _product.HasOptions"></i>          </span>        </div>      </div>      <a href="javascript:void(0)" [routerLink]="[\'/products\', _product[identifier]]" [state]="_product">        <div class="img-container">          <img class="card-img-top w-100 m-auto d-flex align-self-center" [src]="_product.IconId | image"            [alt]="_product.Name" *ngIf="thumbnail">        </div>            <div class="d-flex my-1 align-items-center split-items">          <span class="text-muted product-code pr-1 text-truncate" *ngIf="showCode">{{_product.ProductCode}}</span>          <span class="text-muted product-category pl-1 pr-1 border-left text-truncate"            *ngIf="showCategory && _product.Categories?.length > 0">{{_product.Categories[0]?.Classification?.Name}}</span>        </div>        <span class="card-text font-weight-bold d-flex flex-column justify-content-between" *ngIf="showPrice">          <span class="text-truncate">{{\'PRODUCT_CARD.STANDARD_PRICE\' | translate}}</span>          <apt-price [record]="_product"></apt-price>        </span>      </a>    </div>    <div class="card-footer px-2" *ngIf="canAddToCart">      <apt-add-to-cart [skipRules]="skipRules" size="sm" [product]="_product"></apt-add-to-cart>    </div>  </div>  <div *ngIf="type == \'media\'" class="media">    <div class="custom-control custom-checkbox custom-checkbox-lg">      <input [id]="_product.Id" type="checkbox" class="custom-control-input" (change)="handleCheckbox($event)"        [checked]="selected$ | async" />      <label class="custom-control-label mt-2 ml-2" [for]="_product.Id">&nbsp;</label>    </div>    <a href="javascript:void(0)" [routerLink]="[\'/products\', _product[identifier]]"      class="d-flex justify-content-center w-25" [state]="_product">      <img class="mr-3" [src]="_product.IconId | image" [alt]="_product.Name">    </a>    <div class="media-body px-3">      <h5 class="m-0">        <a href="javascript:void(0)" [routerLink]="[\'/products\', _product[identifier]]" [state]="_product">          {{_product.Name}}        </a>        <span class="ml-auto mr-3 purchased list-purchasedbucket">          <i            *ngIf="aboEnabled && _product?.AssetLineItems?.length>0 && isLoggedIn$ | async"            class="fa fa-shopping-bag"            tooltip="{{\'PRODUCT_CARD.INSTALLED_PRODUCT\' | translate}}"            container="body"            [adaptivePosition]="false"            aria-hidden="true"          ></i>          <i class="fa fa-wrench" tooltip="{{\'PRODUCT_CARD.COMPLEX_PRODUCT\' | translate}}" container="body" [adaptivePosition]="false" *ngIf="_product.HasAttributes || _product.HasOptions"></i>        </span>      </h5>      <div class="d-flex mb-3 align-items-center split-items">        <div class="text-muted" *ngIf="showCode">{{_product.ProductCode}}</div>        <div class="text-muted" *ngIf="showCategory && _product.Categories?.length > 0">          {{_product.Categories[0]?.Classification?.Name}}</div>      </div>      <div class="productDescription">        {{_product.Description}}      </div>    </div>    <div class="pl-4 align-self-stretch d-flex align-items-start flex-column">      <strong class="mb-auto align-self-end" *ngIf="showPrice">        <apt-price [record]="_product"></apt-price>      </strong>      <div *ngIf="canAddToCart">        <apt-add-to-cart [skipRules]="skipRules" size="sm" [product]="_product"></apt-add-to-cart>      </div>    </div>  </div>  <div class="card" *ngIf="type === \'readonly\'">    <div class="card-body readonly p-3">      <div class="card-title d-flex justify-content-between align-items-start">          <p class="m-0 card-title font-weight-bold text-break" tooltip="{{_product?.Name}}" container="body" placement="top">{{_product?.Name | truncate:30}}</p>          <button type="button" class="btn btn-link p-0 close" aria-label="Close" (click)="removeProduct()" *ngIf="selected$ | async">            <span aria-hidden="true">&times;</span>          </button>      </div>      <a href="javascript:void(0)" [routerLink]="[\'/products\', _product[identifier]]" [state]="_product">        <div class="img-container">          <img class="card-img-top w-100 m-auto d-flex align-self-center" [src]="_product.IconId | image"            [alt]="_product.Name" *ngIf="thumbnail">        </div>            <div class="d-flex mt-3 align-items-center split-items" *ngIf="showCategory || showCode">          <span class="text-muted product-code" *ngIf="showCode">{{_product.ProductCode}}</span>          <span class="text-muted product-category"            *ngIf="showCategory && _product.Categories?.length > 0">{{_product.Categories[0].Classification.Name}}</span>&nbsp;        </div>        <span class="card-text font-weight-bold d-flex flex-column justify-content-between mt-2" *ngIf="showPrice">          <span>{{\'PRODUCT_CARD.STANDARD_PRICE\' | translate}}</span>          <apt-price [record]="_product"></apt-price>        </span>      </a>    </div>  </div></ng-container></div>'
+    var COMPONENTS = [{'name': 'AdditionalInformationComponent', 'selector': 'apt-additional-information'},{'name': 'AddressComponent', 'selector': 'apt-address'},{'name': 'AddToCartComponent', 'selector': 'apt-add-to-cart'},{'name': 'AlertComponent', 'selector': 'apt-alert'},{'name': 'AssetDropdownButtonComponent', 'selector': 'apt-asset-dropdown-button'},{'name': 'AssetListComponent', 'selector': 'apt-asset-list'},{'name': 'BreadcrumbComponent', 'selector': 'apt-breadcrumb'},{'name': 'CategoryFilterComponent', 'selector': 'apt-category-filter'},{'name': 'ChartComponent', 'selector': 'apt-chart'},{'name': 'ConstraintRuleAlertComponent', 'selector': 'apt-constraint-rule-alert'},{'name': 'ConstraintRuleSidebarComponent', 'selector': 'apt-constraint-rule-sidebar'},{'name': 'CRIconComponent', 'selector': 'apt-cr-constraint-icon'},{'name': 'CRRecommendedProductsComponent', 'selector': 'apt-cr-recommended-products'},{'name': 'DataFilterComponent', 'selector': 'apt-data-filter'},{'name': 'DotsComponent', 'selector': 'apt-dots'},{'name': 'FavoriteModalComponent', 'selector': 'apt-favorite-modal'},{'name': 'FilesComponent', 'selector': 'apt-files'},{'name': 'GenerateDocumentComponent', 'selector': 'apt-generate-document'},{'name': 'InputDateComponent', 'selector': 'apt-date-range-input'},{'name': 'InputFieldComponent', 'selector': 'apt-input-field'},{'name': 'InputSelectComponent', 'selector': 'apt-input-select'},{'name': 'JumbotronComponent', 'selector': 'apt-jumbotron'},{'name': 'LineitemCardComponent', 'selector': 'apt-lineitem-card'},{'name': 'LineItemMenuComponent', 'selector': 'apt-line-item-menu'},{'name': 'LineItemTableRowComponent', 'selector': 'apt-line-item-table-row'},{'name': 'LoginFormComponent', 'selector': 'apt-login-form'},{'name': 'MiniCartComponent', 'selector': 'apt-mini-cart'},{'name': 'MiniProfileComponent', 'selector': 'apt-mini-profile'},{'name': 'OutputFieldComponent', 'selector': 'apt-output-field'},{'name': 'PaymentComponent', 'selector': 'apt-payment'},{'name': 'PaymentIFrameComponent', 'selector': 'apt-payment-iframe'},{'name': 'PresentDocumentComponent', 'selector': 'apt-present-document'},{'name': 'PriceComponent', 'selector': 'apt-price'},{'name': 'PriceSummaryComponent', 'selector': 'apt-price-summary'},{'name': 'ProductCardComponent', 'selector': 'apt-product-card'},{'name': 'ProductCarouselComponent', 'selector': 'apt-product-carousel'},{'name': 'ProductCompareComponent', 'selector': 'apt-product-compare'},{'name': 'ProductConfigurationComponent', 'selector': 'apt-product-configuration'},{'name': 'ProductConfigurationSummaryComponent', 'selector': 'apt-product-configuration-summary'},{'name': 'ProductDrawerComponent', 'selector': 'apt-product-drawer'},{'name': 'ProductImagesComponent', 'selector': 'apt-product-images'},{'name': 'ProductSearchComponent', 'selector': 'apt-product-search'},{'name': 'ProductTypeFilterComponent', 'selector': 'apt-product-type-filter'},{'name': 'PromotionComponent', 'selector': 'apt-promotion'},{'name': 'PromotionModalComponent', 'selector': 'apt-pr-modal'},{'name': 'RevalidateCartModalComponent', 'selector': 'apt-revalidate-cart-modal'},{'name': 'SelectAllComponent', 'selector': 'apt-select-all'},{'name': 'SpinnerComponent', 'selector': 'apt-spinner'},{'name': 'TableComponent', 'selector': 'apt-table'},{'name': 'TaxPopHoverComponent', 'selector': 'apt-tax-pophover'}];
     var DIRECTIVES = [{'name': 'AutoFocusDirective', 'selector': '[aptAutoFocus]'}];
     var ACTUAL_COMPONENT = {'name': 'ProductCardComponent'};
 </script>

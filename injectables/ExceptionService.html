@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Conga Digital Commerce February &#x27;23 on Conga Revenue Lifecycle Platform</title>
+        <title>Conga Digital Commerce June &#x27;23</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -15,7 +15,7 @@
     <body>
 
         <div class="navbar navbar-default navbar-fixed-top visible-xs">
-            <a href="../" class="navbar-brand">Conga Digital Commerce February &#x27;23 on Conga Revenue Lifecycle Platform</a>
+            <a href="../" class="navbar-brand">Conga Digital Commerce June &#x27;23</a>
             <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
         </div>
 
@@ -56,7 +56,7 @@
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>projects/congarevenuecloud/elements/src/shared/services/exception.service.ts</code>
+            <code>projects/congacommerce/elements/src/shared/services/exception.service.ts</code>
         </p>
 
 
@@ -67,7 +67,7 @@
                 <p>The service is used to show the toaster message based on the message type.</p>
 <h3>Usage</h3>
 
-<div><pre class="line-numbers"><code class="language-typescript">import { ExceptionService, AObjectService} from &#39;&#64;congarevenuecloud/ecommerce&#39;;
+<div><pre class="line-numbers"><code class="language-typescript">import { ExceptionService, AObjectService} from &#39;&#64;congacommerce/ecommerce&#39;;
 
 export class MyComponent implements OnInit{
 constructor( private exceptionService: ExceptionService)
@@ -123,7 +123,7 @@ private exceptionService: ExceptionService = this.injector.get(ExceptionService)
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor(cartService: <a href="../injectables/CartService.html" target="_self">CartService</a>, constraintRuleService: <a href="../injectables/ConstraintRuleService.html" target="_self">ConstraintRuleService</a>, promotionService: PromotionService, toastr: ToastrService, translateService: TranslateService, apiService: ApiService)</code>
+<code>constructor(cartService: <a href="../injectables/CartService.html" target="_self">CartService</a>, constraintRuleService: <a href="../injectables/ConstraintRuleService.html" target="_self">ConstraintRuleService</a>, promotionService: <a href="../injectables/PromotionService.html" target="_self">PromotionService</a>, toastr: ToastrService, translateService: TranslateService)</code>
                     </td>
                 </tr>
 
@@ -168,7 +168,7 @@ private exceptionService: ExceptionService = this.injector.get(ExceptionService)
                                                         <td>promotionService</td>
                                                   
                                                         <td>
-                                                                    <code>PromotionService</code>
+                                                                        <code><a href="../injectables/PromotionService.html" target="_self" >PromotionService</a></code>
                                                         </td>
                                                   
                                                     <td>
@@ -193,18 +193,6 @@ private exceptionService: ExceptionService = this.injector.get(ExceptionService)
                                                   
                                                         <td>
                                                                     <code>TranslateService</code>
-                                                        </td>
-                                                  
-                                                    <td>
-                                                            No
-                                                    </td>
-                                                    
-                                                </tr>
-                                                <tr>
-                                                        <td>apiService</td>
-                                                  
-                                                        <td>
-                                                                    <code>ApiService</code>
                                                         </td>
                                                   
                                                     <td>
@@ -239,7 +227,7 @@ private exceptionService: ExceptionService = this.injector.get(ExceptionService)
             </tr>
             <tr>
                 <td class="col-md-4">
-<code>showError(error: <a href="../classes/Cart.html" target="_self">CartError | Error | string</a>, title: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, positionClass: ToasterPosition)</code>
+<code>showError(error: <a href="../classes/Cart.html" target="_self">CartError | Error | string</a>)</code>
                 </td>
             </tr>
 
@@ -250,8 +238,7 @@ private exceptionService: ExceptionService = this.injector.get(ExceptionService)
                 <td class="col-md-4">
                     <div class="io-description"><p>Show error message in the toaster.</p>
 <h3 id="example">Example:</h3>
-<div><pre class="line-numbers"><code class="language-typescript">import { ExceptionService, CartError } from &#39;&#64;congarevenuecloud/ecommerce&#39;;
-import { Observable } from &#39;rxjs/Observable&#39;;
+<div><pre class="line-numbers"><code class="language-typescript">
 
 export class MyComponent implements OnInit{
 
@@ -269,7 +256,6 @@ this.exceptionService.showError(error);
                                     <td>Name</td>
                                     <td>Type</td>
                                     <td>Optional</td>
-                                    <td>Default value</td>
                                     <td>Description</td>
                                 </tr>
                             </thead>
@@ -284,46 +270,10 @@ this.exceptionService.showError(error);
                                         No
                                     </td>
 
-                                    <td>
-                                    </td>
 
                                     <td>
                                         <p>message is of type Error or CartError or string</p>
 
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>title</td>
-                                    <td>
-                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
-                                    </td>
-
-                                    <td>
-                                        No
-                                    </td>
-
-                                    <td>
-                                        <code>&#x27;ERROR.APPLICATION_ERROR_TOASTR_TITLE&#x27;</code>
-                                    </td>
-
-                                    <td>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>positionClass</td>
-                                    <td>
-                                            <code>ToasterPosition</code>
-                                    </td>
-
-                                    <td>
-                                        No
-                                    </td>
-
-                                    <td>
-                                        <code>ToasterPosition.BOTTOM_LEFT</code>
-                                    </td>
-
-                                    <td>
                                     </td>
                                 </tr>
                             </tbody>
@@ -355,7 +305,7 @@ this.exceptionService.showError(error);
             </tr>
             <tr>
                 <td class="col-md-4">
-<code>showInfo(message: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, title: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, data?: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>, positionClass: ToasterPosition)</code>
+<code>showInfo(message: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, title: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, data?: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
                 </td>
             </tr>
 
@@ -366,7 +316,7 @@ this.exceptionService.showError(error);
                 <td class="col-md-4">
                     <div class="io-description"><p>Show info message in the toaster.</p>
 <h3 id="example">Example:</h3>
-<div><pre class="line-numbers"><code class="language-typescript">import { ExceptionService } from &#39;&#64;congarevenuecloud/ecommerce&#39;;
+<div><pre class="line-numbers"><code class="language-typescript">import { ExceptionService } from &#39;&#64;congacommerce/ecommerce&#39;;
 import { Observable } from &#39;rxjs/Observable&#39;;
 
 export class MyComponent implements OnInit{
@@ -447,23 +397,6 @@ key which updates whenever language change.</p>
 
                                     </td>
                                 </tr>
-                                <tr>
-                                    <td>positionClass</td>
-                                    <td>
-                                            <code>ToasterPosition</code>
-                                    </td>
-
-                                    <td>
-                                        No
-                                    </td>
-
-                                    <td>
-                                        <code>ToasterPosition.BOTTOM_LEFT</code>
-                                    </td>
-
-                                    <td>
-                                    </td>
-                                </tr>
                             </tbody>
                         </table>
                     </div>
@@ -493,7 +426,7 @@ key which updates whenever language change.</p>
             </tr>
             <tr>
                 <td class="col-md-4">
-<code>showSuccess(message: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, title: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, data?: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>, positionClass: ToasterPosition)</code>
+<code>showSuccess(message: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, title: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, data?: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
                 </td>
             </tr>
 
@@ -504,7 +437,7 @@ key which updates whenever language change.</p>
                 <td class="col-md-4">
                     <div class="io-description"><p>Show success message in the toaster.</p>
 <h3 id="example">Example:</h3>
-<div><pre class="line-numbers"><code class="language-typescript">import { ExceptionService } from &#39;&#64;congarevenuecloud/ecommerce&#39;;
+<div><pre class="line-numbers"><code class="language-typescript">import { ExceptionService } from &#39;&#64;congacommerce/ecommerce&#39;;
 import { Observable } from &#39;rxjs/Observable&#39;;
 
 export class MyComponent implements OnInit{
@@ -585,23 +518,6 @@ key which updates whenever language change.</p>
 
                                     </td>
                                 </tr>
-                                <tr>
-                                    <td>positionClass</td>
-                                    <td>
-                                            <code>ToasterPosition</code>
-                                    </td>
-
-                                    <td>
-                                        No
-                                    </td>
-
-                                    <td>
-                                        <code>ToasterPosition.BOTTOM_LEFT</code>
-                                    </td>
-
-                                    <td>
-                                    </td>
-                                </tr>
                             </tbody>
                         </table>
                     </div>
@@ -631,7 +547,7 @@ key which updates whenever language change.</p>
             </tr>
             <tr>
                 <td class="col-md-4">
-<code>showWarning(message: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, title: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, data?: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>, positionClass: ToasterPosition)</code>
+<code>showWarning(message: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, title: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, data?: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
                 </td>
             </tr>
 
@@ -642,7 +558,7 @@ key which updates whenever language change.</p>
                 <td class="col-md-4">
                     <div class="io-description"><p>Show warning message in the toaster.</p>
 <h3 id="example">Example:</h3>
-<div><pre class="line-numbers"><code class="language-typescript">import { ExceptionService } from &#39;&#64;congarevenuecloud/ecommerce&#39;;
+<div><pre class="line-numbers"><code class="language-typescript">import { ExceptionService } from &#39;&#64;congacommerce/ecommerce&#39;;
 import { Observable } from &#39;rxjs/Observable&#39;;
 
 export class MyComponent implements OnInit{
@@ -721,23 +637,6 @@ this.exceptionService.showWarning(message);
                                         <p>is optional; required to return stream of translated values of a 
 key which updates whenever language change.</p>
 
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>positionClass</td>
-                                    <td>
-                                            <code>ToasterPosition</code>
-                                    </td>
-
-                                    <td>
-                                        No
-                                    </td>
-
-                                    <td>
-                                        <code>ToasterPosition.BOTTOM_LEFT</code>
-                                    </td>
-
-                                    <td>
                                     </td>
                                 </tr>
                             </tbody>
