@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Conga Digital Commerce June &#x27;23</title>
+        <title>Conga Digital Commerce February &#x27;23 on Conga Revenue Lifecycle Platform</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -15,7 +15,7 @@
     <body>
 
         <div class="navbar navbar-default navbar-fixed-top visible-xs">
-            <a href="../" class="navbar-brand">Conga Digital Commerce June &#x27;23</a>
+            <a href="../" class="navbar-brand">Conga Digital Commerce February &#x27;23 on Conga Revenue Lifecycle Platform</a>
             <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
         </div>
 
@@ -31,6 +31,7 @@
                <!-- START CONTENT -->
                <div class="content injectable">
                    <div class="content-data">
+
 
 
 
@@ -55,7 +56,7 @@
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>projects/congacommerce/ecommerce/src/lib/modules/pricing/services/price.service.ts</code>
+            <code>projects/congarevenuecloud/ecommerce/src/lib/modules/pricing/services/price.service.ts</code>
         </p>
 
 
@@ -63,13 +64,14 @@
                 <h3>Description</h3>
             </p>
             <p class="comment">
-                <p>Client-side pricing engine for retrieving price for various points in the ecommerce application.
+                <p><strong>This service is a work in progress.</strong></p>
+<p>Client-side pricing engine for retrieving price for various points in the ecommerce application.
 NOTE: It is not guarunteed that this service will always return accurate pricing for a given cart. You should always call cartService.priceCart(...) to trigger
 the server-side pricing engine to get the final price of a given cart.
 There are also pipes provided that wrap this service to provide pricing within a template (i.e. ProductPricePipe, OrderPricePipe, CartPricePipe etc...)</p>
 <h3>Usage</h3>
 
-<div><pre class="line-numbers"><code class="language-typescript">import { PriceService, AObjectService} from &#39;&#64;congacommerce/ecommerce&#39;;
+<div><pre class="line-numbers"><code class="language-typescript">import { PriceService, AObjectService} from &#39;&#64;congarevenuecloud/ecommerce&#39;;
 
 export class MyComponent implements OnInit{
 constructor( private priceService: PriceService)
@@ -426,7 +428,7 @@ private priceService: PriceService = this.injector.get(PriceService);
                 <td class="col-md-4">
                     <div class="io-description"><p>Method returns a price for a given attribute and its value on a product</p>
 <h3 id="example">Example:</h3>
-<div><pre class="line-numbers"><code class="language-typescript">import { PriceService, Price, ProductAttribute, Product } from &#39;&#64;congacommerce/ecommerce&#39;;
+<div><pre class="line-numbers"><code class="language-typescript">import { PriceService, Price, ProductAttribute, Product } from &#39;&#64;congarevenuecloud/ecommerce&#39;;
 import { Observable } from &#39;rxjs/Observable&#39;;
 
 export class MyComponent implements OnInit{
@@ -543,7 +545,30 @@ this.price$ = this.priceService.getAttributePriceForProduct(product, attribute, 
             <tr>
                 <td class="col-md-4">
                     <div class="io-description"><p>Method returns the price for a given cart. If the first parameter is left blank, it will return the price for the current cart.</p>
-</div>
+<h3 id="example">Example:</h3>
+<div><pre class="line-numbers"><code class="language-typescript">import { PriceService, Price, Cart } from &#39;&#64;congarevenuecloud/ecommerce&#39;;
+import { Observable } from &#39;rxjs/Observable&#39;;
+
+export class MyComponent implements OnInit{
+price: Price;
+price$: Observable&lt;Price&gt;;
+
+constructor(private priceService: PriceService){}
+
+getCartPrice(){
+this.priceService.getAttributePriceForProduct().subscribe(a =&gt; this.price = a);
+// or
+this.price$ = this.priceService.getAttributePriceForProduct();
+
+//or
+
+getCartPrice(cart: Observable&lt;Cart&gt; | Cart){
+this.priceService.getAttributePriceForProduct(cart).subscribe(a =&gt; this.price = a);
+// or
+this.price$ = this.priceService.getAttributePriceForProduct(cart);
+
+}
+}</code></pre></div></div>
 
                     <div class="io-description">
                         <b>Parameters :</b>
@@ -615,7 +640,7 @@ this.price$ = this.priceService.getAttributePriceForProduct(product, attribute, 
                 <td class="col-md-4">
                     <div class="io-description"><p>Method returns a price instance for a given cart item. If the price for the item has already been calculated, it will not do client side calculation.</p>
 <h3 id="example">Example:</h3>
-<div><pre class="line-numbers"><code class="language-typescript">import { PriceService, Price, CartItem , AssetLineItem , OrderLineItem , QuoteLineItem } from &#39;&#64;congacommerce/ecommerce&#39;;
+<div><pre class="line-numbers"><code class="language-typescript">import { PriceService, Price, CartItem , AssetLineItem , OrderLineItem , QuoteLineItem } from &#39;&#64;congarevenuecloud/ecommerce&#39;;
 import { Observable } from &#39;rxjs/Observable&#39;;
 
 export class MyComponent implements OnInit{
@@ -629,8 +654,7 @@ this.priceService.getLineItemPrice(itemList).subscribe(a =&gt; this.price = a);
 // or
 this.price$ = this.priceService.getLineItemPrice(itemList);
 }
-}</code></pre></div><p>Line items can be from a cart, an asset, an order or a quote.
-option items can be from an asset, an order or a quote.</p>
+}</code></pre></div><p>Line items can be from a cart, an asset, an order or a quote.</p>
 </div>
 
                     <div class="io-description">
@@ -675,9 +699,6 @@ Line items can be from a cart, an asset, an order or a quote.</p>
 
 
                                     <td>
-                                        <p>an optional parameter that lists option groups for the line items.
-option items can be from an asset, an order or a quote.</p>
-
                                     </td>
                                 </tr>
                             </tbody>
@@ -721,7 +742,7 @@ option items can be from an asset, an order or a quote.</p>
                 <td class="col-md-4">
                     <div class="io-description"><p>Method is used to retrieve the price of an option for a given product</p>
 <h3 id="example">Example:</h3>
-<div><pre class="line-numbers"><code class="language-typescript">import { PriceService, Price, ProductOptionComponent } from &#39;&#64;congacommerce/ecommerce&#39;;
+<div><pre class="line-numbers"><code class="language-typescript">import { PriceService, Price, ProductOptionComponent } from &#39;&#64;congarevenuecloud/ecommerce&#39;;
 import { Observable } from &#39;rxjs/Observable&#39;;
 
 export class MyComponent implements OnInit{
@@ -829,7 +850,7 @@ this.price$ = this.priceService.getOptionAdjustmentPrice(option);
                 <td class="col-md-4">
                     <div class="io-description"><p>Method returns price for a given OrderLineItem instance.</p>
 <h3 id="example">Example:</h3>
-<div><pre class="line-numbers"><code class="language-typescript">import { PriceService, Price, OrderLineItem} from &#39;&#64;congacommerce/ecommerce&#39;;
+<div><pre class="line-numbers"><code class="language-typescript">import { PriceService, Price, OrderLineItem} from &#39;&#64;congarevenuecloud/ecommerce&#39;;
 import { Observable } from &#39;rxjs/Observable&#39;;
 
 export class MyComponent implements OnInit{
@@ -910,7 +931,7 @@ this.price$ = this.priceService.getOrderLineItemPrice(orderLI);
                 <td class="col-md-4">
                     <div class="io-description"><p>Method returns a price for a given order instance.</p>
 <h3 id="example">Example:</h3>
-<div><pre class="line-numbers"><code class="language-typescript">import { PriceService, Price, Order } from &#39;&#64;congacommerce/ecommerce&#39;;
+<div><pre class="line-numbers"><code class="language-typescript">import { PriceService, Price, Order } from &#39;&#64;congarevenuecloud/ecommerce&#39;;
 import { Observable } from &#39;rxjs/Observable&#39;;
 
 export class MyComponent implements OnInit{
@@ -985,7 +1006,7 @@ this.price$ = this.priceService.getOrderPrice(order);
             </tr>
             <tr>
                 <td class="col-md-4">
-<code>getProductPrice(product: <a href="../classes/Product.html" target="_self">Product</a>, quantity: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>, term: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>, attributeValue?: <a href="../classes/ProductAttributeValue.html" target="_self">ProductAttributeValue</a>, bundle: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank">boolean</a>, chargeType?: <a href="../undefineds/ChargeType.html" target="_self">ChargeType</a>)</code>
+<code>getProductPrice(product: <a href="../classes/Product.html" target="_self">Product</a>, quantity: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>, term: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>, bundle: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank">boolean</a>, chargeType?: ChargeType)</code>
                 </td>
             </tr>
 
@@ -996,7 +1017,7 @@ this.price$ = this.priceService.getOrderPrice(order);
                 <td class="col-md-4">
                     <div class="io-description"><p>Method is used to retrieve the price for a given product.</p>
 <h3 id="example">Example:</h3>
-<div><pre class="line-numbers"><code class="language-typescript">import { PriceService, Price, Product } from &#39;&#64;congacommerce/ecommerce&#39;;
+<div><pre class="line-numbers"><code class="language-typescript">import { PriceService, Price, Product } from &#39;&#64;congarevenuecloud/ecommerce&#39;;
 import { Observable } from &#39;rxjs/Observable&#39;;
 
 export class MyComponent implements OnInit{
@@ -1010,7 +1031,8 @@ this.priceService.getProductPrice(product).subscribe(a =&gt; this.price = a);
 // or
 this.price$ = this.priceService.getProductPrice(product);
 }
-}</code></pre></div></div>
+}</code></pre></div><p>/**</p>
+</div>
 
                     <div class="io-description">
                         <b>Parameters :</b>
@@ -1083,24 +1105,6 @@ this.price$ = this.priceService.getProductPrice(product);
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>attributeValue</td>
-                                    <td>
-                                                <code><a href="../classes/ProductAttributeValue.html" target="_self" >ProductAttributeValue</a></code>
-                                    </td>
-
-                                    <td>
-                                        Yes
-                                    </td>
-
-                                    <td>
-                                    </td>
-
-                                    <td>
-                                        <p>an optional parameter representing the product attribute value.</p>
-
-                                    </td>
-                                </tr>
-                                <tr>
                                     <td>bundle</td>
                                     <td>
                                                 <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
@@ -1122,7 +1126,7 @@ this.price$ = this.priceService.getProductPrice(product);
                                 <tr>
                                     <td>chargeType</td>
                                     <td>
-                                                <code><a href="../miscellaneous/enumerations.html#ChargeType" target="_self" >ChargeType</a></code>
+                                            <code>ChargeType</code>
                                     </td>
 
                                     <td>
@@ -1178,7 +1182,7 @@ this.price$ = this.priceService.getProductPrice(product);
                 <td class="col-md-4">
                     <div class="io-description"><p>Method returns a NetPrice for a given QuoteLineItem instance.</p>
 <h3 id="example">Example:</h3>
-<div><pre class="line-numbers"><code class="language-typescript">import { PriceService, Price, QuoteLineItem} from &#39;&#64;congacommerce/ecommerce&#39;;
+<div><pre class="line-numbers"><code class="language-typescript">import { PriceService, Price, QuoteLineItem} from &#39;&#64;congarevenuecloud/ecommerce&#39;;
 import { Observable } from &#39;rxjs/Observable&#39;;
 
 export class MyComponent implements OnInit{
@@ -1259,7 +1263,7 @@ this.price$ = this.priceService.getQuoteLineItemPrice(quoteLI);
                 <td class="col-md-4">
                     <div class="io-description"><p>Method returns a price for a given Quote instance.</p>
 <h3 id="example">Example:</h3>
-<div><pre class="line-numbers"><code class="language-typescript">import { PriceService, Price, Quote} from &#39;&#64;congacommerce/ecommerce&#39;;
+<div><pre class="line-numbers"><code class="language-typescript">import { PriceService, Price, Quote} from &#39;&#64;congarevenuecloud/ecommerce&#39;;
 import { Observable } from &#39;rxjs/Observable&#39;;
 
 export class MyComponent implements OnInit{
@@ -1459,6 +1463,7 @@ this.price$ = this.priceService.getQuotePrice(quote);
 
 
 </div>
+
 
 
 

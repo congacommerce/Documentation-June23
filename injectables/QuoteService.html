@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Conga Digital Commerce June &#x27;23</title>
+        <title>Conga Digital Commerce February &#x27;23 on Conga Revenue Lifecycle Platform</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -15,7 +15,7 @@
     <body>
 
         <div class="navbar navbar-default navbar-fixed-top visible-xs">
-            <a href="../" class="navbar-brand">Conga Digital Commerce June &#x27;23</a>
+            <a href="../" class="navbar-brand">Conga Digital Commerce February &#x27;23 on Conga Revenue Lifecycle Platform</a>
             <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
         </div>
 
@@ -31,6 +31,7 @@
                <!-- START CONTENT -->
                <div class="content injectable">
                    <div class="content-data">
+
 
 
 
@@ -55,7 +56,7 @@
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>projects/congacommerce/ecommerce/src/lib/modules/order/services/quote.service.ts</code>
+            <code>projects/congarevenuecloud/ecommerce/src/lib/modules/order/services/quote.service.ts</code>
         </p>
 
 
@@ -66,7 +67,7 @@
                 <p>The quote represents a price breakdown for a given product configuration. Quotes are generally associated with an approval process and can be converted to a cart or an order.</p>
 <h3>Usage</h3>
 
-<div><pre class="line-numbers"><code class="language-typescript">import { QuoteService } from &#39;&#64;congacommerce/ecommerce&#39;;
+<div><pre class="line-numbers"><code class="language-typescript">import { QuoteService } from &#39;&#64;congarevenuecloud/ecommerce&#39;;
 
 constructor(private quoteService: QuoteService) {}
 
@@ -97,6 +98,10 @@ private quoteService: QuoteService = this.injector.get(QuoteService);
                 <tr>
                     <td class="col-md-4">
                         <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Protected</span>
+                                <a href="#cartItemProductService" >cartItemProductService</a>
+                            </li>
                             <li>
                                 <a href="#cartItemService" >cartItemService</a>
                             </li>
@@ -137,10 +142,16 @@ private quoteService: QuoteService = this.injector.get(QuoteService);
                                 <a href="#createCart" >createCart</a>
                             </li>
                             <li>
+                                <a href="#createQuote" >createQuote</a>
+                            </li>
+                            <li>
                                 <a href="#finalizeQuote" >finalizeQuote</a>
                             </li>
                             <li>
                                 <a href="#generateDocument" >generateDocument</a>
+                            </li>
+                            <li>
+                                <a href="#getAllQuotes" >getAllQuotes</a>
                             </li>
                             <li>
                                 <a href="#getGrandTotalByApprovalStage" >getGrandTotalByApprovalStage</a>
@@ -149,10 +160,19 @@ private quoteService: QuoteService = this.injector.get(QuoteService);
                                 <a href="#getMyQuotes" >getMyQuotes</a>
                             </li>
                             <li>
+                                <a href="#getQuote" >getQuote</a>
+                            </li>
+                            <li>
+                                <a href="#getQuoteById" >getQuoteById</a>
+                            </li>
+                            <li>
                                 <a href="#getQuoteByName" >getQuoteByName</a>
                             </li>
                             <li>
                                 <a href="#onInit" >onInit</a>
+                            </li>
+                            <li>
+                                <a href="#updateQuote" >updateQuote</a>
                             </li>
                         </ul>
                     </td>
@@ -196,7 +216,7 @@ private quoteService: QuoteService = this.injector.get(QuoteService);
                 <td class="col-md-4">
                     <div class="io-description"><p>Method to abandon the cart in Draft status.</p>
 <h3 id="example">Example:</h3>
-<div><pre class="line-numbers"><code class="language-typescript">import { QuoteService } from &#39;&#64;congacommerce/ecommerce&#39;;
+<div><pre class="line-numbers"><code class="language-typescript">import { QuoteService } from &#39;&#64;congarevenuecloud/ecommerce&#39;;
 import { Observable } from &#39;rxjs/Observable&#39;;
 
 export class MyComponent implements OnInit{
@@ -247,7 +267,7 @@ this.quoteService.abandonCart().subscribe(r =&gt; this.result = r);
                 <td class="col-md-4">
                     <div class="io-description"><p>Method to accept the given quote.</p>
 <h3 id="example">Example:</h3>
-<div><pre class="line-numbers"><code class="language-typescript">import { QuoteService } from &#39;&#64;congacommerce/ecommerce&#39;;
+<div><pre class="line-numbers"><code class="language-typescript">import { QuoteService } from &#39;&#64;congarevenuecloud/ecommerce&#39;;
 import { Observable } from &#39;rxjs/Observable&#39;;
 
 export class MyComponent implements OnInit{
@@ -330,7 +350,7 @@ this.quoteService.acceptQuote(quoteId).subscribe(r =&gt; this.result = r);
                 <td class="col-md-4">
                     <div class="io-description"><p>Method converts the current cart into a quote instance. Sets the business object on the cart to &#39;Proposal&#39;</p>
 <h3 id="example">Example:</h3>
-<div><pre class="line-numbers"><code class="language-typescript">import { QuoteService, Quote } from &#39;&#64;congacommerce/ecommerce&#39;;
+<div><pre class="line-numbers"><code class="language-typescript">import { QuoteService, Quote } from &#39;&#64;congarevenuecloud/ecommerce&#39;;
 import { Observable } from &#39;rxjs/Observable&#39;;
 
 export class MyComponent implements OnInit{
@@ -391,7 +411,7 @@ err =&gt; {...}
 
                     </div>
                     <div class="io-description">
-                        <p>an observable of the quote instance that was created from the cart</p>
+                        <p>an observable of the quote instance that was created from the cart.</p>
 
                     </div>
                 </td>
@@ -422,7 +442,7 @@ err =&gt; {...}
                 <td class="col-md-4">
                     <div class="io-description"><p>Method creates new cart and clones the finalized cart linked to the quote Id passed as argument to the new cart and set the new cart as active</p>
 <h3 id="example">Example:</h3>
-<div><pre class="line-numbers"><code class="language-typescript">import { QuoteService, Quote } from &#39;&#64;congacommerce/ecommerce&#39;;
+<div><pre class="line-numbers"><code class="language-typescript">import { QuoteService, Quote } from &#39;&#64;congarevenuecloud/ecommerce&#39;;
 import { Observable } from &#39;rxjs/Observable&#39;;
 
 export class MyComponent implements OnInit{
@@ -437,7 +457,8 @@ err =&gt; {...}
 );
 }
 }
-}</code></pre></div></div>
+}</code></pre></div><p><strong>This method is a work in progress.<strong></p>
+</div>
 
                     <div class="io-description">
                         <b>Parameters :</b>
@@ -473,7 +494,8 @@ err =&gt; {...}
 
                     </div>
                     <div class="io-description">
-                        <p>an observable of the quote instance that was created from the cart</p>
+                        <p>an observable of the quote instance that was created from the cart.
+<strong>This method is a work in progress.<strong></p>
 
                     </div>
                 </td>
@@ -504,7 +526,7 @@ err =&gt; {...}
                 <td class="col-md-4">
                     <div class="io-description"><p>Method to create a new cart for quote</p>
 <h3 id="example">Example:</h3>
-<div><pre class="line-numbers"><code class="language-typescript">import { QuoteService } from &#39;&#64;congacommerce/ecommerce&#39;;
+<div><pre class="line-numbers"><code class="language-typescript">import { QuoteService } from &#39;&#64;congarevenuecloud/ecommerce&#39;;
 import { Observable } from &#39;rxjs/Observable&#39;;
 
 export class MyComponent implements OnInit{
@@ -567,6 +589,91 @@ this.quoteService.createCart().subscribe(r =&gt; this.result = r);
         <tbody>
             <tr>
                 <td class="col-md-4">
+                    <a name="createQuote"></a>
+                    <span class="name">
+                        <span ><b>createQuote</b></span>
+                        <a href="#createQuote"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>createQuote(quote: <a href="../classes/Quote.html" target="_self">Quote</a>)</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>This method is use to create a quote.</p>
+<h3 id="example">Example:</h3>
+<div><pre class="line-numbers"><code class="language-typescript">import { QuoteService } from &#39;&#64;congarevenuecloud/ecommerce&#39;;
+import { Observable } from &#39;rxjs/Observable&#39;;
+export class MyComponent implements OnInit{
+result: Quote;
+result$: Observable&lt;Quote&gt;;
+
+constructor(private quoteService: QuoteService){}
+
+createQuote(quote: Quote){
+this.result$= this.quoteService.createQuote(quote);
+//or
+this.quoteService.createQuote(quote).subscribe(c=&gt; this.result=c);
+}
+}</code></pre></div></div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>quote</td>
+                                    <td>
+                                                <code><a href="../classes/Quote.html" target="_self" >Quote</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>Params hold the information of requested quote.</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../classes/Quote.html" target="_self" >Observable&lt;Quote&gt;</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>Observable<Quote>.</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
                     <a name="finalizeQuote"></a>
                     <span class="name">
                         <span ><b>finalizeQuote</b></span>
@@ -587,7 +694,7 @@ this.quoteService.createCart().subscribe(r =&gt; this.result = r);
                 <td class="col-md-4">
                     <div class="io-description"><p>Method moves the quote status from Draft to Approved.</p>
 <h3 id="example">Example:</h3>
-<div><pre class="line-numbers"><code class="language-typescript">import { QuoteService } from &#39;&#64;congacommerce/ecommerce&#39;;
+<div><pre class="line-numbers"><code class="language-typescript">import { QuoteService } from &#39;&#64;congarevenuecloud/ecommerce&#39;;
 import { Observable } from &#39;rxjs/Observable&#39;;
 export class MyComponent implements OnInit{
 result: boolean;
@@ -668,7 +775,7 @@ this.quoteService.finalizeQuote(quoteId).subscribe(r =&gt; this.result = r);
                 <td class="col-md-4">
                     <div class="io-description"><p>Method to generate the document for a custom object</p>
 <h3 id="example">Example:</h3>
-<div><pre class="line-numbers"><code class="language-typescript">import { QuoteService, GenerateDocument } from &#39;&#64;congacommerce/ecommerce&#39;;
+<div><pre class="line-numbers"><code class="language-typescript">import { QuoteService, GenerateDocument } from &#39;&#64;congarevenuecloud/ecommerce&#39;;
 import { Observable } from &#39;rxjs/Observable&#39;;
 
 export class MyComponent implements OnInit{
@@ -731,6 +838,224 @@ this.quoteService.generateDocument(generateDocumentRequest: GenerateDocument).su
         <tbody>
             <tr>
                 <td class="col-md-4">
+                    <a name="getAllQuotes"></a>
+                    <span class="name">
+                        <span ><b>getAllQuotes</b></span>
+                        <a href="#getAllQuotes"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getAllQuotes(days?: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>, filters?: <a href="../interfaces/FieldFilter.html" target="_self">Array&lt;FieldFilter&gt;</a>, relatedRecords: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, limit: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>, pageNumber: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>, orderBy: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, orderDirection: "ASC" | "DESC", showErrorToaster: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank">boolean</a>)</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>The method fetches the list of quotes based on the parameters passed.</p>
+<h3 id="example">Example:</h3>
+<div><pre class="line-numbers"><code class="language-typescript">import { QuoteService, Quote } from &#39;&#64;congarevenuecloud/ecommerce&#39;;
+import { Observable } from &#39;rxjs/Observable&#39;;
+export class MyComponent implements OnInit{
+result: Array&lt;Quote&gt;
+result$: Observable&lt;Array&lt;Quote&gt;&gt;;
+constructor(private quoteService: QuoteService){}
+getAllQuotes(days?: number, filters?: Array&lt;FieldFilter&gt;, relatedRecords: string = &#39;&#39;, limit: number = 10, pageNumber: number = 1, orderBy: string = &#39;CreatedDate&#39;, orderDirection: &#39;ASC&#39; | &#39;DESC&#39; = &#39;DESC&#39;): Observable&lt;Array&lt;Quote&gt;&gt; {
+this.quoteService.getAllQuotes(7, [{ field: &#39;Id&#39;, value: null, filterOperator: FilterOperator.NOT_EQUAL }], &#39;items&#39;).subscribe(r =&gt; this.result = r);
+// or
+results$ = this.quoteService.getAllQuotes(7, [{ field: &#39;Id&#39;, value: null, filterOperator: FilterOperator.NOT_EQUAL }], &#39;items&#39;);
+}
+}</code></pre></div></div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Default value</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>days</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        Yes
+                                    </td>
+
+                                    <td>
+                                    </td>
+
+                                    <td>
+                                        <p>optional parameter to filter the quotes created for the last &#39;x&#39; number of days.</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>filters</td>
+                                    <td>
+                                                <code><a href="../interfaces/FieldFilter.html" target="_self" >Array&lt;FieldFilter&gt;</a></code>
+                                    </td>
+
+                                    <td>
+                                        Yes
+                                    </td>
+
+                                    <td>
+                                    </td>
+
+                                    <td>
+                                        <p>list of quote field filters to filter the quote records.</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>relatedRecords</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                        <code>&#x27;&#x27;</code>
+                                    </td>
+
+                                    <td>
+                                        <p>related records(qupte line items, prices etc.) to be fetched for the quote(s). Takes in quote related fields as comma separated string.</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>limit</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                        <code>10</code>
+                                    </td>
+
+                                    <td>
+                                        <p>number representing the number of quote records to be fetched.</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>pageNumber</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                        <code>1</code>
+                                    </td>
+
+                                    <td>
+                                        <p>number representing the pagination.</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>orderBy</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                        <code>&#x27;CreatedDate&#x27;</code>
+                                    </td>
+
+                                    <td>
+                                        <p>string representing the sort field on the quote.</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>orderDirection</td>
+                                    <td>
+                                            <code>&quot;ASC&quot; | &quot;DESC&quot;</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                        <code>&#x27;DESC&#x27;</code>
+                                    </td>
+
+                                    <td>
+                                        <p>string representing the sort direction. Posible values are &#39;ASC&#39; or &#39;DESC&#39;.</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>showErrorToaster</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                        <code>true</code>
+                                    </td>
+
+                                    <td>
+                                        <p>boolean indicates whether the underlying API exceptions should be shown as a toaster message in UI. Defaulted to true.</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../interfaces/QuoteResult.html" target="_self" >Observable&lt;QuoteResult&gt;</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>An observable containing the list of quotes matching the criteria with total quote count.</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
                     <a name="getGrandTotalByApprovalStage"></a>
                     <span class="name">
                         <span ><b>getGrandTotalByApprovalStage</b></span>
@@ -751,7 +1076,7 @@ this.quoteService.generateDocument(generateDocumentRequest: GenerateDocument).su
                 <td class="col-md-4">
                     <div class="io-description"><p>Method to get the aggregate of quote total by approval stage</p>
 <h3 id="example">Example:</h3>
-<div><pre class="line-numbers"><code class="language-typescript">import { QuoteService, GenerateDocument } from &#39;&#64;congacommerce/ecommerce&#39;;
+<div><pre class="line-numbers"><code class="language-typescript">import { QuoteService, GenerateDocument } from &#39;&#64;congarevenuecloud/ecommerce&#39;;
 import { Observable } from &#39;rxjs/Observable&#39;;
 
 export class MyComponent implements OnInit{
@@ -792,7 +1117,7 @@ this.quoteService.getGrandTotalByApprovalStage().subscribe(r =&gt; r);
             </tr>
             <tr>
                 <td class="col-md-4">
-<code>getMyQuotes(days?: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>, limit: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>, pageNumber: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>, orderBy: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, orderDirection: "ASC" | "DESC")</code>
+<code>getMyQuotes(days?: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>, filters?: <a href="../interfaces/FieldFilter.html" target="_self">Array&lt;FieldFilter&gt;</a>, relatedRecords: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, limit: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>, pageNumber: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>, orderBy: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, orderDirection: "ASC" | "DESC", showErrorToaster: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank">boolean</a>)</code>
                 </td>
             </tr>
 
@@ -801,21 +1126,20 @@ this.quoteService.getGrandTotalByApprovalStage().subscribe(r =&gt; r);
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-description"><p>Returns a list of quotes for the given user.</p>
+                    <div class="io-description"><p><strong>This method is work in progress, currently returning all quotes.&lt;/<strong>
+The method fetches the list of my quotes based on the parameters passed.</p>
 <h3 id="example">Example:</h3>
-<div><pre class="line-numbers"><code class="language-typescript">import { QuoteService, Quote } from &#39;&#64;congacommerce/ecommerce&#39;;
+<div><pre class="line-numbers"><code class="language-typescript">import { QuoteService, Quote } from &#39;&#64;congarevenuecloud/ecommerce&#39;;
 import { Observable } from &#39;rxjs/Observable&#39;;
-
 export class MyComponent implements OnInit{
-quoteList: Array&lt;Quote&gt;;
-quoteList$: Observable&lt;Array&lt;Quote&gt;&gt;;
-
+result: Array&lt;Quote&gt;
+result$: Observable&lt;Array&lt;Quote&gt;&gt;;
 constructor(private quoteService: QuoteService){}
 
-ngOnInit(){
-this.quoteService.getMyQuotes().subscribe(q =&gt; this.quoteList = q);
+getMyQuotes(days?: number, filters?: Array&lt;FieldFilter&gt;, relatedRecords: string = &#39;&#39;, limit: number = 10, pageNumber: number = 1, orderBy: string = &#39;CreatedDate&#39;, orderDirection: &#39;ASC&#39; | &#39;DESC&#39; = &#39;DESC&#39;): Observable&lt;Array&lt;Quote&gt;&gt; {
+this.quoteService.getMyQuotes(7, [{ field: &#39;Id&#39;, value: null, filterOperator: FilterOperator.NOT_EQUAL }], &#39;items&#39;).subscribe(r =&gt; this.result = r);
 // or
-this.quoteList$ = this.quoteService.getMyQuotes();
+results$ = this.quoteService.getMyQuotes(7, [{ field: &#39;Id&#39;, value: null, filterOperator: FilterOperator.NOT_EQUAL }], &#39;items&#39;);
 }
 }</code></pre></div></div>
 
@@ -847,7 +1171,44 @@ this.quoteList$ = this.quoteService.getMyQuotes();
                                     </td>
 
                                     <td>
-                                        <p>the number of days in the past from now with which to retrieve quotes.</p>
+                                        <p>optional parameter to filter the quotes created for the last &#39;x&#39; number of days.</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>filters</td>
+                                    <td>
+                                                <code><a href="../interfaces/FieldFilter.html" target="_self" >Array&lt;FieldFilter&gt;</a></code>
+                                    </td>
+
+                                    <td>
+                                        Yes
+                                    </td>
+
+                                    <td>
+                                    </td>
+
+                                    <td>
+                                        <p>list of quote field filters to filter the quote records.</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>relatedRecords</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                        <code>&#x27;&#x27;</code>
+                                    </td>
+
+                                    <td>
+                                        <p>related records(qupte line items, prices etc.) to be fetched for the quote(s). Takes in quote related fields as comma separated string.</p>
 
                                     </td>
                                 </tr>
@@ -866,7 +1227,7 @@ this.quoteList$ = this.quoteService.getMyQuotes();
                                     </td>
 
                                     <td>
-                                        <p>the total number of records to return</p>
+                                        <p>number representing the number of quote records to be fetched.</p>
 
                                     </td>
                                 </tr>
@@ -881,10 +1242,12 @@ this.quoteList$ = this.quoteService.getMyQuotes();
                                     </td>
 
                                     <td>
-                                        <code>0</code>
+                                        <code>1</code>
                                     </td>
 
                                     <td>
+                                        <p>number representing the pagination.</p>
+
                                     </td>
                                 </tr>
                                 <tr>
@@ -902,7 +1265,7 @@ this.quoteList$ = this.quoteService.getMyQuotes();
                                     </td>
 
                                     <td>
-                                        <p>the field by which to order the records</p>
+                                        <p>string representing the sort field on the quote.</p>
 
                                     </td>
                                 </tr>
@@ -921,7 +1284,26 @@ this.quoteList$ = this.quoteService.getMyQuotes();
                                     </td>
 
                                     <td>
-                                        <p>the direction in which to sort the records</p>
+                                        <p>string representing the sort direction. Posible values are &#39;ASC&#39; or &#39;DESC&#39;.</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>showErrorToaster</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                        <code>true</code>
+                                    </td>
+
+                                    <td>
+                                        <p>boolean indicates whether the underlying API exceptions should be shown as a toaster message in UI. Defaulted to true.</p>
 
                                     </td>
                                 </tr>
@@ -931,11 +1313,179 @@ this.quoteList$ = this.quoteService.getMyQuotes();
                     <div>
                     </div>
                     <div class="io-description">
-                        <b>Returns : </b>        <code><a href="../classes/Quote.html" target="_self" >Observable&lt;Array&lt;Quote&gt;&gt;</a></code>
+                        <b>Returns : </b>        <code><a href="../interfaces/QuoteResult.html" target="_self" >Observable&lt;QuoteResult&gt;</a></code>
 
                     </div>
                     <div class="io-description">
-                        <p>a an observable array of quote instances for the current user</p>
+                        <p>An observable containing the list of quotes matching the criteria with total quote count.</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getQuote"></a>
+                    <span class="name">
+                        <span ><b>getQuote</b></span>
+                        <a href="#getQuote"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getQuote(Id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>The Method gets details of the Quote.</p>
+<h3 id="example">Example:</h3>
+<div><pre class="line-numbers"><code class="language-typescript">import { QuoteService, Quote } from &#39;&#64;congarevenuecloud/ecommerce&#39;;
+import { Observable } from &#39;rxjs/Observable&#39;;
+
+export class MyComponent implements OnInit{
+quote: Quote;
+
+constructor(private quoteService: QuoteService){}
+
+this.quoteService.getQuote(quoteId).subscribe(
+c =&gt; c,
+err =&gt; {...}
+);
+}
+}</code></pre></div></div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Id</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>the Id of the quote</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../classes/Quote.html" target="_self" >Observable&lt;Quote&gt;</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>an observable of the quote instance that was created from the cart</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getQuoteById"></a>
+                    <span class="name">
+                        <span ><b>getQuoteById</b></span>
+                        <a href="#getQuoteById"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getQuoteById(quoteId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>This method returns the quote details based on given quote Id.</p>
+<h3 id="example">Example:</h3>
+<div><pre class="line-numbers"><code class="language-typescript">import { QuoteService, Quote } from &#39;&#64;congarevenuecloud/ecommerce&#39;;
+import { Observable } from &#39;rxjs/Observable&#39;;
+export class MyComponent implements OnInit{
+result: Quote
+result$: Observable&lt;Quote&gt;;
+constructor(private quoteService: QuoteService){}
+getQuoteById(quoteId: string){
+this.quoteService.getQuoteById(quoteId).subscribe(r =&gt; this.result = r);
+// or
+results$ = this.quoteService.getQuoteById(quoteId);
+}
+}</code></pre></div></div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>quoteId</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>string identifier of the quote.</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../classes/Quote.html" target="_self" >Observable&lt;Quote&gt;</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>Observable<Quote>.</p>
 
                     </div>
                 </td>
@@ -966,7 +1516,7 @@ this.quoteList$ = this.quoteService.getMyQuotes();
                 <td class="col-md-4">
                     <div class="io-description"><p>Method gets a quote by the name</p>
 <h3 id="example">Example:</h3>
-<div><pre class="line-numbers"><code class="language-typescript">import { QuoteService, Quote } from &#39;&#64;congacommerce/ecommerce&#39;;
+<div><pre class="line-numbers"><code class="language-typescript">import { QuoteService, Quote } from &#39;&#64;congarevenuecloud/ecommerce&#39;;
 import { Observable } from &#39;rxjs/Observable&#39;;
 
 export class MyComponent implements OnInit{
@@ -1051,12 +1601,126 @@ this.quoteService.getQuoteByName(name).subscribe(q =&gt; this.quote = q);
             </tr>
         </tbody>
     </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="updateQuote"></a>
+                    <span class="name">
+                        <span ><b>updateQuote</b></span>
+                        <a href="#updateQuote"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>updateQuote(quoteId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, payload: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>This method updates the quote object based on the payload passed.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>quoteId</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>string identifier of the quote record.</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>payload</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>quote data to be updated.</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../classes/Quote.html" target="_self" >Observable&lt;Quote&gt;</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>observable containing the updated quote.</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
 </section>
             <section>
     
     <h3 id="inputs">
         Properties
     </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="cartItemProductService"></a>
+                    <span class="name">
+                            <span class="modifier">Protected</span>
+                        <span ><b>cartItemProductService</b></span>
+                        <a href="#cartItemProductService"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../injectables/ProductService.html" target="_self" >CartItemProductService</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>this.injector.get(CartItemProductService)</code>
+                    </td>
+                </tr>
+
+
+        </tbody>
+    </table>
     <table class="table table-sm table-bordered">
         <tbody>
             <tr>
@@ -1144,6 +1808,7 @@ this.quoteService.getQuoteByName(name).subscribe(q =&gt; this.quote = q);
 
 
 </div>
+
 
 
 

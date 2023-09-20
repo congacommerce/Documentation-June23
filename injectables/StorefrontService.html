@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Conga Digital Commerce June &#x27;23</title>
+        <title>Conga Digital Commerce February &#x27;23 on Conga Revenue Lifecycle Platform</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -15,7 +15,7 @@
     <body>
 
         <div class="navbar navbar-default navbar-fixed-top visible-xs">
-            <a href="../" class="navbar-brand">Conga Digital Commerce June &#x27;23</a>
+            <a href="../" class="navbar-brand">Conga Digital Commerce February &#x27;23 on Conga Revenue Lifecycle Platform</a>
             <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
         </div>
 
@@ -31,6 +31,7 @@
                <!-- START CONTENT -->
                <div class="content injectable">
                    <div class="content-data">
+
 
 
 
@@ -55,7 +56,7 @@
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>projects/congacommerce/ecommerce/src/lib/modules/store/services/storefront.service.ts</code>
+            <code>projects/congarevenuecloud/ecommerce/src/lib/modules/store/services/storefront.service.ts</code>
         </p>
 
 
@@ -66,7 +67,7 @@
                 <p>The storefront record is the backbone to the customer experience. It drives catalog, pricing and interface.</p>
 <h3>Usage</h3>
 
-<div><pre class="line-numbers"><code class="language-typescript">import { StorefrontService } from &#39;&#64;congacommerce/ecommerce&#39;;
+<div><pre class="line-numbers"><code class="language-typescript">import { StorefrontService, AObjectService } from &#39;&#64;congarevenuecloud/ecommerce&#39;;
 
 constructor(private storeFrontService: StorefrontService) {}
 
@@ -118,9 +119,6 @@ private storeFrontService: StorefrontService = this.injector.get(StorefrontServi
                             <li>
                                 <a href="#onInit" >onInit</a>
                             </li>
-                            <li>
-                                <a href="#refresh" >refresh</a>
-                            </li>
                         </ul>
                     </td>
                 </tr>
@@ -163,15 +161,12 @@ private storeFrontService: StorefrontService = this.injector.get(StorefrontServi
                 <td class="col-md-4">
                     <div class="io-description"><p>Retrieves the storefront record</p>
 <h3 id="example">Example:</h3>
-<div><pre class="line-numbers"><code class="language-typescript">import { StorefrontService, Storefront } from &#39;&#64;congacommerce/ecommerce&#39;;
+<div><pre class="line-numbers"><code class="language-typescript">import { StorefrontService, Storefront } from &#39;&#64;congarevenuecloud/ecommerce&#39;;
 import { Observable } from &#39;rxjs/Observable&#39;;
-
 export class MyComponent implements OnInit{
 storefront: Storefront;
 storefront$: Observable&lt;Storefront&gt;;
-
 constructor(private storefrontService: StorefrontService){}
-
 ngOnInit(){
 this.storefrontService.getStorefront().subscribe(s =&gt; this.storefront = s);
 // or
@@ -224,45 +219,6 @@ this.storefront$ = this.storefrontService.getStorefront();
             </tr>
         </tbody>
     </table>
-    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
-                    <a name="refresh"></a>
-                    <span class="name">
-                        <span ><b>refresh</b></span>
-                        <a href="#refresh"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-            <tr>
-                <td class="col-md-4">
-<code>refresh()</code>
-                </td>
-            </tr>
-
-
-
-
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-description"><p>This method is responsible for fetching the active storefront record.</p>
-<h3 id="example">Example:</h3>
-<div><pre class="line-numbers"><code class="language-typescript">import { StorefrontService } from &#39;&#64;congacommerce/ecommerce&#39;;
-export class MyComponent implements OnInit{
-constructor(private storeFrontService: StorefrontService) {}
-
-this.storeFrontService.refresh();
-}</code></pre></div></div>
-
-                    <div class="io-description">
-                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
-
-                    </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
 </section>
             <section>
     
@@ -296,6 +252,7 @@ this.storeFrontService.refresh();
 
 
 </div>
+
 
 
 

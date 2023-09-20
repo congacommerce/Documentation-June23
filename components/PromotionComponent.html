@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Conga Digital Commerce June &#x27;23</title>
+        <title>Conga Digital Commerce February &#x27;23 on Conga Revenue Lifecycle Platform</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -15,7 +15,7 @@
     <body>
 
         <div class="navbar navbar-default navbar-fixed-top visible-xs">
-            <a href="../" class="navbar-brand">Conga Digital Commerce June &#x27;23</a>
+            <a href="../" class="navbar-brand">Conga Digital Commerce February &#x27;23 on Conga Revenue Lifecycle Platform</a>
             <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
         </div>
 
@@ -62,7 +62,7 @@
     <h3>File</h3>
 </p>
 <p class="comment">
-    <code>projects/congacommerce/elements/src/lib/promotion/promotion.component.ts</code>
+    <code>projects/congarevenuecloud/elements/src/lib/promotion/promotion.component.ts</code>
 </p>
 
 
@@ -71,17 +71,20 @@
     </p>
     <p class="comment">
         <p>Promotion component is used to apply and remove promtoions on the cart.
+<strong>This component is a work in progress.</strong>
 Also fetches the list of adjustment line item associated with the cart.</p>
 <h3>Preview</h3>
 <img src="https://raw.githubusercontent.com/Apttus-Ecom/Summer19/master/res/promotion.png" style="max-width: 100%">
 <h3>Usage</h3>
 
-<div><pre class="line-numbers"><code class="language-typescript">import { PromotionModule } from &#39;&#64;congacommerce/elements&#39;;
+<div><pre class="line-numbers"><code class="language-typescript">import { PromotionModule } from &#39;&#64;congarevenuecloud/elements&#39;;
 
 &#64;NgModule({
 imports: [PromotionModule, ...]
 })
-export class AppModule {}</code></pre></div><div><pre class="line-numbers"><code class="language-typescript">&lt;apt-promotion [cart]=&quot;cart&quot;&gt;&lt;/apt-promotion&gt;</code></pre></div>
+export class AppModule {}</code></pre></div><div><pre class="line-numbers"><code class="language-html">```typescript
+&lt;apt-promotion [cart]=&quot;cart&quot;&gt;&lt;/apt-promotion&gt;</code></pre></div><p>```</p>
+
     </p>
 
 
@@ -174,7 +177,7 @@ export class AppModule {}</code></pre></div><div><pre class="line-numbers"><code
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor(promotionService: <a href="../injectables/PromotionService.html" target="_self">PromotionService</a>, exceptionService: <a href="../injectables/ExceptionService.html" target="_self">ExceptionService</a>, storefrontService: <a href="../injectables/StorefrontService.html" target="_self">StorefrontService</a>, cdr: <a href="https://angular.io/api/core/ChangeDetectorRef" target="_blank">ChangeDetectorRef</a>)</code>
+<code>constructor(promotionService: PromotionService, exceptionService: <a href="../injectables/ExceptionService.html" target="_self">ExceptionService</a>, storefrontService: <a href="../injectables/StorefrontService.html" target="_self">StorefrontService</a>, cdr: <a href="https://angular.io/api/core/ChangeDetectorRef" target="_blank">ChangeDetectorRef</a>)</code>
                     </td>
                 </tr>
 
@@ -195,7 +198,7 @@ export class AppModule {}</code></pre></div><div><pre class="line-numbers"><code
                                                         <td>promotionService</td>
                                                   
                                                         <td>
-                                                                        <code><a href="../injectables/PromotionService.html" target="_self" >PromotionService</a></code>
+                                                                    <code>PromotionService</code>
                                                         </td>
                                                   
                                                     <td>
@@ -406,11 +409,13 @@ export class AppModule {}</code></pre></div><div><pre class="line-numbers"><code
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
         var COMPONENT_TEMPLATE = '<div><div class="card " *ngIf="(storefront$ | async)?.EnablePromotions">  <h5 class="card-header mb-0">    {{ \'PROMOTION.PROMOTION_TITLE\' | translate }}  </h5>  <div class="card-body">    <form class="input-group pb-3">      <input type="text" class="form-control promo-form-control" placeholder="{{\'PROMOTION.PROMO_CODE\' | translate}}" [(ngModel)]="promocode"        [ngModelOptions]="{standalone: true}">      <div class="ml-2">        <button type="submit" class="btn btn-outline-primary" (click)="applyPromotions()" [ladda]="loading" [attr.data-style]="\'zoom-in\'">          {{ \'PROMOTION.APPLY\' | translate }} </button>      </div>    </form>    <div>      <ul class="list-group">        <li class="list-group-item dashed-border border-secondary" *ngFor="let incentive of promoList$ | async; trackBy: trackById">          <div class="d-flex justify-content-between align-items-center">            <button class="btn btn-link text-primary p-0 btn-sm font-weight-bold" (click)="promotionModal.openIncentiveModal(incentive)">{{incentive?.Name}}</button>            <span class="badge badge-light p-2">{{incentive?._metadata?.total | localCurrency | async}}</span>          </div>          <apt-output-field field="IncentiveCode" labelClass="font-weight-normal text-uppercase" [editable]="false" [record]="incentive"            layout="inline" class="d-block my-2" *ngIf="!incentive._metadata.couponCode"></apt-output-field>          <span *ngIf="incentive._metadata.couponCode" class="coupon">            <dt>{{\'PROMOTION.COUPON_CODE\' | translate}}:</dt>            <dd>{{ incentive._metadata.couponCode }}</dd>          </span>          <p [innerHTML]="incentive?.Description"></p>          <button *ngIf="incentive?.AutoApply === false" class="btn btn-link p-0 btn-sm" (click)="removePromotion(incentive)" [ladda]="incentive?._metadata?.loading"            [attr.data-style]="\'zoom-in\'"> {{\'PROMOTION.REMOVE\' | translate}} </button>        </li>      </ul>      <!-- <ng-container *ngFor="let item of cartPromotionList">        <div class="list-group-item d-flex justify-content-between small p-1 promo-border promo-li-height">          <div class="d-flex flex-grow-1 flex-column">            <p class="mb-2">              <a href="javascript:void(0)" class="font-weight-bold small" (click)="openModalForCartPromo(item?.Incentive?.Name, item)">{{item?.Incentive?.Name}}</a>            </p>            <div class="mb-2 small">              <span class="font-weight-bold"> {{\'PROMOTION.PROMO_CODE\' | translate}}: </span>              <span>{{item?.IncentiveCode}}</span>            </div>            <div class="text-muted small">              {{item?.Incentive?.Description}}            </div>          </div>          <div class="d-flex align-items-end flex-column">            <p class="pt-1 m-0 small">              <a *ngIf="item?.Incentive?.AutoApply === false" href="javascript:void(0)" class="text-secondary" (click)="removePromotion(item?.IncentiveCode, item?.Incentive?.Name)"> {{\'PROMOTION.REMOVE\' | translate}} </a>            </p>            <div class="mt-auto">              <span class="badge badge-secondary small">{{totalPromotionAmt(item?.Incentive?.Name, item) | localCurrency | async}}</span>            </div>          </div>        </div>      </ng-container> -->    </div>  </div></div><apt-pr-modal #promotionModal></apt-pr-modal></div>'
-    var COMPONENTS = [{'name': 'AdditionalInformationComponent', 'selector': 'apt-additional-information'},{'name': 'AddressComponent', 'selector': 'apt-address'},{'name': 'AddToCartComponent', 'selector': 'apt-add-to-cart'},{'name': 'AlertComponent', 'selector': 'apt-alert'},{'name': 'AssetDropdownButtonComponent', 'selector': 'apt-asset-dropdown-button'},{'name': 'AssetListComponent', 'selector': 'apt-asset-list'},{'name': 'BreadcrumbComponent', 'selector': 'apt-breadcrumb'},{'name': 'CategoryFilterComponent', 'selector': 'apt-category-filter'},{'name': 'ChartComponent', 'selector': 'apt-chart'},{'name': 'ConstraintRuleAlertComponent', 'selector': 'apt-constraint-rule-alert'},{'name': 'ConstraintRuleSidebarComponent', 'selector': 'apt-constraint-rule-sidebar'},{'name': 'CRIconComponent', 'selector': 'apt-cr-constraint-icon'},{'name': 'CRRecommendedProductsComponent', 'selector': 'apt-cr-recommended-products'},{'name': 'DataFilterComponent', 'selector': 'apt-data-filter'},{'name': 'DotsComponent', 'selector': 'apt-dots'},{'name': 'FavoriteModalComponent', 'selector': 'apt-favorite-modal'},{'name': 'FilesComponent', 'selector': 'apt-files'},{'name': 'GenerateDocumentComponent', 'selector': 'apt-generate-document'},{'name': 'InputDateComponent', 'selector': 'apt-date-range-input'},{'name': 'InputFieldComponent', 'selector': 'apt-input-field'},{'name': 'InputSelectComponent', 'selector': 'apt-input-select'},{'name': 'JumbotronComponent', 'selector': 'apt-jumbotron'},{'name': 'LineitemCardComponent', 'selector': 'apt-lineitem-card'},{'name': 'LineItemMenuComponent', 'selector': 'apt-line-item-menu'},{'name': 'LineItemTableRowComponent', 'selector': 'apt-line-item-table-row'},{'name': 'LoginFormComponent', 'selector': 'apt-login-form'},{'name': 'MiniCartComponent', 'selector': 'apt-mini-cart'},{'name': 'MiniProfileComponent', 'selector': 'apt-mini-profile'},{'name': 'OutputFieldComponent', 'selector': 'apt-output-field'},{'name': 'PaymentComponent', 'selector': 'apt-payment'},{'name': 'PaymentIFrameComponent', 'selector': 'apt-payment-iframe'},{'name': 'PresentDocumentComponent', 'selector': 'apt-present-document'},{'name': 'PriceComponent', 'selector': 'apt-price'},{'name': 'PriceSummaryComponent', 'selector': 'apt-price-summary'},{'name': 'ProductCardComponent', 'selector': 'apt-product-card'},{'name': 'ProductCarouselComponent', 'selector': 'apt-product-carousel'},{'name': 'ProductCompareComponent', 'selector': 'apt-product-compare'},{'name': 'ProductConfigurationComponent', 'selector': 'apt-product-configuration'},{'name': 'ProductConfigurationSummaryComponent', 'selector': 'apt-product-configuration-summary'},{'name': 'ProductDrawerComponent', 'selector': 'apt-product-drawer'},{'name': 'ProductImagesComponent', 'selector': 'apt-product-images'},{'name': 'ProductSearchComponent', 'selector': 'apt-product-search'},{'name': 'ProductTypeFilterComponent', 'selector': 'apt-product-type-filter'},{'name': 'PromotionComponent', 'selector': 'apt-promotion'},{'name': 'PromotionModalComponent', 'selector': 'apt-pr-modal'},{'name': 'RevalidateCartModalComponent', 'selector': 'apt-revalidate-cart-modal'},{'name': 'SelectAllComponent', 'selector': 'apt-select-all'},{'name': 'SpinnerComponent', 'selector': 'apt-spinner'},{'name': 'TableComponent', 'selector': 'apt-table'},{'name': 'TaxPopHoverComponent', 'selector': 'apt-tax-pophover'}];
+    var COMPONENTS = [{'name': 'AdditionalInformationComponent', 'selector': 'apt-additional-information'},{'name': 'AddressComponent', 'selector': 'apt-address'},{'name': 'AddToCartComponent', 'selector': 'apt-add-to-cart'},{'name': 'AlertComponent', 'selector': 'apt-alert'},{'name': 'AssetDropdownButtonComponent', 'selector': 'apt-asset-dropdown-button'},{'name': 'AssetListComponent', 'selector': 'apt-asset-list'},{'name': 'BreadcrumbComponent', 'selector': 'apt-breadcrumb'},{'name': 'CategoryFilterComponent', 'selector': 'apt-category-filter'},{'name': 'ChartComponent', 'selector': 'apt-chart'},{'name': 'ConstraintRuleAlertComponent', 'selector': 'apt-constraint-rule-alert'},{'name': 'ConstraintRuleSidebarComponent', 'selector': 'apt-constraint-rule-sidebar'},{'name': 'CRIconComponent', 'selector': 'apt-cr-constraint-icon'},{'name': 'CRRecommendedProductsComponent', 'selector': 'apt-cr-recommended-products'},{'name': 'DataFilterComponent', 'selector': 'apt-data-filter'},{'name': 'DependentPicklistComponent', 'selector': 'apt-dependent-picklist'},{'name': 'DotsComponent', 'selector': 'apt-dots'},{'name': 'FacetFilterComponent', 'selector': 'apt-facet-filter'},{'name': 'FavoriteModalComponent', 'selector': 'apt-favorite-modal'},{'name': 'FilesComponent', 'selector': 'apt-files'},{'name': 'GenerateDocumentComponent', 'selector': 'apt-generate-document'},{'name': 'InputDateComponent', 'selector': 'apt-date-range-input'},{'name': 'InputFieldComponent', 'selector': 'apt-input-field'},{'name': 'InputSelectComponent', 'selector': 'apt-input-select'},{'name': 'JumbotronComponent', 'selector': 'apt-jumbotron'},{'name': 'LineitemCardComponent', 'selector': 'apt-lineitem-card'},{'name': 'LineItemMenuComponent', 'selector': 'apt-line-item-menu'},{'name': 'LineItemTableRowComponent', 'selector': 'apt-line-item-table-row'},{'name': 'MiniCartComponent', 'selector': 'apt-mini-cart'},{'name': 'MiniProfileComponent', 'selector': 'apt-mini-profile'},{'name': 'OutputFieldComponent', 'selector': 'apt-output-field'},{'name': 'PaymentComponent', 'selector': 'apt-payment'},{'name': 'PaymentIFrameComponent', 'selector': 'apt-payment-iframe'},{'name': 'PopoverComponent', 'selector': 'apt-popover'},{'name': 'PresentDocumentComponent', 'selector': 'apt-present-document'},{'name': 'PriceComponent', 'selector': 'apt-price'},{'name': 'PriceModalComponent', 'selector': 'apt-price-modal'},{'name': 'PriceSummaryComponent', 'selector': 'apt-price-summary'},{'name': 'ProductCardComponent', 'selector': 'apt-product-card'},{'name': 'ProductCarouselComponent', 'selector': 'apt-product-carousel'},{'name': 'ProductCompareComponent', 'selector': 'apt-product-compare'},{'name': 'ProductConfigurationComponent', 'selector': 'apt-product-configuration'},{'name': 'ProductConfigurationSummaryComponent', 'selector': 'apt-product-configuration-summary'},{'name': 'ProductDrawerComponent', 'selector': 'apt-product-drawer'},{'name': 'ProductImagesComponent', 'selector': 'apt-product-images'},{'name': 'ProductSearchComponent', 'selector': 'apt-product-search'},{'name': 'ProductTypeFilterComponent', 'selector': 'apt-product-type-filter'},{'name': 'PromotionComponent', 'selector': 'apt-promotion'},{'name': 'PromotionModalComponent', 'selector': 'apt-pr-modal'},{'name': 'SelectAllComponent', 'selector': 'apt-select-all'},{'name': 'SpinnerComponent', 'selector': 'apt-spinner'},{'name': 'TableComponent', 'selector': 'apt-table'}];
     var DIRECTIVES = [{'name': 'AutoFocusDirective', 'selector': '[aptAutoFocus]'}];
     var ACTUAL_COMPONENT = {'name': 'PromotionComponent'};
 </script>
 <script src="../js/tree.js"></script>
+
+
 
 
 

@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Conga Digital Commerce June &#x27;23</title>
+        <title>Conga Digital Commerce February &#x27;23 on Conga Revenue Lifecycle Platform</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -15,7 +15,7 @@
     <body>
 
         <div class="navbar navbar-default navbar-fixed-top visible-xs">
-            <a href="../" class="navbar-brand">Conga Digital Commerce June &#x27;23</a>
+            <a href="../" class="navbar-brand">Conga Digital Commerce February &#x27;23 on Conga Revenue Lifecycle Platform</a>
             <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
         </div>
 
@@ -31,6 +31,7 @@
                <!-- START CONTENT -->
                <div class="content injectable">
                    <div class="content-data">
+
 
 
 
@@ -55,7 +56,7 @@
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>projects/congacommerce/ecommerce/src/lib/services/line-item.service.ts</code>
+            <code>projects/congarevenuecloud/ecommerce/src/lib/services/line-item.service.ts</code>
         </p>
 
 
@@ -66,7 +67,7 @@
                 <p>Line Item Service returns the details of  line items related to the CartItem , AssetLineItem ,QuoteLineItem , OrderLineItem.</p>
 <h3>Usage</h3>
 
-<div><pre class="line-numbers"><code class="language-typescript">import { LineItemService, AObjectService} from &#39;&#64;congacommerce/ecommerce&#39;;
+<div><pre class="line-numbers"><code class="language-typescript">import { LineItemService, AObjectService} from &#39;&#64;congarevenuecloud/ecommerce&#39;;
 
 export class MyComponent implements OnInit{
 constructor( private lineItemService: LineItemService)
@@ -99,9 +100,6 @@ private lineItemService: LineItemService = this.injector.get(LineItemService);
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
-                                <a href="#getOptionsForItem" >getOptionsForItem</a>
-                            </li>
-                            <li>
                                     <span class="modifier">Static</span>
                                 <a href="#groupItems" >groupItems</a>
                             </li>
@@ -123,108 +121,6 @@ private lineItemService: LineItemService = this.injector.get(LineItemService);
     <h3 id="methods">
         Methods
     </h3>
-    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
-                    <a name="getOptionsForItem"></a>
-                    <span class="name">
-                        <span ><b>getOptionsForItem</b></span>
-                        <a href="#getOptionsForItem"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-            <tr>
-                <td class="col-md-4">
-<code>getOptionsForItem(item: CartItem | AssetLineItem | QuoteLineItem | OrderLineItem, relatedTo?: Cart | Order | Quote)</code>
-                </td>
-            </tr>
-
-
-
-
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-description"><p>Method takes a line item and returns the full list of line items related to it. Can be any line item within the bundle.</p>
-<h3 id="example">Example:</h3>
-<div><pre class="line-numbers"><code class="language-typescript">import { LineItemService, Quote } from &#39;&#64;congacommerce/ecommerce&#39;;
-import { Observable } from &#39;rxjs/Observable&#39;;
-
-export class MyComponent implements OnInit{
-option: Array&lt;CartItem | AssetLineItem | QuoteLineItem | OrderLineItem&gt;;
-option$: Observable&lt;Array&lt;CartItem | AssetLineItem | QuoteLineItem | OrderLineItem&gt;&gt;;
-
-constructor(private lineItemService: LineItemService){}
-
-ngOnInit(){
-this.lineItemService.getOptionsForItem(relatedTo, cart)().subscribe(q =&gt; this.option = q);
-// or
-this.option$ = this.lineItemService.getOptionsForItem(relatedTo, cart)();
-}
-}</code></pre></div></div>
-
-                    <div class="io-description">
-                        <b>Parameters :</b>
-                        
-                        <table class="params">
-                            <thead>
-                                <tr>
-                                    <td>Name</td>
-                                    <td>Type</td>
-                                    <td>Optional</td>
-                                    <td>Description</td>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>item</td>
-                                    <td>
-                                            <code>CartItem | AssetLineItem | QuoteLineItem | OrderLineItem</code>
-                                    </td>
-
-                                    <td>
-                                        No
-                                    </td>
-
-
-                                    <td>
-                                        <p>the primary line item to get the related cart items for</p>
-
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>relatedTo</td>
-                                    <td>
-                                            <code>Cart | Order | Quote</code>
-                                    </td>
-
-                                    <td>
-                                        Yes
-                                    </td>
-
-
-                                    <td>
-                                        <p>An optional context object to avoid additional network callouts</p>
-
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div>
-                    </div>
-                    <div class="io-description">
-                        <b>Returns : </b>    <code>Observable&lt;Array&lt;CartItem | AssetLineItem | QuoteLineItem | OrderLineItem&gt;&gt;</code>
-
-                    </div>
-                    <div class="io-description">
-                        <p>An observable of related Line items.  //cartItems$ = this.cartItemService.getOptionsForItem(relatedTo, cart);</p>
-
-                    </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
     <table class="table table-sm table-bordered">
         <tbody>
             <tr>
@@ -251,16 +147,17 @@ this.option$ = this.lineItemService.getOptionsForItem(relatedTo, cart)();
                 <td class="col-md-4">
                     <div class="io-description"><p>The method takes a line item and returns the categorized line item.</p>
 <h3 id="example">Example:</h3>
-<div><pre class="line-numbers"><code class="language-typescript">import { LineItemService, Quote } from &#39;&#64;congacommerce/ecommerce&#39;;
+<div><pre class="line-numbers"><code class="language-typescript">import { LineItemService, ItemGroup, CartItem , AssetLineItem ,QuoteLineItem ,OrderLineItem } from &#39;&#64;congarevenuecloud/ecommerce&#39;;
 import { Observable } from &#39;rxjs/Observable&#39;;
 
 export class MyComponent implements OnInit{
-lineItems: Array&lt;ItemGroup&gt;;
+lineItemList: ItemGroup;
+lineItemList$: Array&lt;ItemGroup&gt;;
 
-constructor(private lineItemService: LineItemService){}
-
-ngOnInit(){
-lineItems: LineItemService.groupItems(lineItems),
+groupItems(items: Array&lt;CartItem | AssetLineItem | QuoteLineItem | OrderLineItem&gt;){
+LineItemService.groupItems(items).subscribe(a =&gt; this.lineItemList = a);
+// or
+this.lineItemList$ = LineItemService.groupItems(items);
 }
 }</code></pre></div></div>
 
@@ -273,6 +170,7 @@ lineItems: LineItemService.groupItems(lineItems),
                                     <td>Name</td>
                                     <td>Type</td>
                                     <td>Optional</td>
+                                    <td>Description</td>
                                 </tr>
                             </thead>
                             <tbody>
@@ -287,6 +185,10 @@ lineItems: LineItemService.groupItems(lineItems),
                                     </td>
 
 
+                                    <td>
+                                        <p>Array of type Cart item, Asset line item, Quote line item Or Order line item</p>
+
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -298,8 +200,7 @@ lineItems: LineItemService.groupItems(lineItems),
 
                     </div>
                     <div class="io-description">
-                        <p>an Array of ItemGroup interface type.</p>
-
+                        
                     </div>
                 </td>
             </tr>
@@ -312,6 +213,7 @@ lineItems: LineItemService.groupItems(lineItems),
 
 
 </div>
+
 
 
 

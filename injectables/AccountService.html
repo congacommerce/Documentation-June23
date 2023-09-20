@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Conga Digital Commerce June &#x27;23</title>
+        <title>Conga Digital Commerce February &#x27;23 on Conga Revenue Lifecycle Platform</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -15,7 +15,7 @@
     <body>
 
         <div class="navbar navbar-default navbar-fixed-top visible-xs">
-            <a href="../" class="navbar-brand">Conga Digital Commerce June &#x27;23</a>
+            <a href="../" class="navbar-brand">Conga Digital Commerce February &#x27;23 on Conga Revenue Lifecycle Platform</a>
             <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
         </div>
 
@@ -31,6 +31,7 @@
                <!-- START CONTENT -->
                <div class="content injectable">
                    <div class="content-data">
+
 
 
 
@@ -55,7 +56,7 @@
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>projects/congacommerce/ecommerce/src/lib/modules/crm/services/account.service.ts</code>
+            <code>projects/congarevenuecloud/ecommerce/src/lib/modules/crm/services/account.service.ts</code>
         </p>
 
 
@@ -66,7 +67,7 @@
                 <p>The account service provides methods for interacting with the accounts the user has access to.</p>
 <h3>Usage</h3>
 
-<div><pre class="line-numbers"><code class="language-typescript">import { AccountService, AObjectService} from &#39;&#64;congacommerce/ecommerce&#39;;
+<div><pre class="line-numbers"><code class="language-typescript">import { AccountService, AObjectService} from &#39;&#64;congarevenuecloud/ecommerce&#39;;
 
 export class MyComponent implements OnInit{
 constructor( private accountService: AccountService)
@@ -113,10 +114,16 @@ private accountService: AccountService = this.injector.get(AccountService);
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
+                                <a href="#getAccount" >getAccount</a>
+                            </li>
+                            <li>
                                 <a href="#getCurrentAccount" >getCurrentAccount</a>
                             </li>
                             <li>
                                 <a href="#getMyAccount" >getMyAccount</a>
+                            </li>
+                            <li>
+                                <a href="#onInit" >onInit</a>
                             </li>
                             <li>
                                 <a href="#setAccount" >setAccount</a>
@@ -139,6 +146,92 @@ private accountService: AccountService = this.injector.get(AccountService);
     <h3 id="methods">
         Methods
     </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getAccount"></a>
+                    <span class="name">
+                        <span ><b>getAccount</b></span>
+                        <a href="#getAccount"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getAccount(accountId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Retrieves the account information based on the account id passed.</p>
+<h3 id="example">Example:</h3>
+<div><pre class="line-numbers"><code class="language-typescript">import { AccountService, Account} from &#39;&#64;congarevenuecloud/ecommerce&#39;;
+import { Observable } from &#39;rxjs/Observable&#39;;
+
+export class MyComponent implements OnInit{
+accountDetails: Account;
+accountDetails$: Observable&lt;Account&gt;;
+
+constructor(private accountService: AccountService){}
+
+getAccountDetails(Id: string){
+this.accountService.getAccount(Id).subscribe(a =&gt; this.accountDetails = a);
+// or
+this.accountDetails$ = this.accountService.getAccount(Id);
+}
+}</code></pre></div></div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>accountId</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>Id of the account to be fetched.</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../classes/Account.html" target="_self" >Observable&lt;Account&gt;</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>an Observable of Account.</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
     <table class="table table-sm table-bordered">
         <tbody>
             <tr>
@@ -170,7 +263,7 @@ private accountService: AccountService = this.injector.get(AccountService);
                 <td class="col-md-4">
                     <div class="io-description"><p>Retrieves the current active account (used for order-on-behalf functions)</p>
 <h3 id="example">Example:</h3>
-<div><pre class="line-numbers"><code class="language-typescript">import { AccountService, Account} from &#39;&#64;congacommerce/ecommerce&#39;;
+<div><pre class="line-numbers"><code class="language-typescript">import { AccountService, Account} from &#39;&#64;congarevenuecloud/ecommerce&#39;;
 import { Observable } from &#39;rxjs/Observable&#39;;
 
 export class MyComponent implements OnInit{
@@ -229,10 +322,9 @@ this.accountDetails$ = this.accountService.getCurrentAccount();
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-description"><p>Retrieves the account associated with the current user.
-For guest user it retrieves the account associated with the storefront object.</p>
+                    <div class="io-description"><p>Retrieves the account associated with the current user.</p>
 <h3 id="example">Example:</h3>
-<div><pre class="line-numbers"><code class="language-typescript">import { AccountService, Account} from &#39;&#64;congacommerce/ecommerce&#39;;
+<div><pre class="line-numbers"><code class="language-typescript">import { AccountService, Account} from &#39;&#64;congarevenuecloud/ecommerce&#39;;
 import { Observable } from &#39;rxjs/Observable&#39;;
 
 export class MyComponent implements OnInit{
@@ -246,7 +338,10 @@ this.accountService.getMyAccount().subscribe(a =&gt; this.accountDetails = a);
 // or
 this.accountDetails$ = this.accountService.getMyAccount();
 }
-}</code></pre></div></div>
+}</code></pre></div><p>For guest user it retrieves the account associated with the storefront object.
+This method is a work in progress.
+<strong>This method is work in progress.</strong></p>
+</div>
 
                     <div>
                     </div>
@@ -255,7 +350,40 @@ this.accountDetails$ = this.accountService.getMyAccount();
 
                     </div>
                     <div class="io-description">
-                        <p>an observable containing the account record</p>
+                        <p>an observable containing the account record associated to the user.
+This method is a work in progress.
+<strong>This method is work in progress.</strong></p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onInit"></a>
+                    <span class="name">
+                        <span ><b>onInit</b></span>
+                        <a href="#onInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>onInit()</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
 
                     </div>
                 </td>
@@ -287,7 +415,7 @@ this.accountDetails$ = this.accountService.getMyAccount();
                     <div class="io-description"><p>Sets the selected account to be the current active account for order-on-behalf functions.
 Will store the selected account record in local storage</p>
 <h3 id="example">Example:</h3>
-<div><pre class="line-numbers"><code class="language-typescript">import { AccountService, Account} from &#39;&#64;congacommerce/ecommerce&#39;;
+<div><pre class="line-numbers"><code class="language-typescript">import { AccountService, Account} from &#39;&#64;congarevenuecloud/ecommerce&#39;;
 import { Observable } from &#39;rxjs/Observable&#39;;
 
 export class MyComponent implements OnInit{
@@ -296,10 +424,10 @@ accountDetails$: Observable&lt;Account&gt;;
 
 constructor(private accountService: AccountService){}
 
-getCurrentAccountDetails(){
-this.accountService.getCurrentAccount().subscribe(a =&gt; this.accountDetails = a);
+setAccount(account: Account | string){
+this.accountService.setAccount(account).subscribe(a =&gt; this.accountDetails = a);
 // or
-this.accountDetails$ = this.accountService.getCurrentAccount();
+this.accountDetails$ = this.accountService.setAccount(account);
 }
 }</code></pre></div></div>
 
@@ -350,8 +478,6 @@ this.accountDetails$ = this.accountService.getCurrentAccount();
                                     </td>
 
                                     <td>
-                                        <p>boolean flag to use to store the selected account in local storage</p>
-
                                     </td>
                                 </tr>
                             </tbody>
@@ -404,6 +530,7 @@ this.accountDetails$ = this.accountService.getCurrentAccount();
 
 
 </div>
+
 
 
 

@@ -3,19 +3,19 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Conga Digital Commerce June &#x27;23</title>
+        <title>Conga Digital Commerce September &#x27;22</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
 	   <link rel="stylesheet" href="../styles/style.css">
-        <link rel="stylesheet" href="../styles/dark.css">
+        <link rel="stylesheet" href="../styles/dark.css" media="(prefers-color-scheme: dark)">
         <link rel="stylesheet" href="../styles/material.css">
     </head>
     <body>
 
         <div class="navbar navbar-default navbar-fixed-top visible-xs">
-            <a href="../" class="navbar-brand">Conga Digital Commerce June &#x27;23</a>
+            <a href="../" class="navbar-brand">Conga Digital Commerce September &#x27;22</a>
             <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
         </div>
 
@@ -64,17 +64,7 @@
             </p>
             <p class="comment">
                 <p>Favorite service defines a way to save a configuration as favorite or add a saved configuration to active cart.</p>
-<h3>Usage</h3>
 
-<div><pre class="line-numbers"><code class="language-typescript">import { FavoriteService, AObjectService} from &#39;&#64;congacommerce/ecommerce&#39;;
-
-export class MyComponent implements OnInit{
-constructor( private favoriteService: FavoriteService)
-}
-// or
-export class MyService extends AObjectService {
-private favoriteService: FavoriteService = this.injector.get(FavoriteService);
-}</code></pre></div>
             </p>
 
             <p class="comment">
@@ -130,9 +120,6 @@ private favoriteService: FavoriteService = this.injector.get(FavoriteService);
                                 <a href="#createFavorite" >createFavorite</a>
                             </li>
                             <li>
-                                <a href="#getFavoriteById" >getFavoriteById</a>
-                            </li>
-                            <li>
                                 <a href="#getFavoriteItems" >getFavoriteItems</a>
                             </li>
                             <li>
@@ -185,22 +172,8 @@ private favoriteService: FavoriteService = this.injector.get(FavoriteService);
             <tr>
                 <td class="col-md-4">
                     <div class="io-description"><p>The method makes an api call to add the favorite items using the existing favoriteId and
-returns an observable of list of cartItems which got added to the existing favorite configuration.</p>
-<h3 id="example">Example:</h3>
-<div><pre class="line-numbers"><code class="language-typescript">import { FavoriteService } from &#39;&#64;congacommerce/ecommerce&#39;;
-import { Observable } from &#39;rxjs/Observable&#39;;
-
-export class MyComponent implements OnInit{
-favorite: Array&lt;CartItem&gt;;
-favorite$: Observable&lt;Array&lt;CartItem&gt;&gt;;
-constructor(private favoriteService: FavoriteService){}
-
-addFavorite(favoriteId: string, payload: Array&lt;FavoriteItemRequest&gt; | Array&lt;number&gt;){
-this.favoriteService.addFavorite(favoriteId, payload).subscribe(a =&gt; this.favorite = a);
-// or
-favorite$ = this.favoriteService.addFavorite(favoriteId, payload);
-}
-}</code></pre></div><p> or Array<Number> is an instance of Array with number, consists of linenumber of cartitem,
+returns an observable of list of cartItems which got added to the existing favorite configuration.
+ or Array<Number> is an instance of Array with number, consists of linenumber of cartitem,
 which is part of request payload.</p>
 </div>
 
@@ -291,21 +264,7 @@ which is part of request payload.</p>
             <tr>
                 <td class="col-md-4">
                     <div class="io-description"><p>This method adds saved favorite configurations to active cart.</p>
-<h3 id="example">Example:</h3>
-<div><pre class="line-numbers"><code class="language-typescript">import { FavoriteService } from &#39;&#64;congacommerce/ecommerce&#39;;
-import { Observable } from &#39;rxjs/Observable&#39;;
-
-export class MyComponent implements OnInit{
-favorite: Array&lt;CartItem&gt;;
-favorite$: Observable&lt;Array&lt;CartItem&gt;&gt;;
-constructor(private favoriteService: FavoriteService){}
-
-addFavoriteToCart(favorite: string | Favorite){
-this.favoriteService.addFavoriteToCart(favorite).subscribe(a =&gt; this.favorite = a);
-// or
-favorite$ = this.favoriteService.addFavoriteToCart(favorite);
-}
-}</code></pre></div></div>
+</div>
 
                     <div class="io-description">
                         <b>Parameters :</b>
@@ -377,21 +336,7 @@ favorite$ = this.favoriteService.addFavoriteToCart(favorite);
                 <td class="col-md-4">
                     <div class="io-description"><p>The method is responsible for creating new favorite by invoking api callout, and returns an observable of
 favorite which got created with favorite information.</p>
-<h3 id="example">Example:</h3>
-<div><pre class="line-numbers"><code class="language-typescript">import { FavoriteService } from &#39;&#64;congacommerce/ecommerce&#39;;
-import { Observable } from &#39;rxjs/Observable&#39;;
-
-export class MyComponent implements OnInit{
-favorite: Favorite;
-favorite$: Observable&lt;Favorite&gt;;
-constructor(private favoriteService: FavoriteService){}
-
-createFavorite(payload: Array&lt;Favorite&gt;){
-this.favoriteService.createFavorite(payload).subscribe(a =&gt; this.favorite = a);
-// or
-favorite$ = this.favoriteService.createFavorite(payload);
-}
-}</code></pre></div></div>
+</div>
 
                     <div class="io-description">
                         <b>Parameters :</b>
@@ -433,113 +378,6 @@ favorite$ = this.favoriteService.createFavorite(payload);
                     </div>
                     <div class="io-description">
                         <p>an observable of Favorite which got newly created.</p>
-
-                    </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
-                    <a name="getFavoriteById"></a>
-                    <span class="name">
-                        <span ><b>getFavoriteById</b></span>
-                        <a href="#getFavoriteById"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-            <tr>
-                <td class="col-md-4">
-<code>getFavoriteById(favoriteId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, lookups: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
-                </td>
-            </tr>
-
-
-
-
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-description"><p>Get the favrorite details</p>
-<h3 id="example">Example:</h3>
-<div><pre class="line-numbers"><code class="language-typescript">import { FavoriteService } from &#39;&#64;congacommerce/ecommerce&#39;;
-import { Observable } from &#39;rxjs/Observable&#39;;
-
-export class MyComponent implements OnInit{
-favorite: Favorite;
-favorite$: Observable&lt;Favorite&gt;;
-constructor(private favoriteService: FavoriteService){}
-
-getFavorite(favoriteId: string){
-this.favoriteService.getFavoriteById().subscribe(a =&gt; this.favorite = a);
-// or
-favorite$ = this.favoriteService.getFavoriteById();
-}
-}</code></pre></div></div>
-
-                    <div class="io-description">
-                        <b>Parameters :</b>
-                        
-                        <table class="params">
-                            <thead>
-                                <tr>
-                                    <td>Name</td>
-                                    <td>Type</td>
-                                    <td>Optional</td>
-                                    <td>Default value</td>
-                                    <td>Description</td>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>favoriteId</td>
-                                    <td>
-                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
-                                    </td>
-
-                                    <td>
-                                        No
-                                    </td>
-
-                                    <td>
-                                    </td>
-
-                                    <td>
-                                        <p>string value representing favorite identifier to fetch details for.</p>
-
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>lookups</td>
-                                    <td>
-                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
-                                    </td>
-
-                                    <td>
-                                        No
-                                    </td>
-
-                                    <td>
-                                        <code>null</code>
-                                    </td>
-
-                                    <td>
-                                        <p>string value representing the lookups to be fetched for a given favorite.</p>
-
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div>
-                    </div>
-                    <div class="io-description">
-                        <b>Returns : </b>        <code><a href="../classes/Favorite.html" target="_self" >Observable&lt;Favorite&gt;</a></code>
-
-                    </div>
-                    <div class="io-description">
-                        <p>observable containing the favorite record.</p>
 
                     </div>
                 </td>
@@ -638,21 +476,7 @@ favorite$ = this.favoriteService.getFavoriteById();
             <tr>
                 <td class="col-md-4">
                     <div class="io-description"><p>This method removes a given favorite.</p>
-<h3 id="example">Example:</h3>
-<div><pre class="line-numbers"><code class="language-typescript">import { FavoriteService } from &#39;&#64;congacommerce/ecommerce&#39;;
-import { Observable } from &#39;rxjs/Observable&#39;;
-
-export class MyComponent implements OnInit{
-favorite: Favorite;
-favorite$: Observable&lt;Favorite&gt;;
-constructor(private favoriteService: FavoriteService){}
-
-removeFavorite(favorite: string | Favorite){
-this.favoriteService.removeFavorite(favorite).subscribe(a =&gt; this.favorite = a);
-// or
-favorite$ = this.favoriteService.removeFavorite(favorite);
-}
-}</code></pre></div></div>
+</div>
 
                     <div class="io-description">
                         <b>Parameters :</b>
@@ -723,21 +547,7 @@ favorite$ = this.favoriteService.removeFavorite(favorite);
             <tr>
                 <td class="col-md-4">
                     <div class="io-description"><p>This method removes list of favorites passed.</p>
-<h3 id="example">Example:</h3>
-<div><pre class="line-numbers"><code class="language-typescript">import { FavoriteService } from &#39;&#64;congacommerce/ecommerce&#39;;
-import { Observable } from &#39;rxjs/Observable&#39;;
-
-export class MyComponent implements OnInit{
-favorite: Array&lt;Favorite&gt;;
-favorite$: Observable&lt;Array&lt;Favorite&gt;&gt;;
-constructor(private favoriteService: FavoriteService){}
-
-removeFavorites(favoriteList: Array&lt;Favorite&gt; | Array&lt;string&gt;){
-this.favoriteService.removeFavorites(favoriteList).subscribe(a =&gt; this.favorite = a);
-// or
-favorite$ = this.favoriteService.removeFavorites(favoriteList);
-}
-}</code></pre></div></div>
+</div>
 
                     <div class="io-description">
                         <b>Parameters :</b>
@@ -803,21 +613,7 @@ favorite$ = this.favoriteService.removeFavorites(favoriteList);
             <tr>
                 <td class="col-md-4">
                     <div class="io-description"><p>This method updates a given favorite. Only Name, Description and Scope of favorite can be updated.</p>
-<h3 id="example">Example:</h3>
-<div><pre class="line-numbers"><code class="language-typescript">import { FavoriteService } from &#39;&#64;congacommerce/ecommerce&#39;;
-import { Observable } from &#39;rxjs/Observable&#39;;
-
-export class MyComponent implements OnInit{
-favorite: Favorite;
-favorite$: Observable&lt;Favorite&gt;;
-constructor(private favoriteService: FavoriteService){}
-
-updateFavorite(favorite: Favorite){
-this.favoriteService.updateFavorite(favorite).subscribe(a =&gt; this.favorite = a);
-// or
-favorite$ = this.favoriteService.updateFavorite(favorite);
-}
-}</code></pre></div></div>
+</div>
 
                     <div class="io-description">
                         <b>Parameters :</b>
@@ -977,15 +773,6 @@ favorite$ = this.favoriteService.updateFavorite(favorite);
                <!-- END CONTENT -->
            </div>
        </div>
-
-          <label class="dark-mode-switch">
-               <input type="checkbox">
-               <span class="slider">
-                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
-                    </svg>
-               </span>
-          </label>
 
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;

@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Conga Digital Commerce June &#x27;23</title>
+        <title>Conga Digital Commerce February &#x27;23 on Conga Revenue Lifecycle Platform</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -15,7 +15,7 @@
     <body>
 
         <div class="navbar navbar-default navbar-fixed-top visible-xs">
-            <a href="../" class="navbar-brand">Conga Digital Commerce June &#x27;23</a>
+            <a href="../" class="navbar-brand">Conga Digital Commerce February &#x27;23 on Conga Revenue Lifecycle Platform</a>
             <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
         </div>
 
@@ -62,7 +62,7 @@
     <h3>File</h3>
 </p>
 <p class="comment">
-    <code>projects/congacommerce/elements/src/lib/favorite-modal/favorite-modal.component.ts</code>
+    <code>projects/congarevenuecloud/elements/src/lib/favorite-modal/favorite-modal.component.ts</code>
 </p>
 
 
@@ -70,18 +70,21 @@
         <h3>Description</h3>
     </p>
     <p class="comment">
-        <p>Favorite modal lets you add products/cart line items from the drawer to the Favorite Configuration.
+        <p><strong>This component is a work in progress.</strong>
+Favorite modal lets you add products/cart line items from the drawer to the Favorite Configuration.
 The modal provides option to choose from existing favorites or allow
 users to create new favorite and add/update items to the favorite configuartion.</p>
 <h3>Preview</h3>
 <img src="https://raw.githubusercontent.com/Apttus-Ecom/Summer19/master/res/favorite%20modal.png" style="max-width: 100%">
 <h3>Usage</h3>
 
-<div><pre class="line-numbers"><code class="language-typescript">import { FavoriteModalModule } from &#39;&#64;congacommerce/elements&#39;;
+<div><pre class="line-numbers"><code class="language-typescript">import { FavoriteModalModule } from &#39;&#64;congarevenuecloud/elements&#39;;
 &#64;NgModule({
 imports: [FavoriteModalModule, ...]
 })
-export class AppModule {}</code></pre></div><div><pre class="line-numbers"><code class="language-typescript">&lt;apt-favorite-modal&gt;&lt;/apt-favorite-modal&gt;</code></pre></div>
+export class AppModule {}</code></pre></div><div><pre class="line-numbers"><code class="language-html">```typescript
+&lt;apt-favorite-modal&gt;&lt;/apt-favorite-modal&gt;</code></pre></div><p>```</p>
+
     </p>
 
 
@@ -226,7 +229,7 @@ export class AppModule {}</code></pre></div><div><pre class="line-numbers"><code
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor(modalRef: BsModalRef, plService: <a href="../injectables/PriceListService.html" target="_self">PriceListService</a>, userService: <a href="../injectables/UserService.html" target="_self">UserService</a>, exceptionService: <a href="../injectables/ExceptionService.html" target="_self">ExceptionService</a>, favService: <a href="../injectables/FavoriteService.html" target="_self">FavoriteService</a>)</code>
+<code>constructor(modalRef: BsModalRef, plService: <a href="../injectables/PriceListService.html" target="_self">PriceListService</a>, userService: <a href="../injectables/UserService.html" target="_self">UserService</a>, exceptionService: <a href="../injectables/ExceptionService.html" target="_self">ExceptionService</a>, favService: <a href="../classes/Favorite.html" target="_self">FavoriteService</a>)</code>
                     </td>
                 </tr>
 
@@ -295,7 +298,7 @@ export class AppModule {}</code></pre></div><div><pre class="line-numbers"><code
                                                         <td>favService</td>
                                                   
                                                         <td>
-                                                                        <code><a href="../injectables/FavoriteService.html" target="_self" >FavoriteService</a></code>
+                                                                        <code><a href="../classes/Favorite.html" target="_self" >FavoriteService</a></code>
                                                         </td>
                                                   
                                                     <td>
@@ -344,7 +347,7 @@ export class AppModule {}</code></pre></div><div><pre class="line-numbers"><code
             <tr>
                 <td class="col-md-4">
                     <div class="io-description"><p>Method Addfavorite is responsible for adding the products or lineitems
-to the already existing Favorite configuration from the drawer.</p>
+to the already existing Favorite configuration fro the drawer.</p>
 </div>
 
                     <div class="io-description">
@@ -832,7 +835,7 @@ adding the products or lineitems to the newly created favorite configuration.</p
         width: 24px;
         height: 24px;
         color: transparent;
-        content: &quot;&quot;;
+        content: &#x27;&#x27;;
         background-image: url(&quot;data:image/svg+xml,%3Csvg fill&#x3D;&#x27;%23000&#x27; xmlns&#x3D;&#x27;http://www.w3.org/2000/svg&#x27; xmlns:xlink&#x3D;&#x27;http://www.w3.org/1999/xlink&#x27; width&#x3D;&#x27;24&#x27; height&#x3D;&#x27;24&#x27; viewBox&#x3D;&#x27;0 0 24 24&#x27; class&#x3D;&#x27;ng-scope&#x27;%3E%3Cpolygon points&#x3D;&#x27;20 5.611 18.389 4 12 10.389 5.611 4 4 5.611 10.389 12 4 18.389 5.611 20 12 13.611 18.389 20 20 18.389 13.611 12&#x27;%3E%3C/polygon%3E%3C/svg%3E&quot;);
         opacity: 0.5;
       }
@@ -841,7 +844,7 @@ adding the products or lineitems to the newly created favorite configuration.</p
     &amp;::before {
       width: 24px;
       height: 24px;
-      content: &quot;&quot;;
+      content: &#x27;&#x27;;
       background-image: url(&quot;data:image/svg+xml,%3Csvg fill&#x3D;&#x27;%23000&#x27; xmlns&#x3D;&#x27;http://www.w3.org/2000/svg&#x27; xmlns:xlink&#x3D;&#x27;http://www.w3.org/1999/xlink&#x27; width&#x3D;&#x27;24&#x27; height&#x3D;&#x27;24&#x27; viewBox&#x3D;&#x27;0 0 24 24&#x27; class&#x3D;&#x27;ng-scope&#x27;%3E%3Cpath d&#x3D;&#x27;M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z&#x27;%3E%3C/path%3E%3C/svg%3E&quot;);
     }
   }
@@ -911,11 +914,13 @@ adding the products or lineitems to the newly created favorite configuration.</p
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
         var COMPONENT_TEMPLATE = '<div><div>    <div class="modal-header">        <h4 class="modal-title d-flex align-items-center m-0 text-truncate">            {{ "FAVORITE.FAVORITE_MODAL.ADD_FAVORITE" | translate }}        </h4>        <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">            <span aria-hidden="true">&times;</span>        </button>    </div>    <ng-container [ngSwitch]="layout">        <ng-container *ngSwitchCase="\'AddExistingFav\'">            <ng-container *ngTemplateOutlet="AddExistingFav;"></ng-container>        </ng-container>        <ng-container *ngSwitchCase="\'AddNewFav\'">            <ng-container *ngTemplateOutlet="AddNewFav;"></ng-container>        </ng-container>    </ng-container></div><ng-template #AddExistingFav>    <div class="modal-body">        <div class="row">            <div class="col-12 col-md-12">                <div class="form-group">                    <label [class.col-form-label-sm]="small"                        class="font-weight-bold">{{\'FAVORITE.FAVORITE_MODAL.SEARCH_OR_ADD_FAV\' | translate}}</label>                    <ng-select class="form-control aptFavLookup p-0" [class.form-control-sm]="small" [(ngModel)]="value"                        [items]="lookupResults" bindLabel="Name" (search)="onLookupSearch($event)" bindValue="Id"                        bindLabel="Name" placeholder="{{\'FAVORITE.FAVORITE_MODAL.ENTER_FAVORITE_NAME\' | translate}}"                        [loading]="lookUpLoading"                        [ngClass]="{ \'is-invalid\': select.invalid && (select.touched || select.dirty) }"                        (clear)="setFavLookupFieldData()" (focus)="setFavLookupFieldData()" #select="ngModel">                        <ng-template ng-option-tmp let-item="item" let-index="index" let-search="search">                            <div class="d-flex align-items-center">                                <div class="d-flex flex-column h-100 justify-content-around">                                    <span [ngOptionHighlight]="search">{{item[\'Name\']}}</span>                                    <i class="small" *ngIf="lookupOptions?.secondaryTextField">{{item[\'Name\']}}</i>                                </div>                            </div>                        </ng-template>                        <ng-template ng-footer-tmp let-search="search">                            <button type="button" class="btn btn-link" (click)="layout = \'AddNewFav\'">                                <small class="d-block">                                    <i class="fa fa-plus mr-2" aria-hidden="true"></i>                                    <small                                        [innerHTML]="\'FAVORITE.FAVORITE_MODAL.ADD_NEW_FAVORITE\' | translate: {search: searchTerm}"></small>                                </small>                            </button>                        </ng-template>                        <ng-template ng-loadingspinner-tmp>                            <apt-spinner></apt-spinner>                        </ng-template>                    </ng-select>                </div>            </div>        </div>    </div>    <div class="modal-footer">        <div class="form-group d-flex justify-content-end">            <button class="btn btn-primary btn-raised" type="button" (click)="addFavorite()" [disabled]="!value"                [ladda]="loading" data-style="zoom-in">{{ "COMMON.UPDATE" | translate }}</button>        </div>    </div></ng-template><ng-template #AddNewFav>    <div class="modal-body">        <div class="row">            <div class="col-12 col-md-12">                <div class="form-group">                    <apt-input-field [entity]="favorite" [field]="\'Name\'" [(ngModel)]="favoriteName" [label]="\'Name\'">                    </apt-input-field>                </div>                <div class="form-group">                    <apt-input-field [entity]="favorite" [field]="\'Description\'" [(ngModel)]="favorite.Description">                    </apt-input-field>                </div>                <div class="form-group custom-control custom-checkbox pl-3">                    <input type="checkbox" [checked]="fav_checked" id="favScope" class="custom-control-input"                        [(ngModel)]="fav_checked"                        (ngModelChange)="fav_checked ? favorite.Scope = \'Public\': favorite.Scope = \'Private\'">                    <label class="ml-2 custom-control-label"                        for="favScope">{{\'FAVORITE.FAVORITE_MODAL.MAKE_PUBLICLY_VISIBILE\' | translate}}</label>                </div>            </div>        </div>    </div>    <div class="modal-footer">        <div class="form-group d-flex justify-content-end">            <button *ngIf="lookupResults.length > 0" class="btn btn-link btn-raised" type="button"                (click)="layout = \'AddExistingFav\'" data-style="zoom-in">                {{ \'FAVORITE.FAVORITE_MODAL.ADD_TO_EXISTING\' | translate }}            </button>            <button class="btn btn-primary btn-raised" type="button" (click)="createFavorite()" [ladda]="loading"                data-style="zoom-in">                {{ \'FAVORITE.FAVORITE_MODAL.ADD_FAVORITE\' | translate }}            </button>        </div>    </div></ng-template></div>'
-    var COMPONENTS = [{'name': 'AdditionalInformationComponent', 'selector': 'apt-additional-information'},{'name': 'AddressComponent', 'selector': 'apt-address'},{'name': 'AddToCartComponent', 'selector': 'apt-add-to-cart'},{'name': 'AlertComponent', 'selector': 'apt-alert'},{'name': 'AssetDropdownButtonComponent', 'selector': 'apt-asset-dropdown-button'},{'name': 'AssetListComponent', 'selector': 'apt-asset-list'},{'name': 'BreadcrumbComponent', 'selector': 'apt-breadcrumb'},{'name': 'CategoryFilterComponent', 'selector': 'apt-category-filter'},{'name': 'ChartComponent', 'selector': 'apt-chart'},{'name': 'ConstraintRuleAlertComponent', 'selector': 'apt-constraint-rule-alert'},{'name': 'ConstraintRuleSidebarComponent', 'selector': 'apt-constraint-rule-sidebar'},{'name': 'CRIconComponent', 'selector': 'apt-cr-constraint-icon'},{'name': 'CRRecommendedProductsComponent', 'selector': 'apt-cr-recommended-products'},{'name': 'DataFilterComponent', 'selector': 'apt-data-filter'},{'name': 'DotsComponent', 'selector': 'apt-dots'},{'name': 'FavoriteModalComponent', 'selector': 'apt-favorite-modal'},{'name': 'FilesComponent', 'selector': 'apt-files'},{'name': 'GenerateDocumentComponent', 'selector': 'apt-generate-document'},{'name': 'InputDateComponent', 'selector': 'apt-date-range-input'},{'name': 'InputFieldComponent', 'selector': 'apt-input-field'},{'name': 'InputSelectComponent', 'selector': 'apt-input-select'},{'name': 'JumbotronComponent', 'selector': 'apt-jumbotron'},{'name': 'LineitemCardComponent', 'selector': 'apt-lineitem-card'},{'name': 'LineItemMenuComponent', 'selector': 'apt-line-item-menu'},{'name': 'LineItemTableRowComponent', 'selector': 'apt-line-item-table-row'},{'name': 'LoginFormComponent', 'selector': 'apt-login-form'},{'name': 'MiniCartComponent', 'selector': 'apt-mini-cart'},{'name': 'MiniProfileComponent', 'selector': 'apt-mini-profile'},{'name': 'OutputFieldComponent', 'selector': 'apt-output-field'},{'name': 'PaymentComponent', 'selector': 'apt-payment'},{'name': 'PaymentIFrameComponent', 'selector': 'apt-payment-iframe'},{'name': 'PresentDocumentComponent', 'selector': 'apt-present-document'},{'name': 'PriceComponent', 'selector': 'apt-price'},{'name': 'PriceSummaryComponent', 'selector': 'apt-price-summary'},{'name': 'ProductCardComponent', 'selector': 'apt-product-card'},{'name': 'ProductCarouselComponent', 'selector': 'apt-product-carousel'},{'name': 'ProductCompareComponent', 'selector': 'apt-product-compare'},{'name': 'ProductConfigurationComponent', 'selector': 'apt-product-configuration'},{'name': 'ProductConfigurationSummaryComponent', 'selector': 'apt-product-configuration-summary'},{'name': 'ProductDrawerComponent', 'selector': 'apt-product-drawer'},{'name': 'ProductImagesComponent', 'selector': 'apt-product-images'},{'name': 'ProductSearchComponent', 'selector': 'apt-product-search'},{'name': 'ProductTypeFilterComponent', 'selector': 'apt-product-type-filter'},{'name': 'PromotionComponent', 'selector': 'apt-promotion'},{'name': 'PromotionModalComponent', 'selector': 'apt-pr-modal'},{'name': 'RevalidateCartModalComponent', 'selector': 'apt-revalidate-cart-modal'},{'name': 'SelectAllComponent', 'selector': 'apt-select-all'},{'name': 'SpinnerComponent', 'selector': 'apt-spinner'},{'name': 'TableComponent', 'selector': 'apt-table'},{'name': 'TaxPopHoverComponent', 'selector': 'apt-tax-pophover'}];
+    var COMPONENTS = [{'name': 'AdditionalInformationComponent', 'selector': 'apt-additional-information'},{'name': 'AddressComponent', 'selector': 'apt-address'},{'name': 'AddToCartComponent', 'selector': 'apt-add-to-cart'},{'name': 'AlertComponent', 'selector': 'apt-alert'},{'name': 'AssetDropdownButtonComponent', 'selector': 'apt-asset-dropdown-button'},{'name': 'AssetListComponent', 'selector': 'apt-asset-list'},{'name': 'BreadcrumbComponent', 'selector': 'apt-breadcrumb'},{'name': 'CategoryFilterComponent', 'selector': 'apt-category-filter'},{'name': 'ChartComponent', 'selector': 'apt-chart'},{'name': 'ConstraintRuleAlertComponent', 'selector': 'apt-constraint-rule-alert'},{'name': 'ConstraintRuleSidebarComponent', 'selector': 'apt-constraint-rule-sidebar'},{'name': 'CRIconComponent', 'selector': 'apt-cr-constraint-icon'},{'name': 'CRRecommendedProductsComponent', 'selector': 'apt-cr-recommended-products'},{'name': 'DataFilterComponent', 'selector': 'apt-data-filter'},{'name': 'DependentPicklistComponent', 'selector': 'apt-dependent-picklist'},{'name': 'DotsComponent', 'selector': 'apt-dots'},{'name': 'FacetFilterComponent', 'selector': 'apt-facet-filter'},{'name': 'FavoriteModalComponent', 'selector': 'apt-favorite-modal'},{'name': 'FilesComponent', 'selector': 'apt-files'},{'name': 'GenerateDocumentComponent', 'selector': 'apt-generate-document'},{'name': 'InputDateComponent', 'selector': 'apt-date-range-input'},{'name': 'InputFieldComponent', 'selector': 'apt-input-field'},{'name': 'InputSelectComponent', 'selector': 'apt-input-select'},{'name': 'JumbotronComponent', 'selector': 'apt-jumbotron'},{'name': 'LineitemCardComponent', 'selector': 'apt-lineitem-card'},{'name': 'LineItemMenuComponent', 'selector': 'apt-line-item-menu'},{'name': 'LineItemTableRowComponent', 'selector': 'apt-line-item-table-row'},{'name': 'MiniCartComponent', 'selector': 'apt-mini-cart'},{'name': 'MiniProfileComponent', 'selector': 'apt-mini-profile'},{'name': 'OutputFieldComponent', 'selector': 'apt-output-field'},{'name': 'PaymentComponent', 'selector': 'apt-payment'},{'name': 'PaymentIFrameComponent', 'selector': 'apt-payment-iframe'},{'name': 'PopoverComponent', 'selector': 'apt-popover'},{'name': 'PresentDocumentComponent', 'selector': 'apt-present-document'},{'name': 'PriceComponent', 'selector': 'apt-price'},{'name': 'PriceModalComponent', 'selector': 'apt-price-modal'},{'name': 'PriceSummaryComponent', 'selector': 'apt-price-summary'},{'name': 'ProductCardComponent', 'selector': 'apt-product-card'},{'name': 'ProductCarouselComponent', 'selector': 'apt-product-carousel'},{'name': 'ProductCompareComponent', 'selector': 'apt-product-compare'},{'name': 'ProductConfigurationComponent', 'selector': 'apt-product-configuration'},{'name': 'ProductConfigurationSummaryComponent', 'selector': 'apt-product-configuration-summary'},{'name': 'ProductDrawerComponent', 'selector': 'apt-product-drawer'},{'name': 'ProductImagesComponent', 'selector': 'apt-product-images'},{'name': 'ProductSearchComponent', 'selector': 'apt-product-search'},{'name': 'ProductTypeFilterComponent', 'selector': 'apt-product-type-filter'},{'name': 'PromotionComponent', 'selector': 'apt-promotion'},{'name': 'PromotionModalComponent', 'selector': 'apt-pr-modal'},{'name': 'SelectAllComponent', 'selector': 'apt-select-all'},{'name': 'SpinnerComponent', 'selector': 'apt-spinner'},{'name': 'TableComponent', 'selector': 'apt-table'}];
     var DIRECTIVES = [{'name': 'AutoFocusDirective', 'selector': '[aptAutoFocus]'}];
     var ACTUAL_COMPONENT = {'name': 'FavoriteModalComponent'};
 </script>
 <script src="../js/tree.js"></script>
+
+
 
 
 

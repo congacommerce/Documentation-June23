@@ -3,19 +3,19 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Conga Digital Commerce June &#x27;23</title>
+        <title>Conga Digital Commerce September &#x27;22</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
 	   <link rel="stylesheet" href="../styles/style.css">
-        <link rel="stylesheet" href="../styles/dark.css">
+        <link rel="stylesheet" href="../styles/dark.css" media="(prefers-color-scheme: dark)">
         <link rel="stylesheet" href="../styles/material.css">
     </head>
     <body>
 
         <div class="navbar navbar-default navbar-fixed-top visible-xs">
-            <a href="../" class="navbar-brand">Conga Digital Commerce June &#x27;23</a>
+            <a href="../" class="navbar-brand">Conga Digital Commerce September &#x27;22</a>
             <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
         </div>
 
@@ -64,17 +64,7 @@
             </p>
             <p class="comment">
                 <p>The quote represents a price breakdown for a given product configuration. Quotes are generally associated with an approval process and can be converted to a cart or an order.</p>
-<h3>Usage</h3>
 
-<div><pre class="line-numbers"><code class="language-typescript">import { QuoteLineItemService } from &#39;&#64;congacommerce/ecommerce&#39;;
-
-constructor(private quoteLineItemService: QuoteLineItemService) { }
-
-// or
-
-export class MyService extends AObjectService {
-private quoteLineItemService: QuoteLineItemService = this.injector.get(QuoteLineItemService);
-}</code></pre></div>
             </p>
 
             <p class="comment">
@@ -172,23 +162,9 @@ private quoteLineItemService: QuoteLineItemService = this.injector.get(QuoteLine
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-description"><p>This method returns the bundled options for the quote line item passed.</p>
-<h3 id="example">Example:</h3>
-<div><pre class="line-numbers"><code class="language-typescript">import { QuoteLineItemService, QuoteLineItem } from &#39;&#64;congacommerce/ecommerce&#39;;
-import { Observable } from &#39;rxjs/Observable&#39;;
-
-export class MyComponent implements OnInit{
-quoteLineItem$: Observable&lt;OrderLineItem&gt;;
-quoteLineItem: OrderLineItem;
-
-constructor(private quoteLineItemService: QuoteLineItemService){}
-
-ngOnInit(){
-this.quoteLineItemService.getBundleItemsForQuoteLineItem(lineItemId: string).subscribe(o =&gt; this.quoteLineItem = o);
-// or
-this.quoteLineItem$ = this.quoteLineItemService.getBundleItemsForQuoteLineItem(lineItemId: string);
-}
-}</code></pre></div></div>
+                    <div class="io-description"><p>This method returns the bundled options for the quote line item passed.
+To Do:</p>
+</div>
 
                     <div class="io-description">
                         <b>Parameters :</b>
@@ -229,7 +205,8 @@ this.quoteLineItem$ = this.quoteLineItemService.getBundleItemsForQuoteLineItem(l
 
                     </div>
                     <div class="io-description">
-                        <p>An observable containing the array of option line items for a given quote line item.</p>
+                        <p>An observable containing the array of option line items for a given quote line item.
+To Do:</p>
 
                     </div>
                 </td>
@@ -276,7 +253,8 @@ this.quoteLineItemService.getPromotionDetailsForQuoteLineItem(lineItemId: string
 // or
 this.quoteLineItem$ = this.quoteLineItemService.getPromotionDetailsForQuoteLineItem(lineItemId: string);
 }
-}</code></pre></div><p>This method returns the adjustment items on a given quote line item.</p>
+}</code></pre></div><p>This method returns the adjustment items on a given quote line item.
+To Do:</p>
 </div>
 
                     <div class="io-description">
@@ -318,7 +296,8 @@ this.quoteLineItem$ = this.quoteLineItemService.getPromotionDetailsForQuoteLineI
 
                     </div>
                     <div class="io-description">
-                        <p>An observable containing the given quote line item with adjustment item details.</p>
+                        <p>An observable containing the given quote line item with adjustment item details.
+To Do:</p>
 
                     </div>
                 </td>
@@ -434,22 +413,7 @@ this.quoteLineItemList$ = this.quoteLineItemService.getQuoteLineItems(quoteId: s
             <tr>
                 <td class="col-md-4">
                     <div class="io-description"><p>Method takes a line item and returns the full list of line items related to it. Can be any line item within the bundle.</p>
-<h3 id="example">Example:</h3>
-<div><pre class="line-numbers"><code class="language-typescript">import { LineItemService, Quote } from &#39;&#64;congacommerce/ecommerce&#39;;
-import { Observable } from &#39;rxjs/Observable&#39;;
-
-export class MyComponent implements OnInit{
-option: Array&lt;CartItem | AssetLineItem | QuoteLineItem | OrderLineItem&gt;;
-option$: Observable&lt;Array&lt;CartItem | AssetLineItem | QuoteLineItem | OrderLineItem&gt;&gt;;
-
-constructor(private lineItemService: LineItemService){}
-
-ngOnInit(){
-this.lineItemService.getOptionsForItem(relatedTo, cart)().subscribe(q =&gt; this.option = q);
-// or
-this.option$ = this.lineItemService.getOptionsForItem(relatedTo, cart)();
-}
-}</code></pre></div></div>
+</div>
 
                     <div class="io-description">
                         <b>Parameters :</b>
@@ -506,8 +470,7 @@ this.option$ = this.lineItemService.getOptionsForItem(relatedTo, cart)();
 
                     </div>
                     <div class="io-description">
-                        <p>An observable of related Line items.  //cartItems$ = this.cartItemService.getOptionsForItem(relatedTo, cart);</p>
-
+                        
                     </div>
                 </td>
             </tr>
@@ -538,19 +501,7 @@ this.option$ = this.lineItemService.getOptionsForItem(relatedTo, cart)();
             <tr>
                 <td class="col-md-4">
                     <div class="io-description"><p>The method takes a line item and returns the categorized line item.</p>
-<h3 id="example">Example:</h3>
-<div><pre class="line-numbers"><code class="language-typescript">import { LineItemService, Quote } from &#39;&#64;congacommerce/ecommerce&#39;;
-import { Observable } from &#39;rxjs/Observable&#39;;
-
-export class MyComponent implements OnInit{
-lineItems: Array&lt;ItemGroup&gt;;
-
-constructor(private lineItemService: LineItemService){}
-
-ngOnInit(){
-lineItems: LineItemService.groupItems(lineItems),
-}
-}</code></pre></div></div>
+</div>
 
                     <div class="io-description">
                         <b>Parameters :</b>
@@ -586,8 +537,7 @@ lineItems: LineItemService.groupItems(lineItems),
 
                     </div>
                     <div class="io-description">
-                        <p>an Array of ItemGroup interface type.</p>
-
+                        
                     </div>
                 </td>
             </tr>
@@ -651,15 +601,6 @@ lineItems: LineItemService.groupItems(lineItems),
                <!-- END CONTENT -->
            </div>
        </div>
-
-          <label class="dark-mode-switch">
-               <input type="checkbox">
-               <span class="slider">
-                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
-                    </svg>
-               </span>
-          </label>
 
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;

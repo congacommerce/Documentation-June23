@@ -3,19 +3,19 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Conga Digital Commerce June &#x27;23</title>
+        <title>Conga Digital Commerce September &#x27;22 on Conga Revenue Lifecycle Platform</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
 	   <link rel="stylesheet" href="../styles/style.css">
-        <link rel="stylesheet" href="../styles/dark.css">
+        <link rel="stylesheet" href="../styles/dark.css" media="(prefers-color-scheme: dark)">
         <link rel="stylesheet" href="../styles/material.css">
     </head>
     <body>
 
         <div class="navbar navbar-default navbar-fixed-top visible-xs">
-            <a href="../" class="navbar-brand">Conga Digital Commerce June &#x27;23</a>
+            <a href="../" class="navbar-brand">Conga Digital Commerce September &#x27;22 on Conga Revenue Lifecycle Platform</a>
             <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
         </div>
 
@@ -59,23 +59,6 @@
         </p>
 
 
-            <p class="comment">
-                <h3>Description</h3>
-            </p>
-            <p class="comment">
-                <p>Btach selecion service provides methods to perform operation on selected product in the drawer.</p>
-<h3>Usage</h3>
-
-<div><pre class="line-numbers"><code class="language-typescript">import { BatchSelectionService, AObjectService} from &#39;&#64;congacommerce/ecommerce&#39;;
-
-export class MyComponent implements OnInit{
-constructor( private batchSelectionService: BatchSelectionService)
-}
-// or
-export class MyService extends AObjectService {
-private batchSelectionService: BatchSelectionService = this.injector.get(BatchSelectionService);
-}</code></pre></div>
-            </p>
 
 
 
@@ -268,17 +251,7 @@ private batchSelectionService: BatchSelectionService = this.injector.get(BatchSe
             <tr>
                 <td class="col-md-4">
                     <div class="io-description"><p>Adds all lineitems to the list of selected LineItems.</p>
-<h3 id="example">Example:</h3>
-<div><pre class="line-numbers"><code class="language-typescript">import { BatchSelectionService, Product } from &#39;&#64;congacommerce/ecommerce&#39;;
-import { Observable } from &#39;rxjs/Observable&#39;;
-
-export class MyComponent implements OnInit{
-constructor(private batchSelectionService: BatchSelectionService){}
-
-addAllLineItemstoSelection(lineItems: Array&lt;CartItem&gt;){
-this.batchSelectionService.addAllLineItemstoSelection(lineItems);
-}
-}</code></pre></div></div>
+</div>
 
                     <div class="io-description">
                         <b>Parameters :</b>
@@ -350,18 +323,7 @@ this.batchSelectionService.addAllLineItemstoSelection(lineItems);
             <tr>
                 <td class="col-md-4">
                     <div class="io-description"><p>Adds all products to the list of selected products.</p>
-<h3 id="example">Example:</h3>
-<div><pre class="line-numbers"><code class="language-typescript">import { BatchSelectionService, Product } from &#39;&#64;congacommerce/ecommerce&#39;;
-import { Observable } from &#39;rxjs/Observable&#39;;
-
-export class MyComponent implements OnInit{
-
-constructor(private batchSelectionService: BatchSelectionService){}
-
-addAllProductstoSelection(products: Array&lt;Product&gt;){
-this.batchSelectionService.addAllProductstoSelection(products);
-}
-}</code></pre></div></div>
+</div>
 
                     <div class="io-description">
                         <b>Parameters :</b>
@@ -433,17 +395,7 @@ this.batchSelectionService.addAllProductstoSelection(products);
             <tr>
                 <td class="col-md-4">
                     <div class="io-description"><p>Adds a new lineitem to the list of selected lineItems.</p>
-<h3 id="example">Example:</h3>
-<div><pre class="line-numbers"><code class="language-typescript">import { BatchSelectionService, Product } from &#39;&#64;congacommerce/ecommerce&#39;;
-import { Observable } from &#39;rxjs/Observable&#39;;
-
-export class MyComponent implements OnInit{
-constructor(private batchSelectionService: BatchSelectionService){}
-
-addLineItemToSelection(lineItem: CartItem){
-this.batchSelectionService.addLineItemToSelection(lineItem);
-}
-}</code></pre></div></div>
+</div>
 
                     <div class="io-description">
                         <b>Parameters :</b>
@@ -515,18 +467,7 @@ this.batchSelectionService.addLineItemToSelection(lineItem);
             <tr>
                 <td class="col-md-4">
                     <div class="io-description"><p>Adds a new product to the list of selected products.</p>
-<h3 id="example">Example:</h3>
-<div><pre class="line-numbers"><code class="language-typescript">import { BatchSelectionService, Product } from &#39;&#64;congacommerce/ecommerce&#39;;
-import { Observable } from &#39;rxjs/Observable&#39;;
-
-export class MyComponent implements OnInit{
-
-constructor(private batchSelectionService: BatchSelectionService){}
-
-addProductToSelection(product: Product){
-this.batchSelectionService.addProductToSelection(product);
-}
-}</code></pre></div></div>
+</div>
 
                     <div class="io-description">
                         <b>Parameters :</b>
@@ -598,21 +539,7 @@ this.batchSelectionService.addProductToSelection(product);
             <tr>
                 <td class="col-md-4">
                     <div class="io-description"><p>Gets the list of currently selected lineItem.</p>
-<h3 id="example">Example:</h3>
-<div><pre class="line-numbers"><code class="language-typescript">import { BatchSelectionService, Product } from &#39;&#64;congacommerce/ecommerce&#39;;
-import { Observable } from &#39;rxjs/Observable&#39;;
-
-export class MyComponent implements OnInit{
-lineItems: CartItem;
-lineItems$: Observable&lt;Array&lt;CartItem&gt;&gt;;
-constructor(private batchSelectionService: BatchSelectionService){}
-
-getSelectedLineItems(){
-this.batchSelectionService.getSelectedLineItems().subscribe((res)=&gt; this.lineItems = res);
-// or
-this.lineItems$ = this.batchSelectionService.getSelectedLineItems();
-}
-}</code></pre></div></div>
+</div>
 
                     <div>
                     </div>
@@ -653,18 +580,7 @@ this.lineItems$ = this.batchSelectionService.getSelectedLineItems();
             <tr>
                 <td class="col-md-4">
                     <div class="io-description"><p>Gets the list of currently selected products.</p>
-<h3 id="example">Example:</h3>
-<div><pre class="line-numbers"><code class="language-typescript">import { BatchSelectionService, Product } from &#39;&#64;congacommerce/ecommerce&#39;;
-import { Observable } from &#39;rxjs/Observable&#39;;
-
-export class MyComponent implements OnInit{
-products:Product=[];
-constructor(private batchSelectionService: BatchSelectionService){}
-
-getSelectedProducts(){
-this.batchSelectionService.getSelectedProducts().subscribe((res)=&gt; this.products = res);
-}
-}</code></pre></div></div>
+</div>
 
                     <div>
                     </div>
@@ -705,18 +621,7 @@ this.batchSelectionService.getSelectedProducts().subscribe((res)=&gt; this.produ
             <tr>
                 <td class="col-md-4">
                     <div class="io-description"><p>Checks if the given lineItem is part of the selected lineItem list.</p>
-<h3 id="example">Example:</h3>
-<div><pre class="line-numbers"><code class="language-typescript">import { BatchSelectionService, Product } from &#39;&#64;congacommerce/ecommerce&#39;;
-import { Observable } from &#39;rxjs/Observable&#39;;
-
-export class MyComponent implements OnInit{
-isLineItemSelected:boolean;
-constructor(private batchSelectionService: BatchSelectionService){}
-
-isLineItemSelected(lineItems: Array&lt;CartItem&gt;){
-this.batchSelectionService.isLineItemSelected(lineItems).subscribe((res)=&gt; this.isLineItemSelected=res);
-}
-}</code></pre></div></div>
+</div>
 
                     <div class="io-description">
                         <b>Parameters :</b>
@@ -789,18 +694,7 @@ this.batchSelectionService.isLineItemSelected(lineItems).subscribe((res)=&gt; th
             <tr>
                 <td class="col-md-4">
                     <div class="io-description"><p>Checks if the given product is part of the selected product list.</p>
-<h3 id="example">Example:</h3>
-<div><pre class="line-numbers"><code class="language-typescript">import { BatchSelectionService, Product } from &#39;&#64;congacommerce/ecommerce&#39;;
-import { Observable } from &#39;rxjs/Observable&#39;;
-
-export class MyComponent implements OnInit{
-isSelected:boolean;
-constructor(private batchSelectionService: BatchSelectionService){}
-
-isProductSelected(product: Product){
-this.batchSelectionService.isProductSelected().subscribe((res)=&gt; this.isSelected = res);
-}
-}</code></pre></div></div>
+</div>
 
                     <div class="io-description">
                         <b>Parameters :</b>
@@ -904,17 +798,7 @@ this.batchSelectionService.isProductSelected().subscribe((res)=&gt; this.isSelec
             <tr>
                 <td class="col-md-4">
                     <div class="io-description"><p>Removes all lineItems from the list of selected lineItem.</p>
-<h3 id="example">Example:</h3>
-<div><pre class="line-numbers"><code class="language-typescript">import { BatchSelectionService, Product } from &#39;&#64;congacommerce/ecommerce&#39;;
-import { Observable } from &#39;rxjs/Observable&#39;;
-
-export class MyComponent implements OnInit{
-constructor(private batchSelectionService: BatchSelectionService){}
-
-removeAllLineItemsFromSelection(lineItems: Array&lt;CartItem&gt;){
-this.batchSelectionService.removeAllLineItemsFromSelection(lineItems);
-}
-}</code></pre></div></div>
+</div>
 
                     <div class="io-description">
                         <b>Parameters :</b>
@@ -986,18 +870,7 @@ this.batchSelectionService.removeAllLineItemsFromSelection(lineItems);
             <tr>
                 <td class="col-md-4">
                     <div class="io-description"><p>Removes all products from the list of selected products.</p>
-<h3 id="example">Example:</h3>
-<div><pre class="line-numbers"><code class="language-typescript">import { BatchSelectionService, Product } from &#39;&#64;congacommerce/ecommerce&#39;;
-import { Observable } from &#39;rxjs/Observable&#39;;
-
-export class MyComponent implements OnInit{
-
-constructor(private batchSelectionService: BatchSelectionService){}
-
-removeAllProductsFromSelection(products: Array&lt;Product&gt;){
-this.batchSelectionService.removeAllProductsFromSelection(products);
-}
-}</code></pre></div></div>
+</div>
 
                     <div class="io-description">
                         <b>Parameters :</b>
@@ -1069,17 +942,7 @@ this.batchSelectionService.removeAllProductsFromSelection(products);
             <tr>
                 <td class="col-md-4">
                     <div class="io-description"><p>Removes LineItems from the list of selected LineItems.</p>
-<h3 id="example">Example:</h3>
-<div><pre class="line-numbers"><code class="language-typescript">import { BatchSelectionService, Product } from &#39;&#64;congacommerce/ecommerce&#39;;
-import { Observable } from &#39;rxjs/Observable&#39;;
-
-export class MyComponent implements OnInit{
-constructor(private batchSelectionService: BatchSelectionService){}
-
-removeLineItemFromSelection(lineItem: CartItem){
-this.batchSelectionService.removeLineItemFromSelection(lineItem);
-}
-}</code></pre></div></div>
+</div>
 
                     <div class="io-description">
                         <b>Parameters :</b>
@@ -1151,18 +1014,7 @@ this.batchSelectionService.removeLineItemFromSelection(lineItem);
             <tr>
                 <td class="col-md-4">
                     <div class="io-description"><p>Removes products from the list of selected products.</p>
-<h3 id="example">Example:</h3>
-<div><pre class="line-numbers"><code class="language-typescript">import { BatchSelectionService, Product } from &#39;&#64;congacommerce/ecommerce&#39;;
-import { Observable } from &#39;rxjs/Observable&#39;;
-
-export class MyComponent implements OnInit{
-
-constructor(private batchSelectionService: BatchSelectionService){}
-
-removeProductFromSelection(product:Product){
-this.batchSelectionService.removeProductFromSelection(product);
-}
-}</code></pre></div></div>
+</div>
 
                     <div class="io-description">
                         <b>Parameters :</b>
@@ -1234,17 +1086,7 @@ this.batchSelectionService.removeProductFromSelection(product);
             <tr>
                 <td class="col-md-4">
                     <div class="io-description"><p>Adds a list of cart items to drawer selection.</p>
-<h3 id="example">Example:</h3>
-<div><pre class="line-numbers"><code class="language-typescript">import { BatchSelectionService, Product } from &#39;&#64;congacommerce/ecommerce&#39;;
-import { Observable } from &#39;rxjs/Observable&#39;;
-
-export class MyComponent implements OnInit{
-constructor(private batchSelectionService: BatchSelectionService){}
-
-setSelectedLineItems(lineItems: Array&lt;CartItem&gt;){
-this.batchSelectionService.setSelectedLineItems(lineItems);
-}
-}</code></pre></div></div>
+</div>
 
                     <div class="io-description">
                         <b>Parameters :</b>
@@ -1316,18 +1158,7 @@ this.batchSelectionService.setSelectedLineItems(lineItems);
             <tr>
                 <td class="col-md-4">
                     <div class="io-description"><p>Adds a list of products to drawer selection.</p>
-<h3 id="example">Example:</h3>
-<div><pre class="line-numbers"><code class="language-typescript">import { BatchSelectionService, Product } from &#39;&#64;congacommerce/ecommerce&#39;;
-import { Observable } from &#39;rxjs/Observable&#39;;
-
-export class MyComponent implements OnInit{
-
-constructor(private batchSelectionService: BatchSelectionService){}
-
-setSelectedProducts(products: Array&lt;Product&gt;){
-this.batchSelectionService.setSelectedProducts(products);
-}
-}</code></pre></div></div>
+</div>
 
                     <div class="io-description">
                         <b>Parameters :</b>
@@ -1478,15 +1309,6 @@ this.batchSelectionService.setSelectedProducts(products);
                <!-- END CONTENT -->
            </div>
        </div>
-
-          <label class="dark-mode-switch">
-               <input type="checkbox">
-               <span class="slider">
-                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
-                    </svg>
-               </span>
-          </label>
 
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;

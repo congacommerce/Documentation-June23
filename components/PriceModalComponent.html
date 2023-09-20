@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Conga Digital Commerce September &#x27;22</title>
+        <title>Conga Digital Commerce February &#x27;23 on Conga Revenue Lifecycle Platform</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -15,7 +15,7 @@
     <body>
 
         <div class="navbar navbar-default navbar-fixed-top visible-xs">
-            <a href="../" class="navbar-brand">Conga Digital Commerce September &#x27;22</a>
+            <a href="../" class="navbar-brand">Conga Digital Commerce February &#x27;23 on Conga Revenue Lifecycle Platform</a>
             <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
         </div>
 
@@ -62,7 +62,7 @@
     <h3>File</h3>
 </p>
 <p class="comment">
-    <code>projects/congacommerce/elements/src/lib/price-modal/price-modal.component.ts</code>
+    <code>projects/congarevenuecloud/elements/src/lib/price-modal/price-modal.component.ts</code>
 </p>
 
 
@@ -71,14 +71,17 @@
     </p>
     <p class="comment">
         <p>Price Modal component can be used when pricing on cart fails for any reason.
+<strong>This component is a work in progress.</strong>
 User can choose to clear the cart or reprice it, from the modal.</p>
 <h3>Usage</h3>
 
-<div><pre class="line-numbers"><code class="language-typescript">import { PriceModalModule } from &#39;&#64;congacommerce/elements&#39;;
+<div><pre class="line-numbers"><code class="language-typescript">import { PriceModalModule } from &#39;&#64;congarevenuecloud/elements&#39;;
 &#64;NgModule({
 imports: [PriceModalModule, ...]
 })
-export class AppModule {}</code></pre></div><div><pre class="line-numbers"><code class="language-typescript">&lt;apt-price-modal&gt;&lt;/apt-price-modal&gt;</code></pre></div>
+export class AppModule {}</code></pre></div><div><pre class="line-numbers"><code class="language-html">```typescript
+&lt;apt-price-modal&gt;&lt;/apt-price-modal&gt;</code></pre></div><p>```</p>
+
     </p>
 
 
@@ -450,27 +453,27 @@ export class AppModule {}</code></pre></div><div><pre class="line-numbers"><code
         <pre class="line-numbers"><code class="language-html">&lt;ng-template #priceModal&gt;
     &lt;div&gt;
         &lt;div class&#x3D;&quot;modal-header&quot;&gt;
-        &lt;h4 class&#x3D;&quot;modal-title d-flex align-items-center m-0 text-truncate&quot;&gt;
-            {{&#x27;COMMON.PRICING_FAILED&#x27; | translate}}
-        &lt;/h4&gt;
-        &lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;close pull-right&quot; aria-label&#x3D;&quot;Close&quot; (click)&#x3D;&quot;closeModal()&quot;&gt;
-            &lt;span aria-hidden&#x3D;&quot;true&quot;&gt;&amp;times;&lt;/span&gt;
-        &lt;/button&gt;
+            &lt;h4 class&#x3D;&quot;modal-title d-flex align-items-center m-0 text-truncate&quot;&gt;
+                {{&#x27;COMMON.PRICING_FAILED&#x27; | translate}}
+            &lt;/h4&gt;
+            &lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;close pull-right&quot; aria-label&#x3D;&quot;Close&quot; (click)&#x3D;&quot;closeModal()&quot;&gt;
+                &lt;span aria-hidden&#x3D;&quot;true&quot;&gt;&amp;times;&lt;/span&gt;
+            &lt;/button&gt;
         &lt;/div&gt;
-        &lt;div class&#x3D;&quot;modal-body&quot;&gt;
-        &lt;div class&#x3D;&quot;row&quot;&gt;
-            &lt;div class&#x3D;&quot;col-md-10&quot;&gt;
-            &lt;div&gt;
-                {{&#x27;COMMON.PRICE_ERROR&#x27; | translate}}
+        &lt;div class&#x3D;&quot;modal-body&quot;&gt;
+            &lt;div class&#x3D;&quot;row&quot;&gt;
+                &lt;div class&#x3D;&quot;col-md-10&quot;&gt;
+                    &lt;div&gt;
+                        {{&#x27;COMMON.PRICE_ERROR&#x27; | translate}}
+                    &lt;/div&gt;
+                &lt;/div&gt;
             &lt;/div&gt;
-            &lt;/div&gt;
-        &lt;/div&gt;
         &lt;/div&gt;
         &lt;div class&#x3D;&quot;modal-footer&quot;&gt;
             &lt;button class&#x3D;&quot;btn btn-outline-danger mr-2&quot; [ladda]&#x3D;&quot;btnLoader&quot; [attr.data-style]&#x3D;&quot;&#x27;zoom-in&#x27;&quot;
-                    (click)&#x3D;&quot;clearCart()&quot;&gt;{{&#x27;COMMON.CLEAR_CART&#x27; | translate}}&lt;/button&gt;
+                (click)&#x3D;&quot;clearCart()&quot;&gt;{{&#x27;COMMON.CLEAR_CART&#x27; | translate}}&lt;/button&gt;
             &lt;button class&#x3D;&quot;btn btn-primary btn-raised&quot; type&#x3D;&quot;button&quot; (click)&#x3D;&quot;retryPrice()&quot;
-                    data-style&#x3D;&quot;zoom-in&quot;&gt;{{&#x27;COMMON.REPRICE_CART&#x27; | translate}}&lt;/button&gt;
+                data-style&#x3D;&quot;zoom-in&quot;&gt;{{&#x27;COMMON.REPRICE_CART&#x27; | translate}}&lt;/button&gt;
         &lt;/div&gt;
     &lt;/div&gt;
 &lt;/ng-template&gt;</code></pre>
@@ -508,12 +511,14 @@ export class AppModule {}</code></pre></div><div><pre class="line-numbers"><code
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><ng-template #priceModal>    <div>        <div class="modal-header">        <h4 class="modal-title d-flex align-items-center m-0 text-truncate">            {{\'COMMON.PRICING_FAILED\' | translate}}        </h4>        <button type="button" class="close pull-right" aria-label="Close" (click)="closeModal()">            <span aria-hidden="true">&times;</span>        </button>        </div>        <div class="modal-body">        <div class="row">            <div class="col-md-10">            <div>                {{\'COMMON.PRICE_ERROR\' | translate}}            </div>            </div>        </div>        </div>        <div class="modal-footer">            <button class="btn btn-outline-danger mr-2" [ladda]="btnLoader" [attr.data-style]="\'zoom-in\'"                    (click)="clearCart()">{{\'COMMON.CLEAR_CART\' | translate}}</button>            <button class="btn btn-primary btn-raised" type="button" (click)="retryPrice()"                    data-style="zoom-in">{{\'COMMON.REPRICE_CART\' | translate}}</button>        </div>    </div></ng-template></div>'
-    var COMPONENTS = [{'name': 'AdditionalInformationComponent', 'selector': 'apt-additional-information'},{'name': 'AddressComponent', 'selector': 'apt-address'},{'name': 'AddToCartComponent', 'selector': 'apt-add-to-cart'},{'name': 'AlertComponent', 'selector': 'apt-alert'},{'name': 'AssetDropdownButtonComponent', 'selector': 'apt-asset-dropdown-button'},{'name': 'AssetListComponent', 'selector': 'apt-asset-list'},{'name': 'BreadcrumbComponent', 'selector': 'apt-breadcrumb'},{'name': 'CategoryFilterComponent', 'selector': 'apt-category-filter'},{'name': 'ChartComponent', 'selector': 'apt-chart'},{'name': 'ConstraintRuleAlertComponent', 'selector': 'apt-constraint-rule-alert'},{'name': 'ConstraintRuleSidebarComponent', 'selector': 'apt-constraint-rule-sidebar'},{'name': 'CRIconComponent', 'selector': 'apt-cr-constraint-icon'},{'name': 'CRRecommendedProductsComponent', 'selector': 'apt-cr-recommended-products'},{'name': 'DataFilterComponent', 'selector': 'apt-data-filter'},{'name': 'DotsComponent', 'selector': 'apt-dots'},{'name': 'FavoriteModalComponent', 'selector': 'apt-favorite-modal'},{'name': 'FilesComponent', 'selector': 'apt-files'},{'name': 'GenerateDocumentComponent', 'selector': 'apt-generate-document'},{'name': 'InputDateComponent', 'selector': 'apt-date-range-input'},{'name': 'InputFieldComponent', 'selector': 'apt-input-field'},{'name': 'InputSelectComponent', 'selector': 'apt-input-select'},{'name': 'JumbotronComponent', 'selector': 'apt-jumbotron'},{'name': 'LineitemCardComponent', 'selector': 'apt-lineitem-card'},{'name': 'LineItemMenuComponent', 'selector': 'apt-line-item-menu'},{'name': 'LineItemTableRowComponent', 'selector': 'apt-line-item-table-row'},{'name': 'LoginFormComponent', 'selector': 'apt-login-form'},{'name': 'MiniCartComponent', 'selector': 'apt-mini-cart'},{'name': 'MiniProfileComponent', 'selector': 'apt-mini-profile'},{'name': 'OutputFieldComponent', 'selector': 'apt-output-field'},{'name': 'PaymentComponent', 'selector': 'apt-payment'},{'name': 'PaymentIFrameComponent', 'selector': 'apt-payment-iframe'},{'name': 'PresentDocumentComponent', 'selector': 'apt-present-document'},{'name': 'PriceComponent', 'selector': 'apt-price'},{'name': 'PriceModalComponent', 'selector': 'apt-price-modal'},{'name': 'PriceSummaryComponent', 'selector': 'apt-price-summary'},{'name': 'ProductCardComponent', 'selector': 'apt-product-card'},{'name': 'ProductCarouselComponent', 'selector': 'apt-product-carousel'},{'name': 'ProductCompareComponent', 'selector': 'apt-product-compare'},{'name': 'ProductConfigurationComponent', 'selector': 'apt-product-configuration'},{'name': 'ProductConfigurationSummaryComponent', 'selector': 'apt-product-configuration-summary'},{'name': 'ProductDrawerComponent', 'selector': 'apt-product-drawer'},{'name': 'ProductImagesComponent', 'selector': 'apt-product-images'},{'name': 'ProductSearchComponent', 'selector': 'apt-product-search'},{'name': 'ProductTypeFilterComponent', 'selector': 'apt-product-type-filter'},{'name': 'PromotionComponent', 'selector': 'apt-promotion'},{'name': 'PromotionModalComponent', 'selector': 'apt-pr-modal'},{'name': 'RevalidateCartModalComponent', 'selector': 'apt-revalidate-cart-modal'},{'name': 'SelectAllComponent', 'selector': 'apt-select-all'},{'name': 'SpinnerComponent', 'selector': 'apt-spinner'},{'name': 'TableComponent', 'selector': 'apt-table'},{'name': 'TaxPopHoverComponent', 'selector': 'apt-tax-pophover'}];
+        var COMPONENT_TEMPLATE = '<div><ng-template #priceModal>    <div>        <div class="modal-header">            <h4 class="modal-title d-flex align-items-center m-0 text-truncate">                {{\'COMMON.PRICING_FAILED\' | translate}}            </h4>            <button type="button" class="close pull-right" aria-label="Close" (click)="closeModal()">                <span aria-hidden="true">&times;</span>            </button>        </div>        <div class="modal-body">            <div class="row">                <div class="col-md-10">                    <div>                        {{\'COMMON.PRICE_ERROR\' | translate}}                    </div>                </div>            </div>        </div>        <div class="modal-footer">            <button class="btn btn-outline-danger mr-2" [ladda]="btnLoader" [attr.data-style]="\'zoom-in\'"                (click)="clearCart()">{{\'COMMON.CLEAR_CART\' | translate}}</button>            <button class="btn btn-primary btn-raised" type="button" (click)="retryPrice()"                data-style="zoom-in">{{\'COMMON.REPRICE_CART\' | translate}}</button>        </div>    </div></ng-template></div>'
+    var COMPONENTS = [{'name': 'AdditionalInformationComponent', 'selector': 'apt-additional-information'},{'name': 'AddressComponent', 'selector': 'apt-address'},{'name': 'AddToCartComponent', 'selector': 'apt-add-to-cart'},{'name': 'AlertComponent', 'selector': 'apt-alert'},{'name': 'AssetDropdownButtonComponent', 'selector': 'apt-asset-dropdown-button'},{'name': 'AssetListComponent', 'selector': 'apt-asset-list'},{'name': 'BreadcrumbComponent', 'selector': 'apt-breadcrumb'},{'name': 'CategoryFilterComponent', 'selector': 'apt-category-filter'},{'name': 'ChartComponent', 'selector': 'apt-chart'},{'name': 'ConstraintRuleAlertComponent', 'selector': 'apt-constraint-rule-alert'},{'name': 'ConstraintRuleSidebarComponent', 'selector': 'apt-constraint-rule-sidebar'},{'name': 'CRIconComponent', 'selector': 'apt-cr-constraint-icon'},{'name': 'CRRecommendedProductsComponent', 'selector': 'apt-cr-recommended-products'},{'name': 'DataFilterComponent', 'selector': 'apt-data-filter'},{'name': 'DependentPicklistComponent', 'selector': 'apt-dependent-picklist'},{'name': 'DotsComponent', 'selector': 'apt-dots'},{'name': 'FacetFilterComponent', 'selector': 'apt-facet-filter'},{'name': 'FavoriteModalComponent', 'selector': 'apt-favorite-modal'},{'name': 'FilesComponent', 'selector': 'apt-files'},{'name': 'GenerateDocumentComponent', 'selector': 'apt-generate-document'},{'name': 'InputDateComponent', 'selector': 'apt-date-range-input'},{'name': 'InputFieldComponent', 'selector': 'apt-input-field'},{'name': 'InputSelectComponent', 'selector': 'apt-input-select'},{'name': 'JumbotronComponent', 'selector': 'apt-jumbotron'},{'name': 'LineitemCardComponent', 'selector': 'apt-lineitem-card'},{'name': 'LineItemMenuComponent', 'selector': 'apt-line-item-menu'},{'name': 'LineItemTableRowComponent', 'selector': 'apt-line-item-table-row'},{'name': 'MiniCartComponent', 'selector': 'apt-mini-cart'},{'name': 'MiniProfileComponent', 'selector': 'apt-mini-profile'},{'name': 'OutputFieldComponent', 'selector': 'apt-output-field'},{'name': 'PaymentComponent', 'selector': 'apt-payment'},{'name': 'PaymentIFrameComponent', 'selector': 'apt-payment-iframe'},{'name': 'PopoverComponent', 'selector': 'apt-popover'},{'name': 'PresentDocumentComponent', 'selector': 'apt-present-document'},{'name': 'PriceComponent', 'selector': 'apt-price'},{'name': 'PriceModalComponent', 'selector': 'apt-price-modal'},{'name': 'PriceSummaryComponent', 'selector': 'apt-price-summary'},{'name': 'ProductCardComponent', 'selector': 'apt-product-card'},{'name': 'ProductCarouselComponent', 'selector': 'apt-product-carousel'},{'name': 'ProductCompareComponent', 'selector': 'apt-product-compare'},{'name': 'ProductConfigurationComponent', 'selector': 'apt-product-configuration'},{'name': 'ProductConfigurationSummaryComponent', 'selector': 'apt-product-configuration-summary'},{'name': 'ProductDrawerComponent', 'selector': 'apt-product-drawer'},{'name': 'ProductImagesComponent', 'selector': 'apt-product-images'},{'name': 'ProductSearchComponent', 'selector': 'apt-product-search'},{'name': 'ProductTypeFilterComponent', 'selector': 'apt-product-type-filter'},{'name': 'PromotionComponent', 'selector': 'apt-promotion'},{'name': 'PromotionModalComponent', 'selector': 'apt-pr-modal'},{'name': 'SelectAllComponent', 'selector': 'apt-select-all'},{'name': 'SpinnerComponent', 'selector': 'apt-spinner'},{'name': 'TableComponent', 'selector': 'apt-table'}];
     var DIRECTIVES = [{'name': 'AutoFocusDirective', 'selector': '[aptAutoFocus]'}];
     var ACTUAL_COMPONENT = {'name': 'PriceModalComponent'};
 </script>
 <script src="../js/tree.js"></script>
+
+
 
 
 

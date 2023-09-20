@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Conga Digital Commerce June &#x27;23</title>
+        <title>Conga Digital Commerce February &#x27;23 on Conga Revenue Lifecycle Platform</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -15,7 +15,7 @@
     <body>
 
         <div class="navbar navbar-default navbar-fixed-top visible-xs">
-            <a href="../" class="navbar-brand">Conga Digital Commerce June &#x27;23</a>
+            <a href="../" class="navbar-brand">Conga Digital Commerce February &#x27;23 on Conga Revenue Lifecycle Platform</a>
             <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
         </div>
 
@@ -31,6 +31,7 @@
                <!-- START CONTENT -->
                <div class="content injectable">
                    <div class="content-data">
+
 
 
 
@@ -55,7 +56,7 @@
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>projects/congacommerce/ecommerce/src/lib/modules/cart/services/user-view.service.ts</code>
+            <code>projects/congarevenuecloud/ecommerce/src/lib/modules/cart/services/user-view.service.ts</code>
         </p>
 
 
@@ -63,10 +64,11 @@
                 <h3>Description</h3>
             </p>
             <p class="comment">
-                <p>User view service returns the configurable view of cart item fields to be displayed for a user on cart page.</p>
+                <p><strong> This service is a work in progress</strong>
+User view service returns the configurable view of cart item fields to be displayed for a user on cart page.</p>
 <h3>Usage</h3>
 
-<div><pre class="line-numbers"><code class="language-typescript">import { UserViewService } from &#39;&#64;congacommerce/ecommerce&#39;;
+<div><pre class="line-numbers"><code class="language-typescript">import { UserViewService, AObjectService} from &#39;&#64;congarevenuecloud/ecommerce&#39;;
 
 constructor(private userViewService: UserViewService) {}
 
@@ -98,7 +100,6 @@ private userViewService: UserViewService = this.injector.get(UserViewService);
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
-                                    <span class="modifier">Protected</span>
                                 <a href="#apiService" >apiService</a>
                             </li>
                             <li>
@@ -174,7 +175,7 @@ private userViewService: UserViewService = this.injector.get(UserViewService);
                 <td class="col-md-4">
                     <div class="io-description"><p>This method fetches the list of display columns for cart item fields, matching the default user view.</p>
 <h3 id="example">Example:</h3>
-<div><pre class="line-numbers"><code class="language-typescript">import { UserViewService } from &#39;&#64;congacommerce/ecommerce&#39;;
+<div><pre class="line-numbers"><code class="language-typescript">import { UserViewService } from &#39;&#64;congarevenuecloud/ecommerce&#39;;
 
 constructor(private userViewService: UserViewService) {
 this.subscriptions.push(this.userViewService.getUserView().subscribe(res =&gt; {....}));
@@ -209,7 +210,7 @@ this.subscriptions.push(this.userViewService.getUserView().subscribe(res =&gt; {
                                     </td>
 
                                     <td>
-                                        <p>string identifier representing the user view.</p>
+                                        <p>string identifier, an optional parameter representing the user view.</p>
 
                                     </td>
                                 </tr>
@@ -254,12 +255,16 @@ this.subscriptions.push(this.userViewService.getUserView().subscribe(res =&gt; {
                 <td class="col-md-4">
                     <div class="io-description"><p>This method stores the given list of user view records in browser storage.</p>
 <h3 id="example">Example:</h3>
-<div><pre class="line-numbers"><code class="language-typescript">import { UserViewService } from &#39;&#64;congacommerce/ecommerce&#39;;
-
+<div><pre class="line-numbers"><code class="language-typescript">import { UserViewService, UserView } from &#39;&#64;congarevenuecloud/ecommerce&#39;;
+result$: Observable&lt;boolean&gt; ;
+result: boolean;
 constructor(private userViewService: UserViewService) {
-this.subscriptions.push(this.userViewService.getUserView().subscribe(res =&gt; {
-const myView = this.mapUserView(res);
-this.updateUserView(myView);
+updateUserView(view: Array&lt;UserView&gt;){
+this.userViewService.updateUserView(view).subscribe(c =&gt; this.result = c);
+//or
+this.result$= this.userViewService.updateUserView(view);
+}
+
 }));
 }</code></pre></div></div>
 
@@ -341,7 +346,6 @@ this.updateUserView(myView);
                 <td class="col-md-4">
                     <a name="apiService"></a>
                     <span class="name">
-                            <span class="modifier">Protected</span>
                         <span ><b>apiService</b></span>
                         <a href="#apiService"><span class="icon ion-ios-link"></span></a>
                     </span>
@@ -474,6 +478,7 @@ this.updateUserView(myView);
 
 
 </div>
+
 
 
 

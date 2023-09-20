@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Conga Digital Commerce June &#x27;23</title>
+        <title>Conga Digital Commerce February &#x27;23 on Conga Revenue Lifecycle Platform</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -15,7 +15,7 @@
     <body>
 
         <div class="navbar navbar-default navbar-fixed-top visible-xs">
-            <a href="../" class="navbar-brand">Conga Digital Commerce June &#x27;23</a>
+            <a href="../" class="navbar-brand">Conga Digital Commerce February &#x27;23 on Conga Revenue Lifecycle Platform</a>
             <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
         </div>
 
@@ -31,6 +31,7 @@
                <!-- START CONTENT -->
                <div class="content injectable">
                    <div class="content-data">
+
 
 
 
@@ -55,7 +56,7 @@
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>projects/congacommerce/ecommerce/src/lib/modules/catalog/services/product-attribute.service.ts</code>
+            <code>projects/congarevenuecloud/ecommerce/src/lib/modules/catalog/services/product-attribute.service.ts</code>
         </p>
 
 
@@ -63,10 +64,11 @@
                 <h3>Description</h3>
             </p>
             <p class="comment">
-                <p>Product attributes represent a characteristic of a product that can have different values like color, vendor etc.</p>
+                <p><strong>This service is a work in progress.</strong></p>
+<p>Product attributes represent a characteristic of a product that can have different values like color, vendor etc.</p>
 <h3>Usage</h3>
 
-<div><pre class="line-numbers"><code class="language-typescript">import { ProductAttributeService, AObjectService} from &#39;&#64;congacommerce/ecommerce&#39;;
+<div><pre class="line-numbers"><code class="language-typescript">import { ProductAttributeService, AObjectService} from &#39;&#64;congarevenuecloud/ecommerce&#39;;
 
 export class MyComponent implements OnInit{
 constructor( private productAttributeService: ProductAttributeService)
@@ -170,7 +172,7 @@ private productAttributeService: ProductAttributeService = this.injector.get(Pro
                 <td class="col-md-4">
                     <div class="io-description"><p>Method returns an array of product attributes.</p>
 <h3 id="example">Example:</h3>
-<div><pre class="line-numbers"><code class="language-typescript">import { ProductAttributeService, ProductAttribute, Product } from &#39;&#64;congacommerce/ecommerce&#39;;
+<div><pre class="line-numbers"><code class="language-typescript">import { ProductAttributeService, ProductAttribute, Product } from &#39;&#64;congarevenuecloud/ecommerce&#39;;
 import { Observable } from &#39;rxjs/Observable&#39;;
 
 export class MyComponent implements OnInit{
@@ -256,7 +258,7 @@ this.productAttributeList$ = this.productAttributeService.getAttributeGroupIdsFo
                 <td class="col-md-4">
                     <div class="io-description"><p>Method returns ProductAttributeValue with default attribute values for a given list of ProductAttributes.</p>
 <h3 id="example">Example:</h3>
-<div><pre class="line-numbers"><code class="language-typescript">import { ProductAttributeService, ProductAttributeValue } from &#39;&#64;congacommerce/ecommerce&#39;;
+<div><pre class="line-numbers"><code class="language-typescript">import { ProductAttributeService, ProductAttributeValue } from &#39;&#64;congarevenuecloud/ecommerce&#39;;
 import { Observable, of } from &#39;rxjs/Observable&#39;;
 
 export class MyComponent implements OnInit{
@@ -307,7 +309,7 @@ this.pav$$ = of(this.productAttributeService.getAttributeValueDefaults(attribute
                     <div>
                     </div>
                     <div class="io-description">
-                        <b>Returns : </b>        <code><a href="../classes/ProductAttributeValue.html" target="_self" >ProductAttributeValue</a></code>
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
 
                     </div>
                     <div class="io-description">
@@ -342,7 +344,7 @@ this.pav$$ = of(this.productAttributeService.getAttributeValueDefaults(attribute
                 <td class="col-md-4">
                     <div class="io-description"><p>Method gets a list of product attributes for a given product. Can further filter the list by a group.</p>
 <h3 id="example">Example:</h3>
-<div><pre class="line-numbers"><code class="language-typescript">import { ProductAttributeService, ProductAttribute, Product } from &#39;&#64;congacommerce/ecommerce&#39;;
+<div><pre class="line-numbers"><code class="language-typescript">import { ProductAttributeService, ProductAttribute, Product } from &#39;&#64;congarevenuecloud/ecommerce&#39;;
 import { Observable } from &#39;rxjs/Observable&#39;;
 
 export class MyComponent implements OnInit{
@@ -445,7 +447,7 @@ this.productAttributeList$ = this.productAttributeService.getProductAttributes(p
                     <div class="io-description"><p>Method returns an array of product attributes.
 Adds an additional property to all attributes returned called &#39;_.describe&#39;. This property contains metadata information about the attribute.</p>
 <h3 id="example">Example:</h3>
-<div><pre class="line-numbers"><code class="language-typescript">import { ProductAttributeService, ProductAttribute, Product } from &#39;&#64;congacommerce/ecommerce&#39;;
+<div><pre class="line-numbers"><code class="language-typescript">import { ProductAttributeService, ProductAttribute, Product } from &#39;&#64;congarevenuecloud/ecommerce&#39;;
 import { Observable } from &#39;rxjs/Observable&#39;;
 
 export class MyComponent implements OnInit{
@@ -567,6 +569,7 @@ this.productAttributeList$ = this.productAttributeService.setDescribeInformation
 
 
 </div>
+
 
 
 

@@ -3,19 +3,19 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Conga Digital Commerce June &#x27;23</title>
+        <title>Conga Digital Commerce September &#x27;22 on Conga Revenue Lifecycle Platform</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
 	   <link rel="stylesheet" href="../styles/style.css">
-        <link rel="stylesheet" href="../styles/dark.css">
+        <link rel="stylesheet" href="../styles/dark.css" media="(prefers-color-scheme: dark)">
         <link rel="stylesheet" href="../styles/material.css">
     </head>
     <body>
 
         <div class="navbar navbar-default navbar-fixed-top visible-xs">
-            <a href="../" class="navbar-brand">Conga Digital Commerce June &#x27;23</a>
+            <a href="../" class="navbar-brand">Conga Digital Commerce September &#x27;22 on Conga Revenue Lifecycle Platform</a>
             <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
         </div>
 
@@ -57,17 +57,10 @@
             <h3>File</h3>
             </p>
             <p class="comment">
-                <code>projects/congacommerce/ecommerce/src/lib/modules/order/services/details.guard.ts</code>
+                <code>projects/congacommerce/ecommerce/src/lib/modules/order/guard/order-details.guard.ts</code>
             </p>
 
 
-                <p class="comment">
-                <h3>Description</h3>
-                </p>
-                <p class="comment">
-                    <p>The order details guard ensures that a user has access to details of an order, if not it redirects them to the login screen.</p>
-
-                </p>
 
 
 
@@ -106,7 +99,7 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor(router: <a href="https://angular.io/api/router/Router" target="_blank">Router</a>, apiService: ApiService)</code>
+<code>constructor(router: <a href="https://angular.io/api/router/Router" target="_blank">Router</a>, orderService: <a href="../classes/Order.html" target="_self">OrderService</a>, apiService: ApiService)</code>
                     </td>
                 </tr>
 
@@ -128,6 +121,18 @@
                                                   
                                                         <td>
                                                                         <code><a href="https://angular.io/api/router/Router" target="_blank" >Router</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>orderService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../classes/Order.html" target="_self" >OrderService</a></code>
                                                         </td>
                                                   
                                                     <td>
@@ -264,15 +269,6 @@
                <!-- END CONTENT -->
            </div>
        </div>
-
-          <label class="dark-mode-switch">
-               <input type="checkbox">
-               <span class="slider">
-                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
-                    </svg>
-               </span>
-          </label>
 
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;

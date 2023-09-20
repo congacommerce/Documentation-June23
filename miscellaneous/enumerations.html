@@ -3,19 +3,19 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Conga Digital Commerce June &#x27;23</title>
+        <title>Conga Digital Commerce September &#x27;22 on Conga Revenue Lifecycle Platform</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
 	   <link rel="stylesheet" href="../styles/style.css">
-        <link rel="stylesheet" href="../styles/dark.css">
+        <link rel="stylesheet" href="../styles/dark.css" media="(prefers-color-scheme: dark)">
         <link rel="stylesheet" href="../styles/material.css">
     </head>
     <body>
 
         <div class="navbar navbar-default navbar-fixed-top visible-xs">
-            <a href="../" class="navbar-brand">Conga Digital Commerce June &#x27;23</a>
+            <a href="../" class="navbar-brand">Conga Digital Commerce September &#x27;22 on Conga Revenue Lifecycle Platform</a>
             <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
         </div>
 
@@ -60,6 +60,9 @@
                 <td class="col-md-4">
                     <ul class="index-list">
                         <li>
+                            <a href="#Adjustment" title="projects/congacommerce/ecommerce/src/lib/modules/pricing/services/price.service.ts" ><b>Adjustment</b>&nbsp;&nbsp;&nbsp;(projects/.../price.service.ts)</a>
+                        </li>
+                        <li>
                             <a href="#CartError" title="projects/congacommerce/ecommerce/src/lib/modules/cart/enums/cart-error.enum.ts" ><b>CartError</b>&nbsp;&nbsp;&nbsp;(projects/.../cart-error.enum.ts)</a>
                         </li>
                         <li>
@@ -69,7 +72,13 @@
                             <a href="#FavoriteScope" title="projects/congacommerce/ecommerce/src/lib/modules/favorite/enums/favorite.enum.ts" ><b>FavoriteScope</b>&nbsp;&nbsp;&nbsp;(projects/.../favorite.enum.ts)</a>
                         </li>
                         <li>
+                            <a href="#LabelPlurals" title="projects/congacommerce/elements/src/lib/output-field/output-field.component.ts" ><b>LabelPlurals</b>&nbsp;&nbsp;&nbsp;(projects/.../output-field.component.ts)</a>
+                        </li>
+                        <li>
                             <a href="#LineStatus" title="projects/congacommerce/ecommerce/src/lib/modules/cart/enums/line-status.enum.ts" ><b>LineStatus</b>&nbsp;&nbsp;&nbsp;(projects/.../line-status.enum.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#ToasterPosition" title="projects/congacommerce/elements/src/shared/services/exception.service.ts" ><b>ToasterPosition</b>&nbsp;&nbsp;&nbsp;(projects/.../exception.service.ts)</a>
                         </li>
                     </ul>
                 </td>
@@ -78,6 +87,79 @@
     </table>
 </section>
 
+    <h3>projects/congacommerce/ecommerce/src/lib/modules/pricing/services/price.service.ts</h3>
+    <section>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="Adjustment"></a>
+                        <span class="name "><b>Adjustment</b><a href="#Adjustment"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                &nbsp;PER_DISCOUNT
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <i>Value : </i><code>% Discount</code>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                &nbsp;DISCOUNT_AMOUNT
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <i>Value : </i><code>Discount Amount</code>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                &nbsp;PER_MARKUP
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <i>Value : </i><code>% Markup</code>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                &nbsp;MARKUP_AMT
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <i>Value : </i><code>Markup Amount</code>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                &nbsp;PRICE_FACTOR
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <i>Value : </i><code>Price Factor</code>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                &nbsp;LIST_PRICE_OVERRIDE
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <i>Value : </i><code>List Price Override</code>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+</section>
     <h3>projects/congacommerce/ecommerce/src/lib/modules/cart/enums/cart-error.enum.ts</h3>
     <section>
         <table class="table table-sm table-bordered">
@@ -88,12 +170,6 @@
                         <span class="name "><b>CartError</b><a href="#CartError"><span class="icon ion-ios-link"></span></a></span>
                     </td>
                 </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <div class="io-description"><p>Enum contains Cart error message</p>
-</div>
-                        </td>
-                    </tr>
                         <tr>
                             <td class="col-md-4">
                                 &nbsp;TOO_MANY_ATTEMPTS
@@ -137,12 +213,6 @@
                         <span class="name "><b>ChargeType</b><a href="#ChargeType"><span class="icon ion-ios-link"></span></a></span>
                     </td>
                 </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <div class="io-description"><p>Enum contains all charge type</p>
-</div>
-                        </td>
-                    </tr>
                         <tr>
                             <td class="col-md-4">
                                 &nbsp;StandardPrice
@@ -276,6 +346,69 @@ Possible values are Public and Private.</p>
             </tbody>
         </table>
 </section>
+    <h3>projects/congacommerce/elements/src/lib/output-field/output-field.component.ts</h3>
+    <section>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="LabelPlurals"></a>
+                        <span class="name "><b>LabelPlurals</b><a href="#LabelPlurals"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                &nbsp;order
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <i>Value : </i><code>orders</code>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                &nbsp;proposal
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <i>Value : </i><code>proposals</code>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                &nbsp;product
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <i>Value : </i><code>products</code>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                &nbsp;cart
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <i>Value : </i><code>carts</code>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                &nbsp;asset
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <i>Value : </i><code>assets</code>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+</section>
     <h3>projects/congacommerce/ecommerce/src/lib/modules/cart/enums/line-status.enum.ts</h3>
     <section>
         <table class="table table-sm table-bordered">
@@ -286,12 +419,6 @@ Possible values are Public and Private.</p>
                         <span class="name "><b>LineStatus</b><a href="#LineStatus"><span class="icon ion-ios-link"></span></a></span>
                     </td>
                 </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <div class="io-description"><p>Enum contains line status</p>
-</div>
-                        </td>
-                    </tr>
                         <tr>
                             <td class="col-md-4">
                                 &nbsp;New
@@ -375,6 +502,79 @@ Possible values are Public and Private.</p>
             </tbody>
         </table>
 </section>
+    <h3>projects/congacommerce/elements/src/shared/services/exception.service.ts</h3>
+    <section>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ToasterPosition"></a>
+                        <span class="name "><b>ToasterPosition</b><a href="#ToasterPosition"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                &nbsp;TOP_RIGHT
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <i>Value : </i><code>toast-top-right</code>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                &nbsp;TOP_CENTER
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <i>Value : </i><code>toast-top-center</code>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                &nbsp;TOP_LEFT
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <i>Value : </i><code>toast-top-left</code>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                &nbsp;BOTTOM_RIGHT
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <i>Value : </i><code>toast-bottom-right</code>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                &nbsp;BOTTOM_CENTER
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <i>Value : </i><code>toast-bottom-center</code>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                &nbsp;BOTTOM_LEFT
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <i>Value : </i><code>toast-bottom-left</code>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+</section>
 
 
 
@@ -391,15 +591,6 @@ Possible values are Public and Private.</p>
                <!-- END CONTENT -->
            </div>
        </div>
-
-          <label class="dark-mode-switch">
-               <input type="checkbox">
-               <span class="slider">
-                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
-                    </svg>
-               </span>
-          </label>
 
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
