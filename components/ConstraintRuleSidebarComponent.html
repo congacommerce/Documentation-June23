@@ -82,17 +82,16 @@ import { ModalModule } from &#39;ngx-bootstrap/modal&#39;;
 &#64;NgModule({
 imports: [ConstraintRuleModule, ModalModule, ...]
 })
-export class AppModule {}</code></pre></div><div><pre class="line-numbers"><code class="language-typescript">import { ConstraintRuleSidebarComponent } from &#39;&#64;congacommerce/elements&#39;;
-import { BsModalService } from &#39;ngx-bootstrap/modal&#39;;
-
-constructor(private bsModalService: BsModalService) {}
-
-showSidebar() {
+export class AppModule {}</code></pre></div><div><pre class="line-numbers"><code class="language-html">```typescript
+import { ConstraintRuleSidebarComponent } from &#39;&#64;congacommerce/elements&#39;;
+import { BsModalService } from &#39;ngx-bootstrap/modal&#39;;</code></pre></div><p>constructor(private bsModalService: BsModalService) {}</p>
+<p>showSidebar() {
       this.bsModalService.show(ConstraintRuleSidebarComponent, {
              backdrop: false,
              class: &#39;constraintRuleSidebar&#39;
       });
-}</code></pre></div>
+}</p>
+<div><pre class="line-numbers"><code class="language-none"></code></pre></div>
     </p>
 
 
@@ -204,7 +203,7 @@ showSidebar() {
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor(bsModalRef: BsModalRef, constraintRuleMessageService: <a href="../classes/ConstraintRule.html" target="_self">ConstraintRuleMessageService</a>, clientConstraintRuleService: <a href="../injectables/ConstraintRuleService.html" target="_self">ClientConstraintRuleService</a>, productConfigurationService: <a href="../injectables/ProductConfigurationService.html" target="_self">ProductConfigurationService</a>)</code>
+<code>constructor(bsModalRef: BsModalRef, constraintRuleMessageService: <a href="../injectables/ConstraintRuleMessageService.html" target="_self">ConstraintRuleMessageService</a>, clientConstraintRuleService: <a href="../injectables/ClientConstraintRuleService.html" target="_self">ClientConstraintRuleService</a>, productConfigurationService: <a href="../injectables/ProductConfigurationService.html" target="_self">ProductConfigurationService</a>)</code>
                     </td>
                 </tr>
 
@@ -237,7 +236,7 @@ showSidebar() {
                                                         <td>constraintRuleMessageService</td>
                                                   
                                                         <td>
-                                                                        <code><a href="../classes/ConstraintRule.html" target="_self" >ConstraintRuleMessageService</a></code>
+                                                                        <code><a href="../injectables/ConstraintRuleMessageService.html" target="_self" >ConstraintRuleMessageService</a></code>
                                                         </td>
                                                   
                                                     <td>
@@ -249,7 +248,7 @@ showSidebar() {
                                                         <td>clientConstraintRuleService</td>
                                                   
                                                         <td>
-                                                                        <code><a href="../injectables/ConstraintRuleService.html" target="_self" >ClientConstraintRuleService</a></code>
+                                                                        <code><a href="../injectables/ClientConstraintRuleService.html" target="_self" >ClientConstraintRuleService</a></code>
                                                         </td>
                                                   
                                                     <td>
@@ -780,6 +779,8 @@ If false this component will show cart level configuration rules.</p>
     var ACTUAL_COMPONENT = {'name': 'ConstraintRuleSidebarComponent'};
 </script>
 <script src="../js/tree.js"></script>
+
+
 
 
 

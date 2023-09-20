@@ -80,12 +80,14 @@
 &#64;NgModule({
 imports: [FilterModule, ...]
 })
-export class AppModule {}</code></pre></div><p>// Basic Usage</p>
-<div><pre class="line-numbers"><code class="language-typescript">&lt;apt-category-filter
+export class AppModule {}</code></pre></div><div><pre class="line-numbers"><code class="language-html">// Basic Usage
+```typescript
+&lt;apt-category-filter
             [category]=&quot;category&quot;
             (onChange)=&quot;handleCategoryChange($event)&quot;
-&gt;&lt;/apt-category-filter&gt;</code></pre></div><p>// Setting multiselection on peer categories with a custom limit and title.</p>
-<div><pre class="line-numbers"><code class="language-typescript">&lt;apt-category-filter
+&gt;&lt;/apt-category-filter&gt;</code></pre></div><div><pre class="line-numbers"><code class="language-none">// Setting multiselection on peer categories with a custom limit and title.
+```typescript
+&lt;apt-category-filter
             [category]=&quot;category&quot;
             selection=&quot;multi&quot;
             relationship=&quot;peers&quot;
@@ -496,6 +498,8 @@ li{
     var ACTUAL_COMPONENT = {'name': 'CategoryFilterComponent'};
 </script>
 <script src="../js/tree.js"></script>
+
+
 
 
 

@@ -80,13 +80,15 @@
 &#64;NgModule({
 imports: [InputFieldModule, ...]
 })
-export class AppModule {}</code></pre></div><p>// Basic Usage</p>
-<div><pre class="line-numbers"><code class="language-typescript">&lt;apt-input-field
+export class AppModule {}</code></pre></div><div><pre class="line-numbers"><code class="language-html">// Basic Usage
+```typescript
+&lt;apt-input-field
             [(ngModel)]=&quot;myModel&quot;
             [field]=&quot;fieldApiName&quot;
             [entity]=&quot;entityApiName&quot;
-&gt;&lt;/apt-input-field&gt;</code></pre></div><p>// All inputs and outputs</p>
-<div><pre class="line-numbers"><code class="language-typescript">&lt;apt-input-field
+&gt;&lt;/apt-input-field&gt;</code></pre></div><div><pre class="line-numbers"><code class="language-none">// All inputs and outputs
+```typescript
+&lt;apt-input-field
             [(ngModel)]=&quot;myModel&quot;
             (ngModelChange)=&quot;handleChange($event)&quot;
             [field]=&quot;fieldApiName&quot;
@@ -1527,6 +1529,8 @@ export class AppModule {}</code></pre></div><p>// Basic Usage</p>
     var ACTUAL_COMPONENT = {'name': 'InputFieldComponent'};
 </script>
 <script src="../js/tree.js"></script>
+
+
 
 
 

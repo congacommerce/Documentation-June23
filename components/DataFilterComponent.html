@@ -80,11 +80,13 @@
 &#64;NgModule({
 imports: [DataFilterModule, ...]
 })
-export class AppModule {}</code></pre></div><p>// Basic usage.</p>
-<div><pre class="line-numbers"><code class="language-typescript">&lt;apt-data-filter
+export class AppModule {}</code></pre></div><div><pre class="line-numbers"><code class="language-html">// Basic usage.
+```typescript
+&lt;apt-data-filter
             [type]=&quot;aObjectType&quot;
-            (filterListChange)=&quot;handleFilterListChange()&quot;&gt;&lt;/apt-data-filter&gt;</code></pre></div><p>// Initialize with array of default filters.</p>
-<div><pre class="line-numbers"><code class="language-typescript">&lt;apt-data-filter
+            (filterListChange)=&quot;handleFilterListChange()&quot;&gt;&lt;/apt-data-filter&gt;</code></pre></div><div><pre class="line-numbers"><code class="language-none">// Initialize with array of default filters.
+```typescript
+&lt;apt-data-filter
             [type]=&quot;aObjectType&quot;
             [filterList]=&quot;defaultFilters&quot;
             (filterListChange)=&quot;handleFilterListChange()&quot;&gt;&lt;/apt-data-filter&gt;</code></pre></div>
@@ -592,6 +594,8 @@ div.dropdown-menu.show {
     var ACTUAL_COMPONENT = {'name': 'DataFilterComponent'};
 </script>
 <script src="../js/tree.js"></script>
+
+
 
 
 

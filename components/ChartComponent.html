@@ -82,12 +82,14 @@
 &#64;NgModule({
 imports: [ChartModule, ...]
 })
-export class AppModule {}</code></pre></div><p>// Basic Usage.</p>
-<div><pre class="line-numbers"><code class="language-typescript">&lt;apt-chart
+export class AppModule {}</code></pre></div><div><pre class="line-numbers"><code class="language-html">// Basic Usage.
+```typescript
+&lt;apt-chart
             [data]=&quot;chartData&quot;
             [type]=&quot;chartType&quot;
-&gt;&lt;/apt-chart&gt;</code></pre></div><p>// Chart with override settings.</p>
-<div><pre class="line-numbers"><code class="language-typescript">&lt;apt-chart
+&gt;&lt;/apt-chart&gt;</code></pre></div><div><pre class="line-numbers"><code class="language-none">// Chart with override settings.
+```typescript
+&lt;apt-chart
             [data]=&quot;chartData&quot;
             [type]=&quot;chartType&quot;
             [chartTitle]=&quot;myTitle&quot;
@@ -598,6 +600,8 @@ Can take values like &#39;currency&#39; etc.</p>
     var ACTUAL_COMPONENT = {'name': 'ChartComponent'};
 </script>
 <script src="../js/tree.js"></script>
+
+
 
 
 

@@ -18,13 +18,13 @@
 <title>cluster_PaymentModule_declarations</title>
 <polygon fill="none" stroke="black" points="194,-40.8 194,-92.8 578,-92.8 578,-40.8 194,-40.8"/>
 </g>
-<g id="clust5" class="cluster">
-<title>cluster_PaymentModule_imports</title>
-<polygon fill="none" stroke="black" points="16,-40.8 16,-92.8 186,-92.8 186,-40.8 16,-40.8"/>
-</g>
 <g id="clust6" class="cluster">
 <title>cluster_PaymentModule_exports</title>
 <polygon fill="none" stroke="black" points="197,-170.8 197,-222.8 387,-222.8 387,-170.8 197,-170.8"/>
+</g>
+<g id="clust5" class="cluster">
+<title>cluster_PaymentModule_imports</title>
+<polygon fill="none" stroke="black" points="16,-40.8 16,-92.8 186,-92.8 186,-40.8 16,-40.8"/>
 </g>
 <!-- PaymentDetailsComponent -->
 <g id="node1" class="node">

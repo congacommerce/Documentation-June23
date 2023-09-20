@@ -38,6 +38,11 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                         <span class="icon ion-ios-list"></span>Dependencies
                                     </a>
                                 </li>
+                                <li class="link">
+                                    <a href="properties.html" data-type="chapter-link">
+                                        <span class="icon ion-ios-apps"></span>Properties
+                                    </a>
+                                </li>
                     </ul>
                 </li>
                     <li class="chapter additional">
@@ -572,7 +577,13 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                     <a href="injectables/CategoryService.html" data-type="entity-link" >CategoryService</a>
                                 </li>
                                 <li class="link">
+                                    <a href="injectables/ClientConstraintRuleService.html" data-type="entity-link" >ClientConstraintRuleService</a>
+                                </li>
+                                <li class="link">
                                     <a href="injectables/ConstraintRuleConditionService.html" data-type="entity-link" >ConstraintRuleConditionService</a>
+                                </li>
+                                <li class="link">
+                                    <a href="injectables/ConstraintRuleMessageService.html" data-type="entity-link" >ConstraintRuleMessageService</a>
                                 </li>
                                 <li class="link">
                                     <a href="injectables/ConstraintRuleService.html" data-type="entity-link" >ConstraintRuleService</a>

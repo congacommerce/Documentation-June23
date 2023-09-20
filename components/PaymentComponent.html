@@ -79,11 +79,13 @@
 &#64;NgModule({
 imports: [PaymentComponentModule, ...]
 })
-export class AppModule {}</code></pre></div><div><pre class="line-numbers"><code class="language-typescript">&lt;apt-payment
+export class AppModule {}</code></pre></div><div><pre class="line-numbers"><code class="language-html">```typescript
+&lt;apt-payment
             [paymentTransaction]=&quot;paymentTransaction&quot;
             (onSelectingPayment)=&quot;handleSelectPayment($event)&quot;
             (onPaymentComplete)=&quot;handlePaymentComplete($event)&quot;
-&gt;&lt;/apt-payment&gt;</code></pre></div>
+&gt;&lt;/apt-payment&gt;</code></pre></div><p>```</p>
+
     </p>
 
 
@@ -318,6 +320,8 @@ export class AppModule {}</code></pre></div><div><pre class="line-numbers"><code
     var ACTUAL_COMPONENT = {'name': 'PaymentComponent'};
 </script>
 <script src="../js/tree.js"></script>
+
+
 
 
 

@@ -82,13 +82,15 @@ When the user selects a date in the start date or end date inputs the onStartDat
 &#64;NgModule({
 imports: [InputDateModule, ...]
 })
-export class AppModule {}</code></pre></div><p>// Basic Usage.</p>
-<div><pre class="line-numbers"><code class="language-typescript">&lt;apt-date-range-input
+export class AppModule {}</code></pre></div><div><pre class="line-numbers"><code class="language-html">// Basic Usage.
+```typescript
+&lt;apt-date-range-input
             [cartItem]=&quot;item&quot;
             (onStartDateChange)=&quot;handleStartChange($event, item)&quot;
             (onEndDateChange)=&quot;handleEndDateChange($event, item)&quot;
-&gt;&lt;/apt-date-range-input&gt;</code></pre></div><p>// Implementation with custom options.</p>
-<div><pre class="line-numbers"><code class="language-typescript">&lt;apt-date-range-input
+&gt;&lt;/apt-date-range-input&gt;</code></pre></div><div><pre class="line-numbers"><code class="language-none">// Implementation with custom options.
+```typescript
+&lt;apt-date-range-input
             (onStartDateChange)=&quot;handleStartChange($event, item)&quot;
             (onEndDateChange)=&quot;handleEndDateChange($event, item)&quot;
             [cartItem]=&quot;item&quot;
@@ -549,6 +551,8 @@ export class AppModule {}</code></pre></div><p>// Basic Usage.</p>
     var ACTUAL_COMPONENT = {'name': 'InputDateComponent'};
 </script>
 <script src="../js/tree.js"></script>
+
+
 
 
 

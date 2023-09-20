@@ -81,9 +81,11 @@ Change detection on this component has been tuned, so use this component in favo
 &#64;NgModule({
 imports: [PriceModule, ...]
 })
-export class AppModule {}</code></pre></div><p>// Basic Usage</p>
-<div><pre class="line-numbers"><code class="language-typescript">&lt;apt-price [record]=&quot;product&quot;&gt;&lt;/apt-price&gt;</code></pre></div><p>// All inputs and outputs.</p>
-<div><pre class="line-numbers"><code class="language-typescript">&lt;apt-price
+export class AppModule {}</code></pre></div><div><pre class="line-numbers"><code class="language-html">// Basic Usage
+```typescript
+&lt;apt-price [record]=&quot;product&quot;&gt;&lt;/apt-price&gt;</code></pre></div><div><pre class="line-numbers"><code class="language-none">// All inputs and outputs.
+```typescript
+&lt;apt-price
             [record]=&quot;product&quot;
             [quantity]=&quot;1&quot;
             [attributeValue]=&quot;attributeValue&quot;
@@ -514,6 +516,8 @@ option type Can be Array of asset line items or Array of quote line item or Arra
     var ACTUAL_COMPONENT = {'name': 'PriceComponent'};
 </script>
 <script src="../js/tree.js"></script>
+
+
 
 
 
